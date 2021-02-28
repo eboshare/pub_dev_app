@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
-import 'package:booster/config/injection.dart';
-import 'package:booster/presentation/app_widget.dart';
-import 'package:booster/utils/sealed_classes/environment.dart';
-import 'package:booster/domain/core/i_error_report_repository.dart';
+import 'package:pub_dev_app/config/injection.dart';
+import 'package:pub_dev_app/presentation/app_widget.dart';
+import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
+import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 
 Future<void> _initDependencies() async {
   HydratedBloc.storage = await getIt.getAsync<Storage>();

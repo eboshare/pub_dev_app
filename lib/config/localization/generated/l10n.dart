@@ -35,32 +35,12 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Booster`
+  /// `Pub.dev`
   String get appTitle {
     return Intl.message(
-      'Booster',
+      'Pub.dev',
       name: 'appTitle',
       desc: '',
-      args: [],
-    );
-  }
-
-  /// `Images`
-  String get galleryPageTitle {
-    return Intl.message(
-      'Images',
-      name: 'galleryPageTitle',
-      desc: 'Displayed in the app bar of the image list page',
-      args: [],
-    );
-  }
-
-  /// `Can't load an image list`
-  String get errorGalleryLoading {
-    return Intl.message(
-      'Can\'t load an image list',
-      name: 'errorGalleryLoading',
-      desc: 'Displayed when a loading error occurs on the image list page',
       args: [],
     );
   }
