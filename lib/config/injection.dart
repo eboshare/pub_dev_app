@@ -5,6 +5,8 @@ import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 
+import 'package:pub_dev_app/domain/core/i_logger.dart';
+import 'package:pub_dev_app/infrastructure/connection/loggers/logger_package_logger_impl.dart';
 import 'package:pub_dev_app/utils/config_reader/config/config.dart';
 import 'package:pub_dev_app/infrastructure/core/error_report_repository/fake_error_report_repository.dart';
 import 'package:pub_dev_app/utils/config_reader/reader.dart';
@@ -25,19 +27,15 @@ import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
 final getIt = GetItExtended(GetIt.instance);
 
 Future<void> configureDependencies(Environment env) async {
-  // Config.
-  getIt.registerSingleton<Config>(await loadConfig('config/app_config.json'));
+  // Configuration.
+  getIt
+    ..registerSingleton<Environment>(env)
+    ..registerSingleton<Config>(
+      await loadConfig('config/app_config.json'),
+    );
 
   // Third party types.
   getIt
-    ..registerSingleton<Environment>(env)
-    ..registerLazySingleton<Logger>(
-      () => Logger(
-        printer: SimplePrinter(
-          colors: false,
-        ),
-      ),
-    )
     ..registerLazySingleton<Dio>(
       () {
         final dio = Dio();
@@ -48,6 +46,7 @@ Future<void> configureDependencies(Environment env) async {
         return dio;
       },
     )
+    ..registerLazySingleton<DataConnectionChecker>(() => DataConnectionChecker())
     ..registerLazySingletonAsync<Storage>(
       () async {
         Future<Storage> whenDevOrProd() => HydratedStorage.build();
@@ -61,6 +60,15 @@ Future<void> configureDependencies(Environment env) async {
 
   // Own types with interfaces
   getIt
+    ..registerLazySingleton<ILogger>(
+      () => LoggerPackageLoggerImpl(
+        Logger(
+          printer: SimplePrinter(
+            colors: false,
+          ),
+        ),
+      ),
+    )
     ..registerLazySingleton<IRequestRetryScheduler>(
       () => DataConnectionRequestRetryScheduler(getIt<IConnectionRepository>()),
     )
