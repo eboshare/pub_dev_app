@@ -25,65 +25,70 @@ import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
 final getIt = GetItExtended(GetIt.instance);
 
 Future<void> configureDependencies(Environment env) async {
+  // Config.
   getIt.registerSingleton<Config>(await loadConfig('config/app_config.json'));
 
-  getIt.registerLazySingleton<Logger>(
-    () => Logger(
-      printer: SimplePrinter(
-        colors: false,
+  // Third party types.
+  getIt
+    ..registerLazySingleton<Logger>(
+      () => Logger(
+        printer: SimplePrinter(
+          colors: false,
+        ),
       ),
-    ),
-  );
-  getIt.registerLazySingleton<Dio>(
-    () {
-      final dio = Dio();
-      dio.interceptors.addAll([
-        PrettyDioLogger(logPrint: getIt<Logger>().i),
-        RequestRetryInterceptor(getIt<IRequestRetryScheduler>(), dio),
-      ]);
-      return dio;
-    },
-  );
-  getIt.registerLazySingleton<IRequestRetryScheduler>(
-    () => DataConnectionRequestRetryScheduler(getIt<IConnectionRepository>()),
-  );
-  getIt.registerLazySingleton<IConnectionBloc>(
-    () => ConnectionBloc(getIt<IConnectionRepository>()),
-  );
-  getIt.registerLazySingleton<DataConnectionChecker>(
-    () => DataConnectionChecker(),
-  );
-
-  getIt.registerLazySingleton<IConnectionRepository>(
-    () {
-      IConnectionRepository whenDevOrProd() => DataConnectionRepository(getIt<DataConnectionChecker>());
-      return env.when(
-        dev: whenDevOrProd,
-        prod: whenDevOrProd,
-        test: () => FakeConnectionRepository(),
-      );
-    },
-  );
-  getIt.registerLazySingletonAsync<Storage>(() async {
-    Future<Storage> whenDevOrProd() => HydratedStorage.build();
-    return env.when(
-      dev: whenDevOrProd,
-      prod: whenDevOrProd,
-      test: () => FakeStorage(),
+    )
+    ..registerLazySingleton<Dio>(
+      () {
+        final dio = Dio();
+        dio.interceptors.addAll([
+          PrettyDioLogger(logPrint: getIt<Logger>().i),
+          RequestRetryInterceptor(getIt<IRequestRetryScheduler>(), dio),
+        ]);
+        return dio;
+      },
+    )
+    ..registerLazySingletonAsync<Storage>(
+      () async {
+        Future<Storage> whenDevOrProd() => HydratedStorage.build();
+        return env.when(
+          dev: whenDevOrProd,
+          prod: whenDevOrProd,
+          test: () => FakeStorage(),
+        );
+      },
     );
-  });
 
-  getIt.registerLazySingleton<IErrorReportRepository>(() {
-    IErrorReportRepository whenDevOrProd() {
-      return SentryErrorReportRepository(dsn: getIt<Config>().sentryDsn);
-    }
+  // Own types with interfaces
+  getIt
+    ..registerLazySingleton<IRequestRetryScheduler>(
+      () => DataConnectionRequestRetryScheduler(getIt<IConnectionRepository>()),
+    )
+    ..registerLazySingleton<IConnectionBloc>(
+      () => ConnectionBloc(getIt<IConnectionRepository>()),
+    )
+    ..registerLazySingleton<IConnectionRepository>(
+      () {
+        IConnectionRepository whenDevOrProd() => DataConnectionRepository(getIt<DataConnectionChecker>());
+        return env.when(
+          dev: whenDevOrProd,
+          prod: whenDevOrProd,
+          test: () => FakeConnectionRepository(),
+        );
+      },
+    )
+    ..registerLazySingleton<IErrorReportRepository>(
+      () {
+        IErrorReportRepository whenDevOrProd() {
+          return SentryErrorReportRepository(dsn: getIt<Config>().sentryDsn);
+        }
 
-    return env.when(
-      dev: whenDevOrProd,
-      prod: whenDevOrProd,
-      test: () => FakeErrorReportRepository(),
+        return env.when(
+          dev: whenDevOrProd,
+          prod: whenDevOrProd,
+          test: () => FakeErrorReportRepository(),
+        );
+      },
     );
-  });
 
   await getIt.allReady();
 }
