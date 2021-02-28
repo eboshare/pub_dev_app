@@ -40,13 +40,15 @@ Future<void> configureDependencies(Environment env) async {
       () {
         final dio = Dio();
         dio.interceptors.addAll([
-          PrettyDioLogger(logPrint: getIt<Logger>().i),
+          PrettyDioLogger(logPrint: getIt<ILogger>().debug),
           RequestRetryInterceptor(getIt<IRequestRetryScheduler>(), dio),
         ]);
         return dio;
       },
     )
-    ..registerLazySingleton<DataConnectionChecker>(() => DataConnectionChecker())
+    ..registerLazySingleton<DataConnectionChecker>(
+      () => DataConnectionChecker(),
+    )
     ..registerLazySingletonAsync<Storage>(
       () async {
         Future<Storage> whenDevOrProd() => HydratedStorage.build();
