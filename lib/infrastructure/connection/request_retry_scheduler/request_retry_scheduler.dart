@@ -1,9 +1,9 @@
 import 'dart:async';
 
 
-import 'package:booster/domain/connection/connection_status.dart';
-import 'package:booster/domain/connection/i_connection_repository.dart';
-import 'package:booster/domain/connection/i_request_retry_scheduler.dart';
+import 'package:pub_dev_app/domain/connection/connection_status.dart';
+import 'package:pub_dev_app/domain/connection/i_connection_repository.dart';
+import 'package:pub_dev_app/domain/connection/i_request_retry_scheduler.dart';
 
 class DataConnectionRequestRetryScheduler implements IRequestRetryScheduler {
   final IConnectionRepository _connectionRepository;

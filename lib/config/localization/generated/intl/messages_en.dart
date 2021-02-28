@@ -21,10 +21,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "appTitle" : MessageLookupByLibrary.simpleMessage("Booster"),
+    "appTitle" : MessageLookupByLibrary.simpleMessage("Pub.dev"),
     "connectionLost" : MessageLookupByLibrary.simpleMessage("No connection"),
-    "connectionRestored" : MessageLookupByLibrary.simpleMessage("Back online"),
-    "errorGalleryLoading" : MessageLookupByLibrary.simpleMessage("Can\'t load an image list"),
-    "galleryPageTitle" : MessageLookupByLibrary.simpleMessage("Images")
+    "connectionRestored" : MessageLookupByLibrary.simpleMessage("Back online")
   };
 }

@@ -2,7 +2,6 @@
 
 ### How to run
 - Add `app_config.json` to `config` directory. Its format must be like in `app_config.example.json`.
-- Generate code with `./codegen-build.sh`.
 - Run the app with `flutter run`.
 
 ### This project uses

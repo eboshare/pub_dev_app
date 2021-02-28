@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
-import 'package:booster/domain/core/i_error_report_repository.dart';
+import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 
 class SentryErrorReportRepository implements IErrorReportRepository {
   final String dsn;

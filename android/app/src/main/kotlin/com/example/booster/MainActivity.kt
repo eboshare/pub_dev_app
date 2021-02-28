@@ -1,4 +1,4 @@
-package com.example.booster
+package com.example.pub_dev_app
 
 import io.flutter.embedding.android.FlutterActivity
 

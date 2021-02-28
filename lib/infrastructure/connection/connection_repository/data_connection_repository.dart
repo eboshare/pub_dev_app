@@ -1,7 +1,7 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 
-import 'package:booster/domain/connection/connection_status.dart';
-import 'package:booster/domain/connection/i_connection_repository.dart';
+import 'package:pub_dev_app/domain/connection/connection_status.dart';
+import 'package:pub_dev_app/domain/connection/i_connection_repository.dart';
 
 class DataConnectionRepository implements IConnectionRepository {
   final DataConnectionChecker _connectionChecker;

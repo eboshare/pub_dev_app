@@ -5,27 +5,22 @@ import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 
-import 'package:booster/utils/config_reader/config/config.dart';
-import 'package:booster/infrastructure/core/error_report_repository/fake_error_report_repository.dart';
-import 'package:booster/utils/config_reader/reader.dart';
-import 'package:booster/domain/core/i_error_report_repository.dart';
-import 'package:booster/infrastructure/core/error_report_repository/sentry_error_report_repository.dart';
-import 'package:booster/utils/get_it_extended.dart';
-import 'package:booster/domain/connection/i_request_retry_scheduler.dart';
-import 'package:booster/infrastructure/connection/request_retry_interceptor.dart';
-import 'package:booster/application/connection/connection_bloc.dart';
-import 'package:booster/application/gallery/gallery_bloc.dart';
-import 'package:booster/domain/connection/i_connection_bloc.dart';
-import 'package:booster/domain/connection/i_connection_repository.dart';
-import 'package:booster/domain/gallery/i_gallery_bloc.dart';
-import 'package:booster/domain/gallery/i_image_repository.dart';
-import 'package:booster/infrastructure/connection/connection_repository/data_connection_repository.dart';
-import 'package:booster/infrastructure/connection/request_retry_scheduler/request_retry_scheduler.dart';
-import 'package:booster/infrastructure/gallery/image_repository/picsum_repository.dart';
-import 'package:booster/infrastructure/connection/connection_repository/fake_connection_repository.dart';
-import 'package:booster/infrastructure/core/storages/fake_storage.dart';
-import 'package:booster/infrastructure/gallery/image_repository/mock_image_repository.dart';
-import 'package:booster/utils/sealed_classes/environment.dart';
+import 'package:pub_dev_app/utils/config_reader/config/config.dart';
+import 'package:pub_dev_app/infrastructure/core/error_report_repository/fake_error_report_repository.dart';
+import 'package:pub_dev_app/utils/config_reader/reader.dart';
+import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
+import 'package:pub_dev_app/infrastructure/core/error_report_repository/sentry_error_report_repository.dart';
+import 'package:pub_dev_app/utils/get_it_extended.dart';
+import 'package:pub_dev_app/domain/connection/i_request_retry_scheduler.dart';
+import 'package:pub_dev_app/infrastructure/connection/request_retry_interceptor.dart';
+import 'package:pub_dev_app/application/connection/connection_bloc.dart';
+import 'package:pub_dev_app/domain/connection/i_connection_bloc.dart';
+import 'package:pub_dev_app/domain/connection/i_connection_repository.dart';
+import 'package:pub_dev_app/infrastructure/connection/connection_repository/data_connection_repository.dart';
+import 'package:pub_dev_app/infrastructure/connection/request_retry_scheduler/request_retry_scheduler.dart';
+import 'package:pub_dev_app/infrastructure/connection/connection_repository/fake_connection_repository.dart';
+import 'package:pub_dev_app/infrastructure/core/storages/fake_storage.dart';
+import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
 
 final getIt = GetItExtended(GetIt.instance);
 
@@ -52,14 +47,8 @@ Future<void> configureDependencies(Environment env) async {
   getIt.registerLazySingleton<IRequestRetryScheduler>(
     () => DataConnectionRequestRetryScheduler(getIt<IConnectionRepository>()),
   );
-  getIt.registerLazySingleton<PicsumClient>(
-    () => PicsumClient(getIt<Dio>()),
-  );
   getIt.registerLazySingleton<IConnectionBloc>(
     () => ConnectionBloc(getIt<IConnectionRepository>()),
-  );
-  getIt.registerLazySingleton<IGalleryBloc>(
-    () => GalleryBloc(getIt<IImageRepository>()),
   );
   getIt.registerLazySingleton<DataConnectionChecker>(
     () => DataConnectionChecker(),
@@ -72,16 +61,6 @@ Future<void> configureDependencies(Environment env) async {
         dev: whenDevOrProd,
         prod: whenDevOrProd,
         test: () => FakeConnectionRepository(),
-      );
-    },
-  );
-  getIt.registerLazySingleton<IImageRepository>(
-    () {
-      IImageRepository whenDevOrProd() => PicsumRepository(getIt<PicsumClient>());
-      return env.when(
-        dev: whenDevOrProd,
-        prod: whenDevOrProd,
-        test: () => MockImageRepository(),
       );
     },
   );

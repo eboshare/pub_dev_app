@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:booster/presentation/core/design_system/design_system_colors/design_system_colors.dart';
-import 'package:booster/presentation/core/design_system/design_system_text/design_system_text.dart';
-import 'package:booster/presentation/core/design_system/design_system_dimensions/design_system_dimensions.dart';
+import 'package:pub_dev_app/presentation/core/design_system/design_system_colors/design_system_colors.dart';
+import 'package:pub_dev_app/presentation/core/design_system/design_system_text/design_system_text.dart';
+import 'package:pub_dev_app/presentation/core/design_system/design_system_dimensions/design_system_dimensions.dart';
 
 part 'design_system_data.freezed.dart';
 

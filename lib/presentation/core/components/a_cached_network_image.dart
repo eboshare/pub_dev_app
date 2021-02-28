@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'package:booster/domain/gallery/image_entity/image_entity.dart';
-
 class ACachedNetworkImage extends StatelessWidget {
-  final ImageEntity image;
+  final String url;
   final double width;
   final double height;
 
   const ACachedNetworkImage({
     Key key,
-    @required this.image,
+    @required this.url,
     @required this.width,
     @required this.height,
   }) : super(key: key);
@@ -21,10 +19,7 @@ class ACachedNetworkImage extends StatelessWidget {
       fit: BoxFit.cover,
       fadeInDuration: const Duration(),
       fadeOutDuration: const Duration(),
-      imageUrl: image.constructDownloadUrl(
-        width: width.toInt(),
-        height: height.toInt(),
-      ),
+      imageUrl: url,
       placeholder: (context, __) {
         return const Center(
           child: CircularProgressIndicator(),

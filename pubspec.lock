@@ -638,7 +638,7 @@ packages:
     source: hosted
     version: "2.1.5"
   retrofit:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: retrofit
       url: "https://pub.dartlang.org"

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:booster/presentation/core/design_system/design_system_data/design_system_data.dart';
+import 'package:pub_dev_app/presentation/core/design_system/design_system_data/design_system_data.dart';
 
 class DesignSystem extends InheritedWidget {
   final DesignSystemData data;
