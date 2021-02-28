@@ -30,6 +30,7 @@ Future<void> configureDependencies(Environment env) async {
 
   // Third party types.
   getIt
+    ..registerSingleton<Environment>(env)
     ..registerLazySingleton<Logger>(
       () => Logger(
         printer: SimplePrinter(
