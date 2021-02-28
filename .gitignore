@@ -43,12 +43,5 @@ app.*.map.json
 # Exceptions to above rules
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 
-# Code generation
-*.g.dart
-*.gr.dart
-*.freezed.dart
-*.iconfig.dart
-*.config.dart
-
 # Configuration
 config/app_config.json
