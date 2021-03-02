@@ -38,8 +38,11 @@ const $HostedDetailsDto = _$HostedDetailsDtoTearOff();
 
 /// @nodoc
 mixin _$HostedDetailsDto {
+  /// Name that gets passed to the source.
   @JsonKey(name: 'name')
   String get name;
+
+  /// Source repository url.
   @JsonKey(name: 'url')
   String get url;
 
@@ -125,9 +128,13 @@ class _$_HostedDetailsDto implements _HostedDetailsDto {
       _$_$_HostedDetailsDtoFromJson(json);
 
   @override
+
+  /// Name that gets passed to the source.
   @JsonKey(name: 'name')
   final String name;
   @override
+
+  /// Source repository url.
   @JsonKey(name: 'url')
   final String url;
 
@@ -172,9 +179,13 @@ abstract class _HostedDetailsDto implements HostedDetailsDto {
       _$_HostedDetailsDto.fromJson;
 
   @override
+
+  /// Name that gets passed to the source.
   @JsonKey(name: 'name')
   String get name;
   @override
+
+  /// Source repository url.
   @JsonKey(name: 'url')
   String get url;
   @override
