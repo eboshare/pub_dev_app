@@ -1,10 +1,10 @@
-import 'package:pub_dev_app/config/injection.dart';
-import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 import 'package:flutter/material.dart' hide Router, ConnectionState;
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:one_context/one_context.dart';
 
+import 'package:pub_dev_app/config/injection.dart';
+import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 import 'package:pub_dev_app/presentation/connection/connection_snack_bar_wrapper.dart';
 import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/presentation/core/navigation/router.gr.dart';

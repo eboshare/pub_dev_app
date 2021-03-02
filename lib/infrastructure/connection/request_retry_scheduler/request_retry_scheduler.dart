@@ -1,6 +1,5 @@
 import 'dart:async';
 
-
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
 import 'package:pub_dev_app/domain/connection/i_connection_repository.dart';
 import 'package:pub_dev_app/domain/connection/i_request_retry_scheduler.dart';

@@ -617,7 +617,7 @@ packages:
     source: hosted
     version: "4.3.3"
   pub_semver:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: pub_semver
       url: "https://pub.dartlang.org"
