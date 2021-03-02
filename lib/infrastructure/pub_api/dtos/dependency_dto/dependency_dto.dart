@@ -2,33 +2,33 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pub_semver/pub_semver.dart';
 
 import 'package:pub_dev_app/infrastructure/core/converters/version_constraint_converter.dart';
-import 'package:pub_dev_app/infrastructure/pub_api/dtos/hosted_details/hosted_details.dart';
+import 'package:pub_dev_app/infrastructure/pub_api/dtos/hosted_details_dto/hosted_details_dto.dart';
 
-part 'dependency.freezed.dart';
-part 'dependency.g.dart';
+part 'dependency_dto.freezed.dart';
+part 'dependency_dto.g.dart';
 
 /// Dependency.
 @freezed
-abstract class Dependency with _$Dependency {
-  const factory Dependency.sdk({
+abstract class DependencyDto with _$DependencyDto {
+  const factory DependencyDto.sdk({
     @required @JsonKey(name: 'sdk') String sdk,
     @JsonKey(name: 'version') @VersionConstraintConverter() VersionConstraint version,
-  }) = SdkDependency;
+  }) = SdkDependencyDto;
 
-  const factory Dependency.git({
+  const factory DependencyDto.git({
     @required @JsonKey(name: 'url') String url,
     @JsonKey(name: 'ref') String ref,
     @JsonKey(name: 'path') String path,
-  }) = GitDependency;
+  }) = GitDependencyDto;
 
-  const factory Dependency.path({
+  const factory DependencyDto.path({
     @required @JsonKey(name: 'path') String path,
-  }) = PathDependency;
+  }) = PathDependencyDto;
 
-  const factory Dependency.hosted({
+  const factory DependencyDto.hosted({
     @required @JsonKey(name: 'version') @VersionConstraintConverter() VersionConstraint version,
-    @JsonKey(name: 'hosted') HostedDetails hosted,
-  }) = HostedDependency;
+    @JsonKey(name: 'hosted') HostedDetailsDto hosted,
+  }) = HostedDependencyDto;
 
-  factory Dependency.fromJson(Map<String, dynamic> json) => _$DependencyFromJson(json);
+  factory DependencyDto.fromJson(Map<String, dynamic> json) => _$DependencyDtoFromJson(json);
 }

@@ -3,18 +3,18 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pub_semver/pub_semver.dart';
 
 import 'package:pub_dev_app/infrastructure/core/converters/dependencies_converter.dart';
-import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency/dependency.dart';
 import 'package:pub_dev_app/infrastructure/core/converters/environment_converter.dart';
 import 'package:pub_dev_app/infrastructure/core/converters/version_converter.dart';
 import 'package:pub_dev_app/infrastructure/core/converters/authors_converter.dart';
+import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency_dto/dependency_dto.dart';
 
-part 'pub_spec.freezed.dart';
-part 'pub_spec.g.dart';
+part 'pub_spec_dto.freezed.dart';
+part 'pub_spec_dto.g.dart';
 
 /// Pubspec model.
 @freezed
-abstract class PubSpec with _$PubSpec {
-  const factory PubSpec({
+abstract class PubSpecDto with _$PubSpecDto {
+  const factory PubSpecDto({
     ///
     @required @JsonKey(name: 'name') String name,
     @required @JsonKey(name: 'version') @VersionConverter() Version version,
@@ -30,10 +30,10 @@ abstract class PubSpec with _$PubSpec {
     @JsonKey(name: 'documentation') String documentation,
 
     ///
-    @JsonKey(name: 'dependencies') @DependenciesConverter() BuiltMap<String, Dependency> dependencies,
-    @JsonKey(name: 'dev_dependencies') @DependenciesConverter() BuiltMap<String, Dependency> devDependencies,
-    @JsonKey(name: 'dependency_overrides') @DependenciesConverter() BuiltMap<String, Dependency> dependencyOverrides,
+    @JsonKey(name: 'dependencies') @DependenciesConverter() BuiltMap<String, DependencyDto> dependencies,
+    @JsonKey(name: 'dev_dependencies') @DependenciesConverter() BuiltMap<String, DependencyDto> devDependencies,
+    @JsonKey(name: 'dependency_overrides') @DependenciesConverter() BuiltMap<String, DependencyDto> dependencyOverrides,
   }) = _PubSpec;
 
-  factory PubSpec.fromJson(Map<String, dynamic> json) => _$PubSpecFromJson(json);
+  factory PubSpecDto.fromJson(Map<String, dynamic> json) => _$PubSpecDtoFromJson(json);
 }

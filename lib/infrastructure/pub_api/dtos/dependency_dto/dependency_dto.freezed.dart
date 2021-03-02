@@ -1,23 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'dependency.dart';
+part of 'dependency_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-Dependency _$DependencyFromJson(Map<String, dynamic> json) {
+DependencyDto _$DependencyDtoFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType'] as String) {
     case 'sdk':
-      return SdkDependency.fromJson(json);
+      return SdkDependencyDto.fromJson(json);
     case 'git':
-      return GitDependency.fromJson(json);
+      return GitDependencyDto.fromJson(json);
     case 'path':
-      return PathDependency.fromJson(json);
+      return PathDependencyDto.fromJson(json);
     case 'hosted':
-      return HostedDependency.fromJson(json);
+      return HostedDependencyDto.fromJson(json);
 
     default:
       throw FallThroughError();
@@ -25,29 +25,29 @@ Dependency _$DependencyFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$DependencyTearOff {
-  const _$DependencyTearOff();
+class _$DependencyDtoTearOff {
+  const _$DependencyDtoTearOff();
 
 // ignore: unused_element
-  SdkDependency sdk(
+  SdkDependencyDto sdk(
       {@required
       @JsonKey(name: 'sdk')
           String sdk,
       @JsonKey(name: 'version')
       @VersionConstraintConverter()
           VersionConstraint version}) {
-    return SdkDependency(
+    return SdkDependencyDto(
       sdk: sdk,
       version: version,
     );
   }
 
 // ignore: unused_element
-  GitDependency git(
+  GitDependencyDto git(
       {@required @JsonKey(name: 'url') String url,
       @JsonKey(name: 'ref') String ref,
       @JsonKey(name: 'path') String path}) {
-    return GitDependency(
+    return GitDependencyDto(
       url: url,
       ref: ref,
       path: path,
@@ -55,38 +55,38 @@ class _$DependencyTearOff {
   }
 
 // ignore: unused_element
-  PathDependency path({@required @JsonKey(name: 'path') String path}) {
-    return PathDependency(
+  PathDependencyDto path({@required @JsonKey(name: 'path') String path}) {
+    return PathDependencyDto(
       path: path,
     );
   }
 
 // ignore: unused_element
-  HostedDependency hosted(
+  HostedDependencyDto hosted(
       {@required
       @JsonKey(name: 'version')
       @VersionConstraintConverter()
           VersionConstraint version,
       @JsonKey(name: 'hosted')
-          HostedDetails hosted}) {
-    return HostedDependency(
+          HostedDetailsDto hosted}) {
+    return HostedDependencyDto(
       version: version,
       hosted: hosted,
     );
   }
 
 // ignore: unused_element
-  Dependency fromJson(Map<String, Object> json) {
-    return Dependency.fromJson(json);
+  DependencyDto fromJson(Map<String, Object> json) {
+    return DependencyDto.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $Dependency = _$DependencyTearOff();
+const $DependencyDto = _$DependencyDtoTearOff();
 
 /// @nodoc
-mixin _$Dependency {
+mixin _$DependencyDto {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required
@@ -108,7 +108,7 @@ mixin _$Dependency {
             @VersionConstraintConverter()
                 VersionConstraint version,
             @JsonKey(name: 'hosted')
-                HostedDetails hosted),
+                HostedDetailsDto hosted),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -126,48 +126,49 @@ mixin _$Dependency {
         @VersionConstraintConverter()
             VersionConstraint version,
         @JsonKey(name: 'hosted')
-            HostedDetails hosted),
+            HostedDetailsDto hosted),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependency value),
-    @required TResult git(GitDependency value),
-    @required TResult path(PathDependency value),
-    @required TResult hosted(HostedDependency value),
+    @required TResult sdk(SdkDependencyDto value),
+    @required TResult git(GitDependencyDto value),
+    @required TResult path(PathDependencyDto value),
+    @required TResult hosted(HostedDependencyDto value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependency value),
-    TResult git(GitDependency value),
-    TResult path(PathDependency value),
-    TResult hosted(HostedDependency value),
+    TResult sdk(SdkDependencyDto value),
+    TResult git(GitDependencyDto value),
+    TResult path(PathDependencyDto value),
+    TResult hosted(HostedDependencyDto value),
     @required TResult orElse(),
   });
   Map<String, dynamic> toJson();
 }
 
 /// @nodoc
-abstract class $DependencyCopyWith<$Res> {
-  factory $DependencyCopyWith(
-          Dependency value, $Res Function(Dependency) then) =
-      _$DependencyCopyWithImpl<$Res>;
+abstract class $DependencyDtoCopyWith<$Res> {
+  factory $DependencyDtoCopyWith(
+          DependencyDto value, $Res Function(DependencyDto) then) =
+      _$DependencyDtoCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DependencyCopyWithImpl<$Res> implements $DependencyCopyWith<$Res> {
-  _$DependencyCopyWithImpl(this._value, this._then);
+class _$DependencyDtoCopyWithImpl<$Res>
+    implements $DependencyDtoCopyWith<$Res> {
+  _$DependencyDtoCopyWithImpl(this._value, this._then);
 
-  final Dependency _value;
+  final DependencyDto _value;
   // ignore: unused_field
-  final $Res Function(Dependency) _then;
+  final $Res Function(DependencyDto) _then;
 }
 
 /// @nodoc
-abstract class $SdkDependencyCopyWith<$Res> {
-  factory $SdkDependencyCopyWith(
-          SdkDependency value, $Res Function(SdkDependency) then) =
-      _$SdkDependencyCopyWithImpl<$Res>;
+abstract class $SdkDependencyDtoCopyWith<$Res> {
+  factory $SdkDependencyDtoCopyWith(
+          SdkDependencyDto value, $Res Function(SdkDependencyDto) then) =
+      _$SdkDependencyDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'sdk')
           String sdk,
@@ -177,21 +178,22 @@ abstract class $SdkDependencyCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SdkDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
-    implements $SdkDependencyCopyWith<$Res> {
-  _$SdkDependencyCopyWithImpl(
-      SdkDependency _value, $Res Function(SdkDependency) _then)
-      : super(_value, (v) => _then(v as SdkDependency));
+class _$SdkDependencyDtoCopyWithImpl<$Res>
+    extends _$DependencyDtoCopyWithImpl<$Res>
+    implements $SdkDependencyDtoCopyWith<$Res> {
+  _$SdkDependencyDtoCopyWithImpl(
+      SdkDependencyDto _value, $Res Function(SdkDependencyDto) _then)
+      : super(_value, (v) => _then(v as SdkDependencyDto));
 
   @override
-  SdkDependency get _value => super._value as SdkDependency;
+  SdkDependencyDto get _value => super._value as SdkDependencyDto;
 
   @override
   $Res call({
     Object sdk = freezed,
     Object version = freezed,
   }) {
-    return _then(SdkDependency(
+    return _then(SdkDependencyDto(
       sdk: sdk == freezed ? _value.sdk : sdk as String,
       version:
           version == freezed ? _value.version : version as VersionConstraint,
@@ -202,14 +204,14 @@ class _$SdkDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$SdkDependency implements SdkDependency {
-  const _$SdkDependency(
+class _$SdkDependencyDto implements SdkDependencyDto {
+  const _$SdkDependencyDto(
       {@required @JsonKey(name: 'sdk') this.sdk,
       @JsonKey(name: 'version') @VersionConstraintConverter() this.version})
       : assert(sdk != null);
 
-  factory _$SdkDependency.fromJson(Map<String, dynamic> json) =>
-      _$_$SdkDependencyFromJson(json);
+  factory _$SdkDependencyDto.fromJson(Map<String, dynamic> json) =>
+      _$_$SdkDependencyDtoFromJson(json);
 
   @override
   @JsonKey(name: 'sdk')
@@ -221,13 +223,13 @@ class _$SdkDependency implements SdkDependency {
 
   @override
   String toString() {
-    return 'Dependency.sdk(sdk: $sdk, version: $version)';
+    return 'DependencyDto.sdk(sdk: $sdk, version: $version)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SdkDependency &&
+        (other is SdkDependencyDto &&
             (identical(other.sdk, sdk) ||
                 const DeepCollectionEquality().equals(other.sdk, sdk)) &&
             (identical(other.version, version) ||
@@ -242,8 +244,8 @@ class _$SdkDependency implements SdkDependency {
 
   @JsonKey(ignore: true)
   @override
-  $SdkDependencyCopyWith<SdkDependency> get copyWith =>
-      _$SdkDependencyCopyWithImpl<SdkDependency>(this, _$identity);
+  $SdkDependencyDtoCopyWith<SdkDependencyDto> get copyWith =>
+      _$SdkDependencyDtoCopyWithImpl<SdkDependencyDto>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -267,7 +269,7 @@ class _$SdkDependency implements SdkDependency {
             @VersionConstraintConverter()
                 VersionConstraint version,
             @JsonKey(name: 'hosted')
-                HostedDetails hosted),
+                HostedDetailsDto hosted),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -293,7 +295,7 @@ class _$SdkDependency implements SdkDependency {
         @VersionConstraintConverter()
             VersionConstraint version,
         @JsonKey(name: 'hosted')
-            HostedDetails hosted),
+            HostedDetailsDto hosted),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -306,10 +308,10 @@ class _$SdkDependency implements SdkDependency {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependency value),
-    @required TResult git(GitDependency value),
-    @required TResult path(PathDependency value),
-    @required TResult hosted(HostedDependency value),
+    @required TResult sdk(SdkDependencyDto value),
+    @required TResult git(GitDependencyDto value),
+    @required TResult path(PathDependencyDto value),
+    @required TResult hosted(HostedDependencyDto value),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -321,10 +323,10 @@ class _$SdkDependency implements SdkDependency {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependency value),
-    TResult git(GitDependency value),
-    TResult path(PathDependency value),
-    TResult hosted(HostedDependency value),
+    TResult sdk(SdkDependencyDto value),
+    TResult git(GitDependencyDto value),
+    TResult path(PathDependencyDto value),
+    TResult hosted(HostedDependencyDto value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -336,21 +338,21 @@ class _$SdkDependency implements SdkDependency {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$SdkDependencyToJson(this)..['runtimeType'] = 'sdk';
+    return _$_$SdkDependencyDtoToJson(this)..['runtimeType'] = 'sdk';
   }
 }
 
-abstract class SdkDependency implements Dependency {
-  const factory SdkDependency(
+abstract class SdkDependencyDto implements DependencyDto {
+  const factory SdkDependencyDto(
       {@required
       @JsonKey(name: 'sdk')
           String sdk,
       @JsonKey(name: 'version')
       @VersionConstraintConverter()
-          VersionConstraint version}) = _$SdkDependency;
+          VersionConstraint version}) = _$SdkDependencyDto;
 
-  factory SdkDependency.fromJson(Map<String, dynamic> json) =
-      _$SdkDependency.fromJson;
+  factory SdkDependencyDto.fromJson(Map<String, dynamic> json) =
+      _$SdkDependencyDto.fromJson;
 
   @JsonKey(name: 'sdk')
   String get sdk;
@@ -358,14 +360,14 @@ abstract class SdkDependency implements Dependency {
   @VersionConstraintConverter()
   VersionConstraint get version;
   @JsonKey(ignore: true)
-  $SdkDependencyCopyWith<SdkDependency> get copyWith;
+  $SdkDependencyDtoCopyWith<SdkDependencyDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $GitDependencyCopyWith<$Res> {
-  factory $GitDependencyCopyWith(
-          GitDependency value, $Res Function(GitDependency) then) =
-      _$GitDependencyCopyWithImpl<$Res>;
+abstract class $GitDependencyDtoCopyWith<$Res> {
+  factory $GitDependencyDtoCopyWith(
+          GitDependencyDto value, $Res Function(GitDependencyDto) then) =
+      _$GitDependencyDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'url') String url,
       @JsonKey(name: 'ref') String ref,
@@ -373,14 +375,15 @@ abstract class $GitDependencyCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GitDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
-    implements $GitDependencyCopyWith<$Res> {
-  _$GitDependencyCopyWithImpl(
-      GitDependency _value, $Res Function(GitDependency) _then)
-      : super(_value, (v) => _then(v as GitDependency));
+class _$GitDependencyDtoCopyWithImpl<$Res>
+    extends _$DependencyDtoCopyWithImpl<$Res>
+    implements $GitDependencyDtoCopyWith<$Res> {
+  _$GitDependencyDtoCopyWithImpl(
+      GitDependencyDto _value, $Res Function(GitDependencyDto) _then)
+      : super(_value, (v) => _then(v as GitDependencyDto));
 
   @override
-  GitDependency get _value => super._value as GitDependency;
+  GitDependencyDto get _value => super._value as GitDependencyDto;
 
   @override
   $Res call({
@@ -388,7 +391,7 @@ class _$GitDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
     Object ref = freezed,
     Object path = freezed,
   }) {
-    return _then(GitDependency(
+    return _then(GitDependencyDto(
       url: url == freezed ? _value.url : url as String,
       ref: ref == freezed ? _value.ref : ref as String,
       path: path == freezed ? _value.path : path as String,
@@ -399,15 +402,15 @@ class _$GitDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$GitDependency implements GitDependency {
-  const _$GitDependency(
+class _$GitDependencyDto implements GitDependencyDto {
+  const _$GitDependencyDto(
       {@required @JsonKey(name: 'url') this.url,
       @JsonKey(name: 'ref') this.ref,
       @JsonKey(name: 'path') this.path})
       : assert(url != null);
 
-  factory _$GitDependency.fromJson(Map<String, dynamic> json) =>
-      _$_$GitDependencyFromJson(json);
+  factory _$GitDependencyDto.fromJson(Map<String, dynamic> json) =>
+      _$_$GitDependencyDtoFromJson(json);
 
   @override
   @JsonKey(name: 'url')
@@ -421,13 +424,13 @@ class _$GitDependency implements GitDependency {
 
   @override
   String toString() {
-    return 'Dependency.git(url: $url, ref: $ref, path: $path)';
+    return 'DependencyDto.git(url: $url, ref: $ref, path: $path)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is GitDependency &&
+        (other is GitDependencyDto &&
             (identical(other.url, url) ||
                 const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.ref, ref) ||
@@ -445,8 +448,8 @@ class _$GitDependency implements GitDependency {
 
   @JsonKey(ignore: true)
   @override
-  $GitDependencyCopyWith<GitDependency> get copyWith =>
-      _$GitDependencyCopyWithImpl<GitDependency>(this, _$identity);
+  $GitDependencyDtoCopyWith<GitDependencyDto> get copyWith =>
+      _$GitDependencyDtoCopyWithImpl<GitDependencyDto>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -470,7 +473,7 @@ class _$GitDependency implements GitDependency {
             @VersionConstraintConverter()
                 VersionConstraint version,
             @JsonKey(name: 'hosted')
-                HostedDetails hosted),
+                HostedDetailsDto hosted),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -496,7 +499,7 @@ class _$GitDependency implements GitDependency {
         @VersionConstraintConverter()
             VersionConstraint version,
         @JsonKey(name: 'hosted')
-            HostedDetails hosted),
+            HostedDetailsDto hosted),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -509,10 +512,10 @@ class _$GitDependency implements GitDependency {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependency value),
-    @required TResult git(GitDependency value),
-    @required TResult path(PathDependency value),
-    @required TResult hosted(HostedDependency value),
+    @required TResult sdk(SdkDependencyDto value),
+    @required TResult git(GitDependencyDto value),
+    @required TResult path(PathDependencyDto value),
+    @required TResult hosted(HostedDependencyDto value),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -524,10 +527,10 @@ class _$GitDependency implements GitDependency {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependency value),
-    TResult git(GitDependency value),
-    TResult path(PathDependency value),
-    TResult hosted(HostedDependency value),
+    TResult sdk(SdkDependencyDto value),
+    TResult git(GitDependencyDto value),
+    TResult path(PathDependencyDto value),
+    TResult hosted(HostedDependencyDto value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -539,18 +542,18 @@ class _$GitDependency implements GitDependency {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$GitDependencyToJson(this)..['runtimeType'] = 'git';
+    return _$_$GitDependencyDtoToJson(this)..['runtimeType'] = 'git';
   }
 }
 
-abstract class GitDependency implements Dependency {
-  const factory GitDependency(
+abstract class GitDependencyDto implements DependencyDto {
+  const factory GitDependencyDto(
       {@required @JsonKey(name: 'url') String url,
       @JsonKey(name: 'ref') String ref,
-      @JsonKey(name: 'path') String path}) = _$GitDependency;
+      @JsonKey(name: 'path') String path}) = _$GitDependencyDto;
 
-  factory GitDependency.fromJson(Map<String, dynamic> json) =
-      _$GitDependency.fromJson;
+  factory GitDependencyDto.fromJson(Map<String, dynamic> json) =
+      _$GitDependencyDto.fromJson;
 
   @JsonKey(name: 'url')
   String get url;
@@ -559,32 +562,33 @@ abstract class GitDependency implements Dependency {
   @JsonKey(name: 'path')
   String get path;
   @JsonKey(ignore: true)
-  $GitDependencyCopyWith<GitDependency> get copyWith;
+  $GitDependencyDtoCopyWith<GitDependencyDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $PathDependencyCopyWith<$Res> {
-  factory $PathDependencyCopyWith(
-          PathDependency value, $Res Function(PathDependency) then) =
-      _$PathDependencyCopyWithImpl<$Res>;
+abstract class $PathDependencyDtoCopyWith<$Res> {
+  factory $PathDependencyDtoCopyWith(
+          PathDependencyDto value, $Res Function(PathDependencyDto) then) =
+      _$PathDependencyDtoCopyWithImpl<$Res>;
   $Res call({@JsonKey(name: 'path') String path});
 }
 
 /// @nodoc
-class _$PathDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
-    implements $PathDependencyCopyWith<$Res> {
-  _$PathDependencyCopyWithImpl(
-      PathDependency _value, $Res Function(PathDependency) _then)
-      : super(_value, (v) => _then(v as PathDependency));
+class _$PathDependencyDtoCopyWithImpl<$Res>
+    extends _$DependencyDtoCopyWithImpl<$Res>
+    implements $PathDependencyDtoCopyWith<$Res> {
+  _$PathDependencyDtoCopyWithImpl(
+      PathDependencyDto _value, $Res Function(PathDependencyDto) _then)
+      : super(_value, (v) => _then(v as PathDependencyDto));
 
   @override
-  PathDependency get _value => super._value as PathDependency;
+  PathDependencyDto get _value => super._value as PathDependencyDto;
 
   @override
   $Res call({
     Object path = freezed,
   }) {
-    return _then(PathDependency(
+    return _then(PathDependencyDto(
       path: path == freezed ? _value.path : path as String,
     ));
   }
@@ -593,12 +597,12 @@ class _$PathDependencyCopyWithImpl<$Res> extends _$DependencyCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$PathDependency implements PathDependency {
-  const _$PathDependency({@required @JsonKey(name: 'path') this.path})
+class _$PathDependencyDto implements PathDependencyDto {
+  const _$PathDependencyDto({@required @JsonKey(name: 'path') this.path})
       : assert(path != null);
 
-  factory _$PathDependency.fromJson(Map<String, dynamic> json) =>
-      _$_$PathDependencyFromJson(json);
+  factory _$PathDependencyDto.fromJson(Map<String, dynamic> json) =>
+      _$_$PathDependencyDtoFromJson(json);
 
   @override
   @JsonKey(name: 'path')
@@ -606,13 +610,13 @@ class _$PathDependency implements PathDependency {
 
   @override
   String toString() {
-    return 'Dependency.path(path: $path)';
+    return 'DependencyDto.path(path: $path)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PathDependency &&
+        (other is PathDependencyDto &&
             (identical(other.path, path) ||
                 const DeepCollectionEquality().equals(other.path, path)));
   }
@@ -623,8 +627,8 @@ class _$PathDependency implements PathDependency {
 
   @JsonKey(ignore: true)
   @override
-  $PathDependencyCopyWith<PathDependency> get copyWith =>
-      _$PathDependencyCopyWithImpl<PathDependency>(this, _$identity);
+  $PathDependencyDtoCopyWith<PathDependencyDto> get copyWith =>
+      _$PathDependencyDtoCopyWithImpl<PathDependencyDto>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -648,7 +652,7 @@ class _$PathDependency implements PathDependency {
             @VersionConstraintConverter()
                 VersionConstraint version,
             @JsonKey(name: 'hosted')
-                HostedDetails hosted),
+                HostedDetailsDto hosted),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -674,7 +678,7 @@ class _$PathDependency implements PathDependency {
         @VersionConstraintConverter()
             VersionConstraint version,
         @JsonKey(name: 'hosted')
-            HostedDetails hosted),
+            HostedDetailsDto hosted),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -687,10 +691,10 @@ class _$PathDependency implements PathDependency {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependency value),
-    @required TResult git(GitDependency value),
-    @required TResult path(PathDependency value),
-    @required TResult hosted(HostedDependency value),
+    @required TResult sdk(SdkDependencyDto value),
+    @required TResult git(GitDependencyDto value),
+    @required TResult path(PathDependencyDto value),
+    @required TResult hosted(HostedDependencyDto value),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -702,10 +706,10 @@ class _$PathDependency implements PathDependency {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependency value),
-    TResult git(GitDependency value),
-    TResult path(PathDependency value),
-    TResult hosted(HostedDependency value),
+    TResult sdk(SdkDependencyDto value),
+    TResult git(GitDependencyDto value),
+    TResult path(PathDependencyDto value),
+    TResult hosted(HostedDependencyDto value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -717,67 +721,67 @@ class _$PathDependency implements PathDependency {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$PathDependencyToJson(this)..['runtimeType'] = 'path';
+    return _$_$PathDependencyDtoToJson(this)..['runtimeType'] = 'path';
   }
 }
 
-abstract class PathDependency implements Dependency {
-  const factory PathDependency({@required @JsonKey(name: 'path') String path}) =
-      _$PathDependency;
+abstract class PathDependencyDto implements DependencyDto {
+  const factory PathDependencyDto(
+      {@required @JsonKey(name: 'path') String path}) = _$PathDependencyDto;
 
-  factory PathDependency.fromJson(Map<String, dynamic> json) =
-      _$PathDependency.fromJson;
+  factory PathDependencyDto.fromJson(Map<String, dynamic> json) =
+      _$PathDependencyDto.fromJson;
 
   @JsonKey(name: 'path')
   String get path;
   @JsonKey(ignore: true)
-  $PathDependencyCopyWith<PathDependency> get copyWith;
+  $PathDependencyDtoCopyWith<PathDependencyDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $HostedDependencyCopyWith<$Res> {
-  factory $HostedDependencyCopyWith(
-          HostedDependency value, $Res Function(HostedDependency) then) =
-      _$HostedDependencyCopyWithImpl<$Res>;
+abstract class $HostedDependencyDtoCopyWith<$Res> {
+  factory $HostedDependencyDtoCopyWith(
+          HostedDependencyDto value, $Res Function(HostedDependencyDto) then) =
+      _$HostedDependencyDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'version')
       @VersionConstraintConverter()
           VersionConstraint version,
       @JsonKey(name: 'hosted')
-          HostedDetails hosted});
+          HostedDetailsDto hosted});
 
-  $HostedDetailsCopyWith<$Res> get hosted;
+  $HostedDetailsDtoCopyWith<$Res> get hosted;
 }
 
 /// @nodoc
-class _$HostedDependencyCopyWithImpl<$Res>
-    extends _$DependencyCopyWithImpl<$Res>
-    implements $HostedDependencyCopyWith<$Res> {
-  _$HostedDependencyCopyWithImpl(
-      HostedDependency _value, $Res Function(HostedDependency) _then)
-      : super(_value, (v) => _then(v as HostedDependency));
+class _$HostedDependencyDtoCopyWithImpl<$Res>
+    extends _$DependencyDtoCopyWithImpl<$Res>
+    implements $HostedDependencyDtoCopyWith<$Res> {
+  _$HostedDependencyDtoCopyWithImpl(
+      HostedDependencyDto _value, $Res Function(HostedDependencyDto) _then)
+      : super(_value, (v) => _then(v as HostedDependencyDto));
 
   @override
-  HostedDependency get _value => super._value as HostedDependency;
+  HostedDependencyDto get _value => super._value as HostedDependencyDto;
 
   @override
   $Res call({
     Object version = freezed,
     Object hosted = freezed,
   }) {
-    return _then(HostedDependency(
+    return _then(HostedDependencyDto(
       version:
           version == freezed ? _value.version : version as VersionConstraint,
-      hosted: hosted == freezed ? _value.hosted : hosted as HostedDetails,
+      hosted: hosted == freezed ? _value.hosted : hosted as HostedDetailsDto,
     ));
   }
 
   @override
-  $HostedDetailsCopyWith<$Res> get hosted {
+  $HostedDetailsDtoCopyWith<$Res> get hosted {
     if (_value.hosted == null) {
       return null;
     }
-    return $HostedDetailsCopyWith<$Res>(_value.hosted, (value) {
+    return $HostedDetailsDtoCopyWith<$Res>(_value.hosted, (value) {
       return _then(_value.copyWith(hosted: value));
     });
   }
@@ -786,8 +790,8 @@ class _$HostedDependencyCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$HostedDependency implements HostedDependency {
-  const _$HostedDependency(
+class _$HostedDependencyDto implements HostedDependencyDto {
+  const _$HostedDependencyDto(
       {@required
       @JsonKey(name: 'version')
       @VersionConstraintConverter()
@@ -796,8 +800,8 @@ class _$HostedDependency implements HostedDependency {
           this.hosted})
       : assert(version != null);
 
-  factory _$HostedDependency.fromJson(Map<String, dynamic> json) =>
-      _$_$HostedDependencyFromJson(json);
+  factory _$HostedDependencyDto.fromJson(Map<String, dynamic> json) =>
+      _$_$HostedDependencyDtoFromJson(json);
 
   @override
   @JsonKey(name: 'version')
@@ -805,17 +809,17 @@ class _$HostedDependency implements HostedDependency {
   final VersionConstraint version;
   @override
   @JsonKey(name: 'hosted')
-  final HostedDetails hosted;
+  final HostedDetailsDto hosted;
 
   @override
   String toString() {
-    return 'Dependency.hosted(version: $version, hosted: $hosted)';
+    return 'DependencyDto.hosted(version: $version, hosted: $hosted)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HostedDependency &&
+        (other is HostedDependencyDto &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
@@ -831,8 +835,8 @@ class _$HostedDependency implements HostedDependency {
 
   @JsonKey(ignore: true)
   @override
-  $HostedDependencyCopyWith<HostedDependency> get copyWith =>
-      _$HostedDependencyCopyWithImpl<HostedDependency>(this, _$identity);
+  $HostedDependencyDtoCopyWith<HostedDependencyDto> get copyWith =>
+      _$HostedDependencyDtoCopyWithImpl<HostedDependencyDto>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -856,7 +860,7 @@ class _$HostedDependency implements HostedDependency {
             @VersionConstraintConverter()
                 VersionConstraint version,
             @JsonKey(name: 'hosted')
-                HostedDetails hosted),
+                HostedDetailsDto hosted),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -882,7 +886,7 @@ class _$HostedDependency implements HostedDependency {
         @VersionConstraintConverter()
             VersionConstraint version,
         @JsonKey(name: 'hosted')
-            HostedDetails hosted),
+            HostedDetailsDto hosted),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -895,10 +899,10 @@ class _$HostedDependency implements HostedDependency {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependency value),
-    @required TResult git(GitDependency value),
-    @required TResult path(PathDependency value),
-    @required TResult hosted(HostedDependency value),
+    @required TResult sdk(SdkDependencyDto value),
+    @required TResult git(GitDependencyDto value),
+    @required TResult path(PathDependencyDto value),
+    @required TResult hosted(HostedDependencyDto value),
   }) {
     assert(sdk != null);
     assert(git != null);
@@ -910,10 +914,10 @@ class _$HostedDependency implements HostedDependency {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependency value),
-    TResult git(GitDependency value),
-    TResult path(PathDependency value),
-    TResult hosted(HostedDependency value),
+    TResult sdk(SdkDependencyDto value),
+    TResult git(GitDependencyDto value),
+    TResult path(PathDependencyDto value),
+    TResult hosted(HostedDependencyDto value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -925,27 +929,27 @@ class _$HostedDependency implements HostedDependency {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$HostedDependencyToJson(this)..['runtimeType'] = 'hosted';
+    return _$_$HostedDependencyDtoToJson(this)..['runtimeType'] = 'hosted';
   }
 }
 
-abstract class HostedDependency implements Dependency {
-  const factory HostedDependency(
+abstract class HostedDependencyDto implements DependencyDto {
+  const factory HostedDependencyDto(
       {@required
       @JsonKey(name: 'version')
       @VersionConstraintConverter()
           VersionConstraint version,
       @JsonKey(name: 'hosted')
-          HostedDetails hosted}) = _$HostedDependency;
+          HostedDetailsDto hosted}) = _$HostedDependencyDto;
 
-  factory HostedDependency.fromJson(Map<String, dynamic> json) =
-      _$HostedDependency.fromJson;
+  factory HostedDependencyDto.fromJson(Map<String, dynamic> json) =
+      _$HostedDependencyDto.fromJson;
 
   @JsonKey(name: 'version')
   @VersionConstraintConverter()
   VersionConstraint get version;
   @JsonKey(name: 'hosted')
-  HostedDetails get hosted;
+  HostedDetailsDto get hosted;
   @JsonKey(ignore: true)
-  $HostedDependencyCopyWith<HostedDependency> get copyWith;
+  $HostedDependencyDtoCopyWith<HostedDependencyDto> get copyWith;
 }

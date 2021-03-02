@@ -1,29 +1,29 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'package_version.dart';
+part of 'package_version_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-PackageVersion _$PackageVersionFromJson(Map<String, dynamic> json) {
-  return _PackageVersion.fromJson(json);
+PackageVersionDto _$PackageVersionDtoFromJson(Map<String, dynamic> json) {
+  return _PackageVersionDto.fromJson(json);
 }
 
 /// @nodoc
-class _$PackageVersionTearOff {
-  const _$PackageVersionTearOff();
+class _$PackageVersionDtoTearOff {
+  const _$PackageVersionDtoTearOff();
 
 // ignore: unused_element
-  _PackageVersion call(
+  _PackageVersionDto call(
       {@required @JsonKey(name: 'version') @VersionConverter() Version version,
-      @required @JsonKey(name: 'pubspec') PubSpec pubSpec,
+      @required @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
       @required @JsonKey(name: 'archive_url') String archiveUrl,
       @JsonKey(name: 'package_url') String packageUrl,
       @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt}) {
-    return _PackageVersion(
+    return _PackageVersionDto(
       version: version,
       pubSpec: pubSpec,
       archiveUrl: archiveUrl,
@@ -33,22 +33,22 @@ class _$PackageVersionTearOff {
   }
 
 // ignore: unused_element
-  PackageVersion fromJson(Map<String, Object> json) {
-    return PackageVersion.fromJson(json);
+  PackageVersionDto fromJson(Map<String, Object> json) {
+    return PackageVersionDto.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $PackageVersion = _$PackageVersionTearOff();
+const $PackageVersionDto = _$PackageVersionDtoTearOff();
 
 /// @nodoc
-mixin _$PackageVersion {
+mixin _$PackageVersionDto {
   @JsonKey(name: 'version')
   @VersionConverter()
   Version get version;
   @JsonKey(name: 'pubspec')
-  PubSpec get pubSpec;
+  PubSpecDto get pubSpec;
   @JsonKey(name: 'archive_url')
   String get archiveUrl;
   @JsonKey(name: 'package_url')
@@ -59,32 +59,32 @@ mixin _$PackageVersion {
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
-  $PackageVersionCopyWith<PackageVersion> get copyWith;
+  $PackageVersionDtoCopyWith<PackageVersionDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $PackageVersionCopyWith<$Res> {
-  factory $PackageVersionCopyWith(
-          PackageVersion value, $Res Function(PackageVersion) then) =
-      _$PackageVersionCopyWithImpl<$Res>;
+abstract class $PackageVersionDtoCopyWith<$Res> {
+  factory $PackageVersionDtoCopyWith(
+          PackageVersionDto value, $Res Function(PackageVersionDto) then) =
+      _$PackageVersionDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'version') @VersionConverter() Version version,
-      @JsonKey(name: 'pubspec') PubSpec pubSpec,
+      @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
       @JsonKey(name: 'archive_url') String archiveUrl,
       @JsonKey(name: 'package_url') String packageUrl,
       @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt});
 
-  $PubSpecCopyWith<$Res> get pubSpec;
+  $PubSpecDtoCopyWith<$Res> get pubSpec;
 }
 
 /// @nodoc
-class _$PackageVersionCopyWithImpl<$Res>
-    implements $PackageVersionCopyWith<$Res> {
-  _$PackageVersionCopyWithImpl(this._value, this._then);
+class _$PackageVersionDtoCopyWithImpl<$Res>
+    implements $PackageVersionDtoCopyWith<$Res> {
+  _$PackageVersionDtoCopyWithImpl(this._value, this._then);
 
-  final PackageVersion _value;
+  final PackageVersionDto _value;
   // ignore: unused_field
-  final $Res Function(PackageVersion) _then;
+  final $Res Function(PackageVersionDto) _then;
 
   @override
   $Res call({
@@ -96,7 +96,7 @@ class _$PackageVersionCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       version: version == freezed ? _value.version : version as Version,
-      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpec,
+      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecDto,
       archiveUrl:
           archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
       packageUrl:
@@ -107,44 +107,44 @@ class _$PackageVersionCopyWithImpl<$Res>
   }
 
   @override
-  $PubSpecCopyWith<$Res> get pubSpec {
+  $PubSpecDtoCopyWith<$Res> get pubSpec {
     if (_value.pubSpec == null) {
       return null;
     }
-    return $PubSpecCopyWith<$Res>(_value.pubSpec, (value) {
+    return $PubSpecDtoCopyWith<$Res>(_value.pubSpec, (value) {
       return _then(_value.copyWith(pubSpec: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$PackageVersionCopyWith<$Res>
-    implements $PackageVersionCopyWith<$Res> {
-  factory _$PackageVersionCopyWith(
-          _PackageVersion value, $Res Function(_PackageVersion) then) =
-      __$PackageVersionCopyWithImpl<$Res>;
+abstract class _$PackageVersionDtoCopyWith<$Res>
+    implements $PackageVersionDtoCopyWith<$Res> {
+  factory _$PackageVersionDtoCopyWith(
+          _PackageVersionDto value, $Res Function(_PackageVersionDto) then) =
+      __$PackageVersionDtoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'version') @VersionConverter() Version version,
-      @JsonKey(name: 'pubspec') PubSpec pubSpec,
+      @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
       @JsonKey(name: 'archive_url') String archiveUrl,
       @JsonKey(name: 'package_url') String packageUrl,
       @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt});
 
   @override
-  $PubSpecCopyWith<$Res> get pubSpec;
+  $PubSpecDtoCopyWith<$Res> get pubSpec;
 }
 
 /// @nodoc
-class __$PackageVersionCopyWithImpl<$Res>
-    extends _$PackageVersionCopyWithImpl<$Res>
-    implements _$PackageVersionCopyWith<$Res> {
-  __$PackageVersionCopyWithImpl(
-      _PackageVersion _value, $Res Function(_PackageVersion) _then)
-      : super(_value, (v) => _then(v as _PackageVersion));
+class __$PackageVersionDtoCopyWithImpl<$Res>
+    extends _$PackageVersionDtoCopyWithImpl<$Res>
+    implements _$PackageVersionDtoCopyWith<$Res> {
+  __$PackageVersionDtoCopyWithImpl(
+      _PackageVersionDto _value, $Res Function(_PackageVersionDto) _then)
+      : super(_value, (v) => _then(v as _PackageVersionDto));
 
   @override
-  _PackageVersion get _value => super._value as _PackageVersion;
+  _PackageVersionDto get _value => super._value as _PackageVersionDto;
 
   @override
   $Res call({
@@ -154,9 +154,9 @@ class __$PackageVersionCopyWithImpl<$Res>
     Object packageUrl = freezed,
     Object publishedAt = freezed,
   }) {
-    return _then(_PackageVersion(
+    return _then(_PackageVersionDto(
       version: version == freezed ? _value.version : version as Version,
-      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpec,
+      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecDto,
       archiveUrl:
           archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
       packageUrl:
@@ -170,8 +170,8 @@ class __$PackageVersionCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_PackageVersion implements _PackageVersion {
-  const _$_PackageVersion(
+class _$_PackageVersionDto implements _PackageVersionDto {
+  const _$_PackageVersionDto(
       {@required @JsonKey(name: 'version') @VersionConverter() this.version,
       @required @JsonKey(name: 'pubspec') this.pubSpec,
       @required @JsonKey(name: 'archive_url') this.archiveUrl,
@@ -181,8 +181,8 @@ class _$_PackageVersion implements _PackageVersion {
         assert(pubSpec != null),
         assert(archiveUrl != null);
 
-  factory _$_PackageVersion.fromJson(Map<String, dynamic> json) =>
-      _$_$_PackageVersionFromJson(json);
+  factory _$_PackageVersionDto.fromJson(Map<String, dynamic> json) =>
+      _$_$_PackageVersionDtoFromJson(json);
 
   @override
   @JsonKey(name: 'version')
@@ -190,7 +190,7 @@ class _$_PackageVersion implements _PackageVersion {
   final Version version;
   @override
   @JsonKey(name: 'pubspec')
-  final PubSpec pubSpec;
+  final PubSpecDto pubSpec;
   @override
   @JsonKey(name: 'archive_url')
   final String archiveUrl;
@@ -204,13 +204,13 @@ class _$_PackageVersion implements _PackageVersion {
 
   @override
   String toString() {
-    return 'PackageVersion(version: $version, pubSpec: $pubSpec, archiveUrl: $archiveUrl, packageUrl: $packageUrl, publishedAt: $publishedAt)';
+    return 'PackageVersionDto(version: $version, pubSpec: $pubSpec, archiveUrl: $archiveUrl, packageUrl: $packageUrl, publishedAt: $publishedAt)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PackageVersion &&
+        (other is _PackageVersionDto &&
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
@@ -239,24 +239,24 @@ class _$_PackageVersion implements _PackageVersion {
 
   @JsonKey(ignore: true)
   @override
-  _$PackageVersionCopyWith<_PackageVersion> get copyWith =>
-      __$PackageVersionCopyWithImpl<_PackageVersion>(this, _$identity);
+  _$PackageVersionDtoCopyWith<_PackageVersionDto> get copyWith =>
+      __$PackageVersionDtoCopyWithImpl<_PackageVersionDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PackageVersionToJson(this);
+    return _$_$_PackageVersionDtoToJson(this);
   }
 }
 
-abstract class _PackageVersion implements PackageVersion {
-  const factory _PackageVersion(
+abstract class _PackageVersionDto implements PackageVersionDto {
+  const factory _PackageVersionDto(
       {@required
       @JsonKey(name: 'version')
       @VersionConverter()
           Version version,
       @required
       @JsonKey(name: 'pubspec')
-          PubSpec pubSpec,
+          PubSpecDto pubSpec,
       @required
       @JsonKey(name: 'archive_url')
           String archiveUrl,
@@ -264,10 +264,10 @@ abstract class _PackageVersion implements PackageVersion {
           String packageUrl,
       @JsonKey(name: 'published')
       @DateTimeConverter()
-          DateTime publishedAt}) = _$_PackageVersion;
+          DateTime publishedAt}) = _$_PackageVersionDto;
 
-  factory _PackageVersion.fromJson(Map<String, dynamic> json) =
-      _$_PackageVersion.fromJson;
+  factory _PackageVersionDto.fromJson(Map<String, dynamic> json) =
+      _$_PackageVersionDto.fromJson;
 
   @override
   @JsonKey(name: 'version')
@@ -275,7 +275,7 @@ abstract class _PackageVersion implements PackageVersion {
   Version get version;
   @override
   @JsonKey(name: 'pubspec')
-  PubSpec get pubSpec;
+  PubSpecDto get pubSpec;
   @override
   @JsonKey(name: 'archive_url')
   String get archiveUrl;
@@ -288,5 +288,5 @@ abstract class _PackageVersion implements PackageVersion {
   DateTime get publishedAt;
   @override
   @JsonKey(ignore: true)
-  _$PackageVersionCopyWith<_PackageVersion> get copyWith;
+  _$PackageVersionDtoCopyWith<_PackageVersionDto> get copyWith;
 }

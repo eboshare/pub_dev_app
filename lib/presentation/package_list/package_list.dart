@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 
 import 'package:pub_dev_app/config/injection.dart';
-import 'package:pub_dev_app/infrastructure/pub_api/dtos/package/package.dart';
+import 'package:pub_dev_app/infrastructure/pub_api/dtos/package_dto/package_dto.dart';
 
 /// This function is required only for testing
-Future<Package> fetchPackage() async {
+Future<PackageDto> fetchPackage() async {
   final response = await getIt<Dio>().get('https://pub.dev/api/packages/bloc');
-  return Package.fromJson(response.data);
+  return PackageDto.fromJson(response.data);
 }
 
 class PackageList extends StatefulWidget {
@@ -16,7 +16,7 @@ class PackageList extends StatefulWidget {
 }
 
 class _PackageListState extends State<PackageList> {
-  Future<Package> _future;
+  Future<PackageDto> _future;
 
   @override
   void initState() {
@@ -29,7 +29,7 @@ class _PackageListState extends State<PackageList> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: FutureBuilder<Package>(
+          child: FutureBuilder<PackageDto>(
             future: _future,
             builder: (context, snapshot) {
               if (!snapshot.hasData) {

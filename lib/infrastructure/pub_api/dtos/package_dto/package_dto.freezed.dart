@@ -1,34 +1,34 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'package.dart';
+part of 'package_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-Package _$PackageFromJson(Map<String, dynamic> json) {
-  return _Package.fromJson(json);
+PackageDto _$PackageDtoFromJson(Map<String, dynamic> json) {
+  return _PackageDto.fromJson(json);
 }
 
 /// @nodoc
-class _$PackageTearOff {
-  const _$PackageTearOff();
+class _$PackageDtoTearOff {
+  const _$PackageDtoTearOff();
 
 // ignore: unused_element
-  _Package call(
+  _PackageDto call(
       {@required
       @JsonKey(name: 'name')
           String name,
       @required
       @JsonKey(name: 'latest')
-          PackageVersion latest,
+          PackageVersionDto latest,
       @required
       @JsonKey(name: 'versions')
       @VersionsConverter()
-          BuiltList<PackageVersion> versions}) {
-    return _Package(
+          BuiltList<PackageVersionDto> versions}) {
+    return _PackageDto(
       name: name,
       latest: latest,
       versions: versions,
@@ -36,53 +36,54 @@ class _$PackageTearOff {
   }
 
 // ignore: unused_element
-  Package fromJson(Map<String, Object> json) {
-    return Package.fromJson(json);
+  PackageDto fromJson(Map<String, Object> json) {
+    return PackageDto.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $Package = _$PackageTearOff();
+const $PackageDto = _$PackageDtoTearOff();
 
 /// @nodoc
-mixin _$Package {
+mixin _$PackageDto {
   @JsonKey(name: 'name')
   String get name;
   @JsonKey(name: 'latest')
-  PackageVersion get latest;
+  PackageVersionDto get latest;
   @JsonKey(name: 'versions')
   @VersionsConverter()
-  BuiltList<PackageVersion> get versions;
+  BuiltList<PackageVersionDto> get versions;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
-  $PackageCopyWith<Package> get copyWith;
+  $PackageDtoCopyWith<PackageDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $PackageCopyWith<$Res> {
-  factory $PackageCopyWith(Package value, $Res Function(Package) then) =
-      _$PackageCopyWithImpl<$Res>;
+abstract class $PackageDtoCopyWith<$Res> {
+  factory $PackageDtoCopyWith(
+          PackageDto value, $Res Function(PackageDto) then) =
+      _$PackageDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'name')
           String name,
       @JsonKey(name: 'latest')
-          PackageVersion latest,
+          PackageVersionDto latest,
       @JsonKey(name: 'versions')
       @VersionsConverter()
-          BuiltList<PackageVersion> versions});
+          BuiltList<PackageVersionDto> versions});
 
-  $PackageVersionCopyWith<$Res> get latest;
+  $PackageVersionDtoCopyWith<$Res> get latest;
 }
 
 /// @nodoc
-class _$PackageCopyWithImpl<$Res> implements $PackageCopyWith<$Res> {
-  _$PackageCopyWithImpl(this._value, this._then);
+class _$PackageDtoCopyWithImpl<$Res> implements $PackageDtoCopyWith<$Res> {
+  _$PackageDtoCopyWithImpl(this._value, this._then);
 
-  final Package _value;
+  final PackageDto _value;
   // ignore: unused_field
-  final $Res Function(Package) _then;
+  final $Res Function(PackageDto) _then;
 
   @override
   $Res call({
@@ -92,50 +93,52 @@ class _$PackageCopyWithImpl<$Res> implements $PackageCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
-      latest: latest == freezed ? _value.latest : latest as PackageVersion,
+      latest: latest == freezed ? _value.latest : latest as PackageVersionDto,
       versions: versions == freezed
           ? _value.versions
-          : versions as BuiltList<PackageVersion>,
+          : versions as BuiltList<PackageVersionDto>,
     ));
   }
 
   @override
-  $PackageVersionCopyWith<$Res> get latest {
+  $PackageVersionDtoCopyWith<$Res> get latest {
     if (_value.latest == null) {
       return null;
     }
-    return $PackageVersionCopyWith<$Res>(_value.latest, (value) {
+    return $PackageVersionDtoCopyWith<$Res>(_value.latest, (value) {
       return _then(_value.copyWith(latest: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$PackageCopyWith<$Res> implements $PackageCopyWith<$Res> {
-  factory _$PackageCopyWith(_Package value, $Res Function(_Package) then) =
-      __$PackageCopyWithImpl<$Res>;
+abstract class _$PackageDtoCopyWith<$Res> implements $PackageDtoCopyWith<$Res> {
+  factory _$PackageDtoCopyWith(
+          _PackageDto value, $Res Function(_PackageDto) then) =
+      __$PackageDtoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'name')
           String name,
       @JsonKey(name: 'latest')
-          PackageVersion latest,
+          PackageVersionDto latest,
       @JsonKey(name: 'versions')
       @VersionsConverter()
-          BuiltList<PackageVersion> versions});
+          BuiltList<PackageVersionDto> versions});
 
   @override
-  $PackageVersionCopyWith<$Res> get latest;
+  $PackageVersionDtoCopyWith<$Res> get latest;
 }
 
 /// @nodoc
-class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
-    implements _$PackageCopyWith<$Res> {
-  __$PackageCopyWithImpl(_Package _value, $Res Function(_Package) _then)
-      : super(_value, (v) => _then(v as _Package));
+class __$PackageDtoCopyWithImpl<$Res> extends _$PackageDtoCopyWithImpl<$Res>
+    implements _$PackageDtoCopyWith<$Res> {
+  __$PackageDtoCopyWithImpl(
+      _PackageDto _value, $Res Function(_PackageDto) _then)
+      : super(_value, (v) => _then(v as _PackageDto));
 
   @override
-  _Package get _value => super._value as _Package;
+  _PackageDto get _value => super._value as _PackageDto;
 
   @override
   $Res call({
@@ -143,12 +146,12 @@ class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
     Object latest = freezed,
     Object versions = freezed,
   }) {
-    return _then(_Package(
+    return _then(_PackageDto(
       name: name == freezed ? _value.name : name as String,
-      latest: latest == freezed ? _value.latest : latest as PackageVersion,
+      latest: latest == freezed ? _value.latest : latest as PackageVersionDto,
       versions: versions == freezed
           ? _value.versions
-          : versions as BuiltList<PackageVersion>,
+          : versions as BuiltList<PackageVersionDto>,
     ));
   }
 }
@@ -156,8 +159,8 @@ class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_Package implements _Package {
-  const _$_Package(
+class _$_PackageDto implements _PackageDto {
+  const _$_PackageDto(
       {@required @JsonKey(name: 'name') this.name,
       @required @JsonKey(name: 'latest') this.latest,
       @required @JsonKey(name: 'versions') @VersionsConverter() this.versions})
@@ -165,29 +168,29 @@ class _$_Package implements _Package {
         assert(latest != null),
         assert(versions != null);
 
-  factory _$_Package.fromJson(Map<String, dynamic> json) =>
-      _$_$_PackageFromJson(json);
+  factory _$_PackageDto.fromJson(Map<String, dynamic> json) =>
+      _$_$_PackageDtoFromJson(json);
 
   @override
   @JsonKey(name: 'name')
   final String name;
   @override
   @JsonKey(name: 'latest')
-  final PackageVersion latest;
+  final PackageVersionDto latest;
   @override
   @JsonKey(name: 'versions')
   @VersionsConverter()
-  final BuiltList<PackageVersion> versions;
+  final BuiltList<PackageVersionDto> versions;
 
   @override
   String toString() {
-    return 'Package(name: $name, latest: $latest, versions: $versions)';
+    return 'PackageDto(name: $name, latest: $latest, versions: $versions)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Package &&
+        (other is _PackageDto &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.latest, latest) ||
@@ -206,41 +209,42 @@ class _$_Package implements _Package {
 
   @JsonKey(ignore: true)
   @override
-  _$PackageCopyWith<_Package> get copyWith =>
-      __$PackageCopyWithImpl<_Package>(this, _$identity);
+  _$PackageDtoCopyWith<_PackageDto> get copyWith =>
+      __$PackageDtoCopyWithImpl<_PackageDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PackageToJson(this);
+    return _$_$_PackageDtoToJson(this);
   }
 }
 
-abstract class _Package implements Package {
-  const factory _Package(
+abstract class _PackageDto implements PackageDto {
+  const factory _PackageDto(
       {@required
       @JsonKey(name: 'name')
           String name,
       @required
       @JsonKey(name: 'latest')
-          PackageVersion latest,
+          PackageVersionDto latest,
       @required
       @JsonKey(name: 'versions')
       @VersionsConverter()
-          BuiltList<PackageVersion> versions}) = _$_Package;
+          BuiltList<PackageVersionDto> versions}) = _$_PackageDto;
 
-  factory _Package.fromJson(Map<String, dynamic> json) = _$_Package.fromJson;
+  factory _PackageDto.fromJson(Map<String, dynamic> json) =
+      _$_PackageDto.fromJson;
 
   @override
   @JsonKey(name: 'name')
   String get name;
   @override
   @JsonKey(name: 'latest')
-  PackageVersion get latest;
+  PackageVersionDto get latest;
   @override
   @JsonKey(name: 'versions')
   @VersionsConverter()
-  BuiltList<PackageVersion> get versions;
+  BuiltList<PackageVersionDto> get versions;
   @override
   @JsonKey(ignore: true)
-  _$PackageCopyWith<_Package> get copyWith;
+  _$PackageDtoCopyWith<_PackageDto> get copyWith;
 }

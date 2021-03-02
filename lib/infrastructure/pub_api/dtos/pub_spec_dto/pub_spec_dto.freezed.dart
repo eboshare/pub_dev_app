@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'pub_spec.dart';
+part of 'pub_spec_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-PubSpec _$PubSpecFromJson(Map<String, dynamic> json) {
+PubSpecDto _$PubSpecDtoFromJson(Map<String, dynamic> json) {
   return _PubSpec.fromJson(json);
 }
 
 /// @nodoc
-class _$PubSpecTearOff {
-  const _$PubSpecTearOff();
+class _$PubSpecDtoTearOff {
+  const _$PubSpecDtoTearOff();
 
 // ignore: unused_element
   _PubSpec call(
@@ -47,13 +47,13 @@ class _$PubSpecTearOff {
           String documentation,
       @JsonKey(name: 'dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencies,
+          BuiltMap<String, DependencyDto> dependencies,
       @JsonKey(name: 'dev_dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> devDependencies,
+          BuiltMap<String, DependencyDto> devDependencies,
       @JsonKey(name: 'dependency_overrides')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencyOverrides}) {
+          BuiltMap<String, DependencyDto> dependencyOverrides}) {
     return _PubSpec(
       name: name,
       version: version,
@@ -72,17 +72,17 @@ class _$PubSpecTearOff {
   }
 
 // ignore: unused_element
-  PubSpec fromJson(Map<String, Object> json) {
-    return PubSpec.fromJson(json);
+  PubSpecDto fromJson(Map<String, Object> json) {
+    return PubSpecDto.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $PubSpec = _$PubSpecTearOff();
+const $PubSpecDto = _$PubSpecDtoTearOff();
 
 /// @nodoc
-mixin _$PubSpec {
+mixin _$PubSpecDto {
   ///
   @JsonKey(name: 'name')
   String get name;
@@ -109,25 +109,28 @@ mixin _$PubSpec {
   BuiltList<String> get authors;
   @JsonKey(name: 'documentation')
   String get documentation;
+
+  ///
   @JsonKey(name: 'dependencies')
   @DependenciesConverter()
-  BuiltMap<String, Dependency> get dependencies;
+  BuiltMap<String, DependencyDto> get dependencies;
   @JsonKey(name: 'dev_dependencies')
   @DependenciesConverter()
-  BuiltMap<String, Dependency> get devDependencies;
+  BuiltMap<String, DependencyDto> get devDependencies;
   @JsonKey(name: 'dependency_overrides')
   @DependenciesConverter()
-  BuiltMap<String, Dependency> get dependencyOverrides;
+  BuiltMap<String, DependencyDto> get dependencyOverrides;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
-  $PubSpecCopyWith<PubSpec> get copyWith;
+  $PubSpecDtoCopyWith<PubSpecDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $PubSpecCopyWith<$Res> {
-  factory $PubSpecCopyWith(PubSpec value, $Res Function(PubSpec) then) =
-      _$PubSpecCopyWithImpl<$Res>;
+abstract class $PubSpecDtoCopyWith<$Res> {
+  factory $PubSpecDtoCopyWith(
+          PubSpecDto value, $Res Function(PubSpecDto) then) =
+      _$PubSpecDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'name')
           String name,
@@ -154,22 +157,22 @@ abstract class $PubSpecCopyWith<$Res> {
           String documentation,
       @JsonKey(name: 'dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencies,
+          BuiltMap<String, DependencyDto> dependencies,
       @JsonKey(name: 'dev_dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> devDependencies,
+          BuiltMap<String, DependencyDto> devDependencies,
       @JsonKey(name: 'dependency_overrides')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencyOverrides});
+          BuiltMap<String, DependencyDto> dependencyOverrides});
 }
 
 /// @nodoc
-class _$PubSpecCopyWithImpl<$Res> implements $PubSpecCopyWith<$Res> {
-  _$PubSpecCopyWithImpl(this._value, this._then);
+class _$PubSpecDtoCopyWithImpl<$Res> implements $PubSpecDtoCopyWith<$Res> {
+  _$PubSpecDtoCopyWithImpl(this._value, this._then);
 
-  final PubSpec _value;
+  final PubSpecDto _value;
   // ignore: unused_field
-  final $Res Function(PubSpec) _then;
+  final $Res Function(PubSpecDto) _then;
 
   @override
   $Res call({
@@ -209,19 +212,19 @@ class _$PubSpecCopyWithImpl<$Res> implements $PubSpecCopyWith<$Res> {
           : documentation as String,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as BuiltMap<String, Dependency>,
+          : dependencies as BuiltMap<String, DependencyDto>,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as BuiltMap<String, Dependency>,
+          : devDependencies as BuiltMap<String, DependencyDto>,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as BuiltMap<String, Dependency>,
+          : dependencyOverrides as BuiltMap<String, DependencyDto>,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$PubSpecCopyWith<$Res> implements $PubSpecCopyWith<$Res> {
+abstract class _$PubSpecCopyWith<$Res> implements $PubSpecDtoCopyWith<$Res> {
   factory _$PubSpecCopyWith(_PubSpec value, $Res Function(_PubSpec) then) =
       __$PubSpecCopyWithImpl<$Res>;
   @override
@@ -251,17 +254,17 @@ abstract class _$PubSpecCopyWith<$Res> implements $PubSpecCopyWith<$Res> {
           String documentation,
       @JsonKey(name: 'dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencies,
+          BuiltMap<String, DependencyDto> dependencies,
       @JsonKey(name: 'dev_dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> devDependencies,
+          BuiltMap<String, DependencyDto> devDependencies,
       @JsonKey(name: 'dependency_overrides')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencyOverrides});
+          BuiltMap<String, DependencyDto> dependencyOverrides});
 }
 
 /// @nodoc
-class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecCopyWithImpl<$Res>
+class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecDtoCopyWithImpl<$Res>
     implements _$PubSpecCopyWith<$Res> {
   __$PubSpecCopyWithImpl(_PubSpec _value, $Res Function(_PubSpec) _then)
       : super(_value, (v) => _then(v as _PubSpec));
@@ -307,13 +310,13 @@ class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecCopyWithImpl<$Res>
           : documentation as String,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as BuiltMap<String, Dependency>,
+          : dependencies as BuiltMap<String, DependencyDto>,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as BuiltMap<String, Dependency>,
+          : devDependencies as BuiltMap<String, DependencyDto>,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as BuiltMap<String, Dependency>,
+          : dependencyOverrides as BuiltMap<String, DependencyDto>,
     ));
   }
 }
@@ -405,21 +408,23 @@ class _$_PubSpec implements _PubSpec {
   @JsonKey(name: 'documentation')
   final String documentation;
   @override
+
+  ///
   @JsonKey(name: 'dependencies')
   @DependenciesConverter()
-  final BuiltMap<String, Dependency> dependencies;
+  final BuiltMap<String, DependencyDto> dependencies;
   @override
   @JsonKey(name: 'dev_dependencies')
   @DependenciesConverter()
-  final BuiltMap<String, Dependency> devDependencies;
+  final BuiltMap<String, DependencyDto> devDependencies;
   @override
   @JsonKey(name: 'dependency_overrides')
   @DependenciesConverter()
-  final BuiltMap<String, Dependency> dependencyOverrides;
+  final BuiltMap<String, DependencyDto> dependencyOverrides;
 
   @override
   String toString() {
-    return 'PubSpec(name: $name, version: $version, description: $description, environment: $environment, publishTo: $publishTo, repository: $repository, homePage: $homePage, issueTracker: $issueTracker, authors: $authors, documentation: $documentation, dependencies: $dependencies, devDependencies: $devDependencies, dependencyOverrides: $dependencyOverrides)';
+    return 'PubSpecDto(name: $name, version: $version, description: $description, environment: $environment, publishTo: $publishTo, repository: $repository, homePage: $homePage, issueTracker: $issueTracker, authors: $authors, documentation: $documentation, dependencies: $dependencies, devDependencies: $devDependencies, dependencyOverrides: $dependencyOverrides)';
   }
 
   @override
@@ -494,7 +499,7 @@ class _$_PubSpec implements _PubSpec {
   }
 }
 
-abstract class _PubSpec implements PubSpec {
+abstract class _PubSpec implements PubSpecDto {
   const factory _PubSpec(
       {@required
       @JsonKey(name: 'name')
@@ -525,13 +530,13 @@ abstract class _PubSpec implements PubSpec {
           String documentation,
       @JsonKey(name: 'dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencies,
+          BuiltMap<String, DependencyDto> dependencies,
       @JsonKey(name: 'dev_dependencies')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> devDependencies,
+          BuiltMap<String, DependencyDto> devDependencies,
       @JsonKey(name: 'dependency_overrides')
       @DependenciesConverter()
-          BuiltMap<String, Dependency> dependencyOverrides}) = _$_PubSpec;
+          BuiltMap<String, DependencyDto> dependencyOverrides}) = _$_PubSpec;
 
   factory _PubSpec.fromJson(Map<String, dynamic> json) = _$_PubSpec.fromJson;
 
@@ -573,17 +578,19 @@ abstract class _PubSpec implements PubSpec {
   @JsonKey(name: 'documentation')
   String get documentation;
   @override
+
+  ///
   @JsonKey(name: 'dependencies')
   @DependenciesConverter()
-  BuiltMap<String, Dependency> get dependencies;
+  BuiltMap<String, DependencyDto> get dependencies;
   @override
   @JsonKey(name: 'dev_dependencies')
   @DependenciesConverter()
-  BuiltMap<String, Dependency> get devDependencies;
+  BuiltMap<String, DependencyDto> get devDependencies;
   @override
   @JsonKey(name: 'dependency_overrides')
   @DependenciesConverter()
-  BuiltMap<String, Dependency> get dependencyOverrides;
+  BuiltMap<String, DependencyDto> get dependencyOverrides;
   @override
   @JsonKey(ignore: true)
   _$PubSpecCopyWith<_PubSpec> get copyWith;

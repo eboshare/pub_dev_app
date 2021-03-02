@@ -1,17 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'package_version.dart';
+part of 'package_version_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PackageVersion _$_$_PackageVersionFromJson(Map<String, dynamic> json) {
-  return _$_PackageVersion(
+_$_PackageVersionDto _$_$_PackageVersionDtoFromJson(Map<String, dynamic> json) {
+  return _$_PackageVersionDto(
     version: const VersionConverter().fromJson(json['version'] as String),
     pubSpec: json['pubspec'] == null
         ? null
-        : PubSpec.fromJson(json['pubspec'] as Map<String, dynamic>),
+        : PubSpecDto.fromJson(json['pubspec'] as Map<String, dynamic>),
     archiveUrl: json['archive_url'] as String,
     packageUrl: json['package_url'] as String,
     publishedAt:
@@ -19,7 +19,8 @@ _$_PackageVersion _$_$_PackageVersionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_PackageVersionToJson(_$_PackageVersion instance) =>
+Map<String, dynamic> _$_$_PackageVersionDtoToJson(
+        _$_PackageVersionDto instance) =>
     <String, dynamic>{
       'version': const VersionConverter().toJson(instance.version),
       'pubspec': instance.pubSpec?.toJson(),

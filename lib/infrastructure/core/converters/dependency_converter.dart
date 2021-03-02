@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pub_semver/pub_semver.dart';
 
-import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency/dependency.dart';
+import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency_dto/dependency_dto.dart';
 
 abstract class SourceKeys {
   static const sdk = 'sdk';
@@ -17,7 +17,7 @@ abstract class SourceKeys {
   ];
 }
 
-Dependency dependencyFromJson(Object json) {
+DependencyDto dependencyFromJson(Object json) {
   // dependencies:
   //   transmogrify: ^1.4.0
   //
@@ -27,7 +27,7 @@ Dependency dependencyFromJson(Object json) {
   // dependencies:
   //   transmogrify:          (with no version)
   if (json is String || json == null) {
-    return Dependency.hosted(
+    return DependencyDto.hosted(
       version: VersionConstraint.parse(json),
     );
   }
@@ -43,7 +43,7 @@ Dependency dependencyFromJson(Object json) {
     //   transmogrify:
     //     version: ^1.4.0
     if (json.isEmpty || jsonHasOnlyVersion) {
-      return HostedDependency.fromJson(json);
+      return HostedDependencyDto.fromJson(json);
     }
 
     // Unknown dependency option.
@@ -64,7 +64,7 @@ Dependency dependencyFromJson(Object json) {
       throw CheckedFromJsonException(
         json,
         matchedKeys.first,
-        'Dependency',
+        'DependencyDto',
         'A dependency may only have one source.',
       );
     }
@@ -78,7 +78,7 @@ Dependency dependencyFromJson(Object json) {
         //  kittens:
         //    git: https://github.com/munificent/kittens.git
         if (value is String) {
-          return GitDependency(url: value);
+          return GitDependencyDto(url: value);
         }
         // dependencies:
         //   kittens:
@@ -86,7 +86,7 @@ Dependency dependencyFromJson(Object json) {
         //       url: git@github.com:munificent/kittens.git
         //       ref: some-branch
         if (value is Map) {
-          return GitDependency.fromJson(value);
+          return GitDependencyDto.fromJson(value);
         }
         throw AssertionError();
 
@@ -94,14 +94,14 @@ Dependency dependencyFromJson(Object json) {
         // dependencies:
         //   transmogrify:
         //     path: /Users/me/transmogrify
-        return PathDependency.fromJson(json);
+        return PathDependencyDto.fromJson(json);
 
       case SourceKeys.sdk:
         // dependencies:
         //   flutter_driver:
         //     sdk: flutter
         //     version: ^0.0.1
-        return SdkDependency.fromJson(json);
+        return SdkDependencyDto.fromJson(json);
 
       case SourceKeys.hosted:
         // dependencies:
@@ -110,17 +110,17 @@ Dependency dependencyFromJson(Object json) {
         //       name: transmogrify
         //       url: http://your-package-server.com
         //     version: ^1.4.0
-        return HostedDependency.fromJson(json);
+        return HostedDependencyDto.fromJson(json);
     }
   }
 
   throw AssertionError('Unhandled case in the dependency parsing.');
 }
 
-class DependencyConverter implements JsonConverter<Dependency, Object> {
+class DependencyDtoConverter implements JsonConverter<DependencyDto, Object> {
   @override
-  Dependency fromJson(Object json) => dependencyFromJson(json);
+  DependencyDto fromJson(Object json) => dependencyFromJson(json);
 
   @override
-  Object toJson(Dependency dependency) => dependency?.toJson();
+  Object toJson(DependencyDto dependency) => dependency?.toJson();
 }

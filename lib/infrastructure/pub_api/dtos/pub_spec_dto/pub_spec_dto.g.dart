@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pub_spec.dart';
+part of 'pub_spec_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
