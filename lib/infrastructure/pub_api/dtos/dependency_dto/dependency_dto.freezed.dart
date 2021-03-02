@@ -214,9 +214,13 @@ class _$SdkDependencyDto implements SdkDependencyDto {
       _$_$SdkDependencyDtoFromJson(json);
 
   @override
+
+  /// Which SDK the package comes from.
   @JsonKey(name: 'sdk')
   final String sdk;
   @override
+
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConstraintConverter()
   final VersionConstraint version;
@@ -354,8 +358,11 @@ abstract class SdkDependencyDto implements DependencyDto {
   factory SdkDependencyDto.fromJson(Map<String, dynamic> json) =
       _$SdkDependencyDto.fromJson;
 
+  /// Which SDK the package comes from.
   @JsonKey(name: 'sdk')
   String get sdk;
+
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConstraintConverter()
   VersionConstraint get version;
@@ -413,12 +420,19 @@ class _$GitDependencyDto implements GitDependencyDto {
       _$_$GitDependencyDtoFromJson(json);
 
   @override
+
+  /// Git URL that can be used to clone the package.
   @JsonKey(name: 'url')
   final String url;
   @override
+
+  /// The ref can be anything that Git allows to identify a commit.
+  /// See: https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html#naming-commits
   @JsonKey(name: 'ref')
   final String ref;
   @override
+
+  /// Specifies a different location in the repository.
   @JsonKey(name: 'path')
   final String path;
 
@@ -555,10 +569,16 @@ abstract class GitDependencyDto implements DependencyDto {
   factory GitDependencyDto.fromJson(Map<String, dynamic> json) =
       _$GitDependencyDto.fromJson;
 
+  /// Git URL that can be used to clone the package.
   @JsonKey(name: 'url')
   String get url;
+
+  /// The ref can be anything that Git allows to identify a commit.
+  /// See: https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html#naming-commits
   @JsonKey(name: 'ref')
   String get ref;
+
+  /// Specifies a different location in the repository.
   @JsonKey(name: 'path')
   String get path;
   @JsonKey(ignore: true)
@@ -605,6 +625,8 @@ class _$PathDependencyDto implements PathDependencyDto {
       _$_$PathDependencyDtoFromJson(json);
 
   @override
+
+  /// Path to the live version of that package on your local file system
   @JsonKey(name: 'path')
   final String path;
 
@@ -732,6 +754,7 @@ abstract class PathDependencyDto implements DependencyDto {
   factory PathDependencyDto.fromJson(Map<String, dynamic> json) =
       _$PathDependencyDto.fromJson;
 
+  /// Path to the live version of that package on your local file system
   @JsonKey(name: 'path')
   String get path;
   @JsonKey(ignore: true)
@@ -804,10 +827,14 @@ class _$HostedDependencyDto implements HostedDependencyDto {
       _$_$HostedDependencyDtoFromJson(json);
 
   @override
+
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConstraintConverter()
   final VersionConstraint version;
   @override
+
+  /// Used if you want to specify a source which the package comes from.
   @JsonKey(name: 'hosted')
   final HostedDetailsDto hosted;
 
@@ -945,9 +972,12 @@ abstract class HostedDependencyDto implements DependencyDto {
   factory HostedDependencyDto.fromJson(Map<String, dynamic> json) =
       _$HostedDependencyDto.fromJson;
 
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConstraintConverter()
   VersionConstraint get version;
+
+  /// Used if you want to specify a source which the package comes from.
   @JsonKey(name: 'hosted')
   HostedDetailsDto get hosted;
   @JsonKey(ignore: true)
