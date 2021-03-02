@@ -40,6 +40,7 @@ class _$PubSpecDtoTearOff {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
+      @Deprecated('Deprecated. Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -83,40 +84,86 @@ const $PubSpecDto = _$PubSpecDtoTearOff();
 
 /// @nodoc
 mixin _$PubSpecDto {
-  ///
+  /// Required for every package.
+  /// Package name.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#name
   @JsonKey(name: 'name')
   String get name;
+
+  /// Required for packages that are hosted on pub.dev.
+  /// Package version.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#version
   @JsonKey(name: 'version')
   @VersionConverter()
   Version get version;
+
+  /// Required for packages that are hosted on the pub.dev.
+  /// Package description.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#description
   @JsonKey(name: 'description')
   String get description;
+
+  /// Required as of Dart 2.
+  /// Version constraint for the Dart platform itself.
+  /// https://dart.dev/tools/pub/pubspec#sdk-constraints
   @JsonKey(name: 'environment')
   @EnvironmentConverter()
   BuiltMap<String, VersionConstraint> get environment;
 
-  ///
+  /// Optional.
+  /// Specify where to publish a package.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#publish_to
   @JsonKey(name: 'publish_to')
   String get publishTo;
+
+  /// Optional.
+  /// URL pointing to the package’s source code repository.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#repository
   @JsonKey(name: 'repository')
   String get repository;
+
+  /// Optional.
+  /// URL pointing to the package’s homepage (or source code repository).
+  /// Learn more: https://dart.dev/tools/pub/pubspec#homepage
   @JsonKey(name: 'homepage')
   String get homePage;
+
+  /// Optional.
+  /// URL pointing to an issue tracker for the package.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#issue-tracker
   @JsonKey(name: 'issue_tracker')
   String get issueTracker;
+
+  /// Deprecated. Use a verified publisher instead.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
+  @Deprecated('Deprecated. Use a verified publisher instead.')
   @JsonKey(name: 'authors')
   @AuthorsConverter()
   BuiltList<String> get authors;
+
+  /// Optional.
+  /// URL pointing to documentation for the package.
+  /// Lean more: https://dart.dev/tools/pub/pubspec#documentation
   @JsonKey(name: 'documentation')
   String get documentation;
 
-  ///
+  /// Can be omitted if your package has no dependencies.
+  /// Package dependencies.
+  /// https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependencies')
   @DependenciesConverter()
   BuiltMap<String, DependencyDto> get dependencies;
+
+  /// Can be omitted if your package has no dev dependencies.
+  /// Package dependencies that are required only during development.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dev_dependencies')
   @DependenciesConverter()
   BuiltMap<String, DependencyDto> get devDependencies;
+
+  /// Can be omitted if you do not need to override any dependencies.
+  /// Used to override a dependency.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependency_overrides')
   @DependenciesConverter()
   BuiltMap<String, DependencyDto> get dependencyOverrides;
@@ -150,6 +197,7 @@ abstract class $PubSpecDtoCopyWith<$Res> {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
+      @Deprecated('Deprecated. Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -247,6 +295,7 @@ abstract class _$PubSpecCopyWith<$Res> implements $PubSpecDtoCopyWith<$Res> {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
+      @Deprecated('Deprecated. Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -348,6 +397,7 @@ class _$_PubSpec implements _PubSpec {
           this.homePage,
       @JsonKey(name: 'issue_tracker')
           this.issueTracker,
+      @Deprecated('Deprecated. Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           this.authors,
@@ -372,52 +422,98 @@ class _$_PubSpec implements _PubSpec {
 
   @override
 
-  ///
+  /// Required for every package.
+  /// Package name.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#name
   @JsonKey(name: 'name')
   final String name;
   @override
+
+  /// Required for packages that are hosted on pub.dev.
+  /// Package version.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#version
   @JsonKey(name: 'version')
   @VersionConverter()
   final Version version;
   @override
+
+  /// Required for packages that are hosted on the pub.dev.
+  /// Package description.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#description
   @JsonKey(name: 'description')
   final String description;
   @override
+
+  /// Required as of Dart 2.
+  /// Version constraint for the Dart platform itself.
+  /// https://dart.dev/tools/pub/pubspec#sdk-constraints
   @JsonKey(name: 'environment')
   @EnvironmentConverter()
   final BuiltMap<String, VersionConstraint> environment;
   @override
 
-  ///
+  /// Optional.
+  /// Specify where to publish a package.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#publish_to
   @JsonKey(name: 'publish_to')
   final String publishTo;
   @override
+
+  /// Optional.
+  /// URL pointing to the package’s source code repository.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#repository
   @JsonKey(name: 'repository')
   final String repository;
   @override
+
+  /// Optional.
+  /// URL pointing to the package’s homepage (or source code repository).
+  /// Learn more: https://dart.dev/tools/pub/pubspec#homepage
   @JsonKey(name: 'homepage')
   final String homePage;
   @override
+
+  /// Optional.
+  /// URL pointing to an issue tracker for the package.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#issue-tracker
   @JsonKey(name: 'issue_tracker')
   final String issueTracker;
   @override
+
+  /// Deprecated. Use a verified publisher instead.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
+  @Deprecated('Deprecated. Use a verified publisher instead.')
   @JsonKey(name: 'authors')
   @AuthorsConverter()
   final BuiltList<String> authors;
   @override
+
+  /// Optional.
+  /// URL pointing to documentation for the package.
+  /// Lean more: https://dart.dev/tools/pub/pubspec#documentation
   @JsonKey(name: 'documentation')
   final String documentation;
   @override
 
-  ///
+  /// Can be omitted if your package has no dependencies.
+  /// Package dependencies.
+  /// https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependencies')
   @DependenciesConverter()
   final BuiltMap<String, DependencyDto> dependencies;
   @override
+
+  /// Can be omitted if your package has no dev dependencies.
+  /// Package dependencies that are required only during development.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dev_dependencies')
   @DependenciesConverter()
   final BuiltMap<String, DependencyDto> devDependencies;
   @override
+
+  /// Can be omitted if you do not need to override any dependencies.
+  /// Used to override a dependency.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependency_overrides')
   @DependenciesConverter()
   final BuiltMap<String, DependencyDto> dependencyOverrides;
@@ -523,6 +619,7 @@ abstract class _PubSpec implements PubSpecDto {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
+      @Deprecated('Deprecated. Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -542,52 +639,98 @@ abstract class _PubSpec implements PubSpecDto {
 
   @override
 
-  ///
+  /// Required for every package.
+  /// Package name.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#name
   @JsonKey(name: 'name')
   String get name;
   @override
+
+  /// Required for packages that are hosted on pub.dev.
+  /// Package version.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#version
   @JsonKey(name: 'version')
   @VersionConverter()
   Version get version;
   @override
+
+  /// Required for packages that are hosted on the pub.dev.
+  /// Package description.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#description
   @JsonKey(name: 'description')
   String get description;
   @override
+
+  /// Required as of Dart 2.
+  /// Version constraint for the Dart platform itself.
+  /// https://dart.dev/tools/pub/pubspec#sdk-constraints
   @JsonKey(name: 'environment')
   @EnvironmentConverter()
   BuiltMap<String, VersionConstraint> get environment;
   @override
 
-  ///
+  /// Optional.
+  /// Specify where to publish a package.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#publish_to
   @JsonKey(name: 'publish_to')
   String get publishTo;
   @override
+
+  /// Optional.
+  /// URL pointing to the package’s source code repository.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#repository
   @JsonKey(name: 'repository')
   String get repository;
   @override
+
+  /// Optional.
+  /// URL pointing to the package’s homepage (or source code repository).
+  /// Learn more: https://dart.dev/tools/pub/pubspec#homepage
   @JsonKey(name: 'homepage')
   String get homePage;
   @override
+
+  /// Optional.
+  /// URL pointing to an issue tracker for the package.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#issue-tracker
   @JsonKey(name: 'issue_tracker')
   String get issueTracker;
   @override
+
+  /// Deprecated. Use a verified publisher instead.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
+  @Deprecated('Deprecated. Use a verified publisher instead.')
   @JsonKey(name: 'authors')
   @AuthorsConverter()
   BuiltList<String> get authors;
   @override
+
+  /// Optional.
+  /// URL pointing to documentation for the package.
+  /// Lean more: https://dart.dev/tools/pub/pubspec#documentation
   @JsonKey(name: 'documentation')
   String get documentation;
   @override
 
-  ///
+  /// Can be omitted if your package has no dependencies.
+  /// Package dependencies.
+  /// https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependencies')
   @DependenciesConverter()
   BuiltMap<String, DependencyDto> get dependencies;
   @override
+
+  /// Can be omitted if your package has no dev dependencies.
+  /// Package dependencies that are required only during development.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dev_dependencies')
   @DependenciesConverter()
   BuiltMap<String, DependencyDto> get devDependencies;
   @override
+
+  /// Can be omitted if you do not need to override any dependencies.
+  /// Used to override a dependency.
+  /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependency_overrides')
   @DependenciesConverter()
   BuiltMap<String, DependencyDto> get dependencyOverrides;
