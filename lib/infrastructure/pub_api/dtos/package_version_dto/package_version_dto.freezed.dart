@@ -22,12 +22,14 @@ class _$PackageVersionDtoTearOff {
       @required @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
       @required @JsonKey(name: 'archive_url') String archiveUrl,
       @JsonKey(name: 'package_url') String packageUrl,
+      @JsonKey(name: 'url') String url,
       @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt}) {
     return _PackageVersionDto(
       version: version,
       pubSpec: pubSpec,
       archiveUrl: archiveUrl,
       packageUrl: packageUrl,
+      url: url,
       publishedAt: publishedAt,
     );
   }
@@ -44,15 +46,28 @@ const $PackageVersionDto = _$PackageVersionDtoTearOff();
 
 /// @nodoc
 mixin _$PackageVersionDto {
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConverter()
   Version get version;
+
+  /// Data from pubspec.yaml of the package.
   @JsonKey(name: 'pubspec')
   PubSpecDto get pubSpec;
+
+  /// Url to download the source code of the package.
   @JsonKey(name: 'archive_url')
   String get archiveUrl;
+
+  /// Url to the package info.
   @JsonKey(name: 'package_url')
   String get packageUrl;
+
+  /// Url to the detailed package version info.
+  @JsonKey(name: 'url')
+  String get url;
+
+  /// Date and time at which the package was published.
   @JsonKey(name: 'published')
   @DateTimeConverter()
   DateTime get publishedAt;
@@ -72,6 +87,7 @@ abstract class $PackageVersionDtoCopyWith<$Res> {
       @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
       @JsonKey(name: 'archive_url') String archiveUrl,
       @JsonKey(name: 'package_url') String packageUrl,
+      @JsonKey(name: 'url') String url,
       @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt});
 
   $PubSpecDtoCopyWith<$Res> get pubSpec;
@@ -92,6 +108,7 @@ class _$PackageVersionDtoCopyWithImpl<$Res>
     Object pubSpec = freezed,
     Object archiveUrl = freezed,
     Object packageUrl = freezed,
+    Object url = freezed,
     Object publishedAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -101,6 +118,7 @@ class _$PackageVersionDtoCopyWithImpl<$Res>
           archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
       packageUrl:
           packageUrl == freezed ? _value.packageUrl : packageUrl as String,
+      url: url == freezed ? _value.url : url as String,
       publishedAt:
           publishedAt == freezed ? _value.publishedAt : publishedAt as DateTime,
     ));
@@ -129,6 +147,7 @@ abstract class _$PackageVersionDtoCopyWith<$Res>
       @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
       @JsonKey(name: 'archive_url') String archiveUrl,
       @JsonKey(name: 'package_url') String packageUrl,
+      @JsonKey(name: 'url') String url,
       @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt});
 
   @override
@@ -152,6 +171,7 @@ class __$PackageVersionDtoCopyWithImpl<$Res>
     Object pubSpec = freezed,
     Object archiveUrl = freezed,
     Object packageUrl = freezed,
+    Object url = freezed,
     Object publishedAt = freezed,
   }) {
     return _then(_PackageVersionDto(
@@ -161,6 +181,7 @@ class __$PackageVersionDtoCopyWithImpl<$Res>
           archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
       packageUrl:
           packageUrl == freezed ? _value.packageUrl : packageUrl as String,
+      url: url == freezed ? _value.url : url as String,
       publishedAt:
           publishedAt == freezed ? _value.publishedAt : publishedAt as DateTime,
     ));
@@ -176,6 +197,7 @@ class _$_PackageVersionDto implements _PackageVersionDto {
       @required @JsonKey(name: 'pubspec') this.pubSpec,
       @required @JsonKey(name: 'archive_url') this.archiveUrl,
       @JsonKey(name: 'package_url') this.packageUrl,
+      @JsonKey(name: 'url') this.url,
       @JsonKey(name: 'published') @DateTimeConverter() this.publishedAt})
       : assert(version != null),
         assert(pubSpec != null),
@@ -185,26 +207,41 @@ class _$_PackageVersionDto implements _PackageVersionDto {
       _$_$_PackageVersionDtoFromJson(json);
 
   @override
+
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConverter()
   final Version version;
   @override
+
+  /// Data from pubspec.yaml of the package.
   @JsonKey(name: 'pubspec')
   final PubSpecDto pubSpec;
   @override
+
+  /// Url to download the source code of the package.
   @JsonKey(name: 'archive_url')
   final String archiveUrl;
   @override
+
+  /// Url to the package info.
   @JsonKey(name: 'package_url')
   final String packageUrl;
   @override
+
+  /// Url to the detailed package version info.
+  @JsonKey(name: 'url')
+  final String url;
+  @override
+
+  /// Date and time at which the package was published.
   @JsonKey(name: 'published')
   @DateTimeConverter()
   final DateTime publishedAt;
 
   @override
   String toString() {
-    return 'PackageVersionDto(version: $version, pubSpec: $pubSpec, archiveUrl: $archiveUrl, packageUrl: $packageUrl, publishedAt: $publishedAt)';
+    return 'PackageVersionDto(version: $version, pubSpec: $pubSpec, archiveUrl: $archiveUrl, packageUrl: $packageUrl, url: $url, publishedAt: $publishedAt)';
   }
 
   @override
@@ -223,6 +260,8 @@ class _$_PackageVersionDto implements _PackageVersionDto {
             (identical(other.packageUrl, packageUrl) ||
                 const DeepCollectionEquality()
                     .equals(other.packageUrl, packageUrl)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.publishedAt, publishedAt) ||
                 const DeepCollectionEquality()
                     .equals(other.publishedAt, publishedAt)));
@@ -235,6 +274,7 @@ class _$_PackageVersionDto implements _PackageVersionDto {
       const DeepCollectionEquality().hash(pubSpec) ^
       const DeepCollectionEquality().hash(archiveUrl) ^
       const DeepCollectionEquality().hash(packageUrl) ^
+      const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(publishedAt);
 
   @JsonKey(ignore: true)
@@ -262,6 +302,8 @@ abstract class _PackageVersionDto implements PackageVersionDto {
           String archiveUrl,
       @JsonKey(name: 'package_url')
           String packageUrl,
+      @JsonKey(name: 'url')
+          String url,
       @JsonKey(name: 'published')
       @DateTimeConverter()
           DateTime publishedAt}) = _$_PackageVersionDto;
@@ -270,19 +312,34 @@ abstract class _PackageVersionDto implements PackageVersionDto {
       _$_PackageVersionDto.fromJson;
 
   @override
+
+  /// Package version.
   @JsonKey(name: 'version')
   @VersionConverter()
   Version get version;
   @override
+
+  /// Data from pubspec.yaml of the package.
   @JsonKey(name: 'pubspec')
   PubSpecDto get pubSpec;
   @override
+
+  /// Url to download the source code of the package.
   @JsonKey(name: 'archive_url')
   String get archiveUrl;
   @override
+
+  /// Url to the package info.
   @JsonKey(name: 'package_url')
   String get packageUrl;
   @override
+
+  /// Url to the detailed package version info.
+  @JsonKey(name: 'url')
+  String get url;
+  @override
+
+  /// Date and time at which the package was published.
   @JsonKey(name: 'published')
   @DateTimeConverter()
   DateTime get publishedAt;
