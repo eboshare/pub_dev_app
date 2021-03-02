@@ -57,7 +57,7 @@ abstract class PubSpecDto with _$PubSpecDto {
 
     /// Deprecated. Use a verified publisher instead.
     /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
-    @Deprecated('Deprecated. Use a verified publisher instead.')
+    @Deprecated('Use a verified publisher instead.')
     @JsonKey(name: 'authors')
     @AuthorsConverter()
         BuiltList<String> authors,

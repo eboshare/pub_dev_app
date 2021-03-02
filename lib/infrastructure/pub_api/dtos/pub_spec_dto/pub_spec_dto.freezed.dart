@@ -40,7 +40,7 @@ class _$PubSpecDtoTearOff {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
-      @Deprecated('Deprecated. Use a verified publisher instead.')
+      @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -136,7 +136,7 @@ mixin _$PubSpecDto {
 
   /// Deprecated. Use a verified publisher instead.
   /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
-  @Deprecated('Deprecated. Use a verified publisher instead.')
+  @Deprecated('Use a verified publisher instead.')
   @JsonKey(name: 'authors')
   @AuthorsConverter()
   BuiltList<String> get authors;
@@ -197,7 +197,7 @@ abstract class $PubSpecDtoCopyWith<$Res> {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
-      @Deprecated('Deprecated. Use a verified publisher instead.')
+      @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -295,7 +295,7 @@ abstract class _$PubSpecCopyWith<$Res> implements $PubSpecDtoCopyWith<$Res> {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
-      @Deprecated('Deprecated. Use a verified publisher instead.')
+      @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -397,7 +397,7 @@ class _$_PubSpec implements _PubSpec {
           this.homePage,
       @JsonKey(name: 'issue_tracker')
           this.issueTracker,
-      @Deprecated('Deprecated. Use a verified publisher instead.')
+      @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           this.authors,
@@ -482,7 +482,7 @@ class _$_PubSpec implements _PubSpec {
 
   /// Deprecated. Use a verified publisher instead.
   /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
-  @Deprecated('Deprecated. Use a verified publisher instead.')
+  @Deprecated('Use a verified publisher instead.')
   @JsonKey(name: 'authors')
   @AuthorsConverter()
   final BuiltList<String> authors;
@@ -619,7 +619,7 @@ abstract class _PubSpec implements PubSpecDto {
           String homePage,
       @JsonKey(name: 'issue_tracker')
           String issueTracker,
-      @Deprecated('Deprecated. Use a verified publisher instead.')
+      @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
       @AuthorsConverter()
           BuiltList<String> authors,
@@ -699,7 +699,7 @@ abstract class _PubSpec implements PubSpecDto {
 
   /// Deprecated. Use a verified publisher instead.
   /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
-  @Deprecated('Deprecated. Use a verified publisher instead.')
+  @Deprecated('Use a verified publisher instead.')
   @JsonKey(name: 'authors')
   @AuthorsConverter()
   BuiltList<String> get authors;
