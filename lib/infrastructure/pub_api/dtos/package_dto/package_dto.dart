@@ -11,8 +11,13 @@ part 'package_dto.g.dart';
 @freezed
 abstract class PackageDto implements _$PackageDto {
   const factory PackageDto({
+    /// Package name.
     @required @JsonKey(name: 'name') String name,
+
+    /// Information about the latest version of the package.
     @required @JsonKey(name: 'latest') PackageVersionDto latest,
+
+    /// Information about all package versions.
     @required @JsonKey(name: 'versions') @VersionsConverter() BuiltList<PackageVersionDto> versions,
   }) = _PackageDto;
 

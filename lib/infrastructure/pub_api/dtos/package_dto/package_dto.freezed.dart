@@ -47,10 +47,15 @@ const $PackageDto = _$PackageDtoTearOff();
 
 /// @nodoc
 mixin _$PackageDto {
+  /// Package name.
   @JsonKey(name: 'name')
   String get name;
+
+  /// Information about the latest version of the package.
   @JsonKey(name: 'latest')
   PackageVersionDto get latest;
+
+  /// Information about all package versions.
   @JsonKey(name: 'versions')
   @VersionsConverter()
   BuiltList<PackageVersionDto> get versions;
@@ -172,12 +177,18 @@ class _$_PackageDto implements _PackageDto {
       _$_$_PackageDtoFromJson(json);
 
   @override
+
+  /// Package name.
   @JsonKey(name: 'name')
   final String name;
   @override
+
+  /// Information about the latest version of the package.
   @JsonKey(name: 'latest')
   final PackageVersionDto latest;
   @override
+
+  /// Information about all package versions.
   @JsonKey(name: 'versions')
   @VersionsConverter()
   final BuiltList<PackageVersionDto> versions;
@@ -235,12 +246,18 @@ abstract class _PackageDto implements PackageDto {
       _$_PackageDto.fromJson;
 
   @override
+
+  /// Package name.
   @JsonKey(name: 'name')
   String get name;
   @override
+
+  /// Information about the latest version of the package.
   @JsonKey(name: 'latest')
   PackageVersionDto get latest;
   @override
+
+  /// Information about all package versions.
   @JsonKey(name: 'versions')
   @VersionsConverter()
   BuiltList<PackageVersionDto> get versions;
