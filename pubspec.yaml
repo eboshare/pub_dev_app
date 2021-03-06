@@ -51,12 +51,6 @@ dev_dependencies:
   freezed: ^0.14.0
   intl_utils: ^2.0.0
 
-#dependency_overrides:
-#  flutter_cache_manager: ^3.0.0-nullsafety  # Remove when sentry_flutter updates to null-safety.
-#  http: ^0.13.0  # Remove when sentry_flutter updates to null-safety.
-#  uuid: ^3.0.1  # Remove when sentry_flutter updates to null-safety.
-#  dio: ^4.0.0-beta5  # Remove when pretty_dio_logger updates to null-safety.
-
 flutter:
   # Includes the Material Icons font.
   uses-material-design: true
