@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:pub_dev_app/infrastructure/core/converters/dependencies_converters.dart';
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency_dto/dependency_dto.dart';
 
 part 'pub_spec_dto.freezed.dart';

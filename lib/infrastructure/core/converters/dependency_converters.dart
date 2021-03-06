@@ -115,23 +115,3 @@ DependencyDto dependencyFromJson(Object? json) {
 
   throw AssertionError('Unhandled case in the dependency parsing.');
 }
-
-class NullableDependencyDtoConverter implements JsonConverter<DependencyDto?, Object?> {
-  const NullableDependencyDtoConverter();
-
-  @override
-  DependencyDto? fromJson(Object? json) => dependencyFromJson(json);
-
-  @override
-  Object? toJson(DependencyDto? dependency) => dependency?.toJson();
-}
-
-class DependencyDtoConverter implements JsonConverter<DependencyDto, Object> {
-  const DependencyDtoConverter();
-
-  @override
-  DependencyDto fromJson(Object json) => dependencyFromJson(json);
-
-  @override
-  Object toJson(DependencyDto dependency) => dependency.toJson();
-}
