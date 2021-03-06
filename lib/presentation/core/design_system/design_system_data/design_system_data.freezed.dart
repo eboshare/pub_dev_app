@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'design_system_data.dart';
 
@@ -9,15 +9,17 @@ part of 'design_system_data.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$DesignSystemDataTearOff {
   const _$DesignSystemDataTearOff();
 
-// ignore: unused_element
   _DesignSystemData call(
-      {@required DesignSystemColors colors,
-      @required DesignSystemText text,
-      @required DesignSystemDimensions dimensions}) {
+      {required DesignSystemColors colors,
+      required DesignSystemText text,
+      required DesignSystemDimensions dimensions}) {
     return _DesignSystemData(
       colors: colors,
       text: text,
@@ -27,17 +29,17 @@ class _$DesignSystemDataTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DesignSystemData = _$DesignSystemDataTearOff();
 
 /// @nodoc
 mixin _$DesignSystemData {
-  DesignSystemColors get colors;
-  DesignSystemText get text;
-  DesignSystemDimensions get dimensions;
+  DesignSystemColors get colors => throw _privateConstructorUsedError;
+  DesignSystemText get text => throw _privateConstructorUsedError;
+  DesignSystemDimensions get dimensions => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $DesignSystemDataCopyWith<DesignSystemData> get copyWith;
+  $DesignSystemDataCopyWith<DesignSystemData> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -66,9 +68,9 @@ class _$DesignSystemDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object colors = freezed,
-    Object text = freezed,
-    Object dimensions = freezed,
+    Object? colors = freezed,
+    Object? text = freezed,
+    Object? dimensions = freezed,
   }) {
     return _then(_value.copyWith(
       colors: colors == freezed ? _value.colors : colors as DesignSystemColors,
@@ -81,9 +83,6 @@ class _$DesignSystemDataCopyWithImpl<$Res>
 
   @override
   $DesignSystemColorsCopyWith<$Res> get colors {
-    if (_value.colors == null) {
-      return null;
-    }
     return $DesignSystemColorsCopyWith<$Res>(_value.colors, (value) {
       return _then(_value.copyWith(colors: value));
     });
@@ -91,9 +90,6 @@ class _$DesignSystemDataCopyWithImpl<$Res>
 
   @override
   $DesignSystemTextCopyWith<$Res> get text {
-    if (_value.text == null) {
-      return null;
-    }
     return $DesignSystemTextCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
     });
@@ -101,9 +97,6 @@ class _$DesignSystemDataCopyWithImpl<$Res>
 
   @override
   $DesignSystemDimensionsCopyWith<$Res> get dimensions {
-    if (_value.dimensions == null) {
-      return null;
-    }
     return $DesignSystemDimensionsCopyWith<$Res>(_value.dimensions, (value) {
       return _then(_value.copyWith(dimensions: value));
     });
@@ -143,9 +136,9 @@ class __$DesignSystemDataCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object colors = freezed,
-    Object text = freezed,
-    Object dimensions = freezed,
+    Object? colors = freezed,
+    Object? text = freezed,
+    Object? dimensions = freezed,
   }) {
     return _then(_DesignSystemData(
       colors: colors == freezed ? _value.colors : colors as DesignSystemColors,
@@ -160,10 +153,7 @@ class __$DesignSystemDataCopyWithImpl<$Res>
 /// @nodoc
 class _$_DesignSystemData implements _DesignSystemData {
   const _$_DesignSystemData(
-      {@required this.colors, @required this.text, @required this.dimensions})
-      : assert(colors != null),
-        assert(text != null),
-        assert(dimensions != null);
+      {required this.colors, required this.text, required this.dimensions});
 
   @override
   final DesignSystemColors colors;
@@ -205,17 +195,18 @@ class _$_DesignSystemData implements _DesignSystemData {
 
 abstract class _DesignSystemData implements DesignSystemData {
   const factory _DesignSystemData(
-      {@required DesignSystemColors colors,
-      @required DesignSystemText text,
-      @required DesignSystemDimensions dimensions}) = _$_DesignSystemData;
+      {required DesignSystemColors colors,
+      required DesignSystemText text,
+      required DesignSystemDimensions dimensions}) = _$_DesignSystemData;
 
   @override
-  DesignSystemColors get colors;
+  DesignSystemColors get colors => throw _privateConstructorUsedError;
   @override
-  DesignSystemText get text;
+  DesignSystemText get text => throw _privateConstructorUsedError;
   @override
-  DesignSystemDimensions get dimensions;
+  DesignSystemDimensions get dimensions => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DesignSystemDataCopyWith<_DesignSystemData> get copyWith;
+  _$DesignSystemDataCopyWith<_DesignSystemData> get copyWith =>
+      throw _privateConstructorUsedError;
 }

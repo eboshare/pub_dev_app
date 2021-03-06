@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'package_version_dto.dart';
 
@@ -8,6 +8,10 @@ part of 'package_version_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PackageVersionDto _$PackageVersionDtoFromJson(Map<String, dynamic> json) {
   return _PackageVersionDto.fromJson(json);
 }
@@ -16,14 +20,20 @@ PackageVersionDto _$PackageVersionDtoFromJson(Map<String, dynamic> json) {
 class _$PackageVersionDtoTearOff {
   const _$PackageVersionDtoTearOff();
 
-// ignore: unused_element
   _PackageVersionDto call(
-      {@required @JsonKey(name: 'version') @VersionConverter() Version version,
-      @required @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
-      @required @JsonKey(name: 'archive_url') String archiveUrl,
-      @JsonKey(name: 'package_url') String packageUrl,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt}) {
+      {@JsonKey(name: 'version')
+          required String version,
+      @JsonKey(name: 'pubspec')
+          required PubSpecDto pubSpec,
+      @JsonKey(name: 'archive_url')
+          required String archiveUrl,
+      @JsonKey(name: 'package_url')
+          String? packageUrl,
+      @JsonKey(name: 'url')
+          String? url,
+      @JsonKey(name: 'published')
+      @NullableDateTimeConverter()
+          DateTime? publishedAt}) {
     return _PackageVersionDto(
       version: version,
       pubSpec: pubSpec,
@@ -34,47 +44,45 @@ class _$PackageVersionDtoTearOff {
     );
   }
 
-// ignore: unused_element
   PackageVersionDto fromJson(Map<String, Object> json) {
     return PackageVersionDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PackageVersionDto = _$PackageVersionDtoTearOff();
 
 /// @nodoc
 mixin _$PackageVersionDto {
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConverter()
-  Version get version;
+  String get version => throw _privateConstructorUsedError;
 
   /// Data from pubspec.yaml of the package.
   @JsonKey(name: 'pubspec')
-  PubSpecDto get pubSpec;
+  PubSpecDto get pubSpec => throw _privateConstructorUsedError;
 
   /// Url to download the source code of the package.
   @JsonKey(name: 'archive_url')
-  String get archiveUrl;
+  String get archiveUrl => throw _privateConstructorUsedError;
 
   /// Url to the package info.
   @JsonKey(name: 'package_url')
-  String get packageUrl;
+  String? get packageUrl => throw _privateConstructorUsedError;
 
   /// Url to the detailed package version info.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url => throw _privateConstructorUsedError;
 
   /// Date and time at which the package was published.
   @JsonKey(name: 'published')
-  @DateTimeConverter()
-  DateTime get publishedAt;
+  @NullableDateTimeConverter()
+  DateTime? get publishedAt => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PackageVersionDtoCopyWith<PackageVersionDto> get copyWith;
+  $PackageVersionDtoCopyWith<PackageVersionDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -83,12 +91,19 @@ abstract class $PackageVersionDtoCopyWith<$Res> {
           PackageVersionDto value, $Res Function(PackageVersionDto) then) =
       _$PackageVersionDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'version') @VersionConverter() Version version,
-      @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
-      @JsonKey(name: 'archive_url') String archiveUrl,
-      @JsonKey(name: 'package_url') String packageUrl,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt});
+      {@JsonKey(name: 'version')
+          String version,
+      @JsonKey(name: 'pubspec')
+          PubSpecDto pubSpec,
+      @JsonKey(name: 'archive_url')
+          String archiveUrl,
+      @JsonKey(name: 'package_url')
+          String? packageUrl,
+      @JsonKey(name: 'url')
+          String? url,
+      @JsonKey(name: 'published')
+      @NullableDateTimeConverter()
+          DateTime? publishedAt});
 
   $PubSpecDtoCopyWith<$Res> get pubSpec;
 }
@@ -104,31 +119,29 @@ class _$PackageVersionDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object version = freezed,
-    Object pubSpec = freezed,
-    Object archiveUrl = freezed,
-    Object packageUrl = freezed,
-    Object url = freezed,
-    Object publishedAt = freezed,
+    Object? version = freezed,
+    Object? pubSpec = freezed,
+    Object? archiveUrl = freezed,
+    Object? packageUrl = freezed,
+    Object? url = freezed,
+    Object? publishedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      version: version == freezed ? _value.version : version as Version,
+      version: version == freezed ? _value.version : version as String,
       pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecDto,
       archiveUrl:
           archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
       packageUrl:
-          packageUrl == freezed ? _value.packageUrl : packageUrl as String,
-      url: url == freezed ? _value.url : url as String,
-      publishedAt:
-          publishedAt == freezed ? _value.publishedAt : publishedAt as DateTime,
+          packageUrl == freezed ? _value.packageUrl : packageUrl as String?,
+      url: url == freezed ? _value.url : url as String?,
+      publishedAt: publishedAt == freezed
+          ? _value.publishedAt
+          : publishedAt as DateTime?,
     ));
   }
 
   @override
   $PubSpecDtoCopyWith<$Res> get pubSpec {
-    if (_value.pubSpec == null) {
-      return null;
-    }
     return $PubSpecDtoCopyWith<$Res>(_value.pubSpec, (value) {
       return _then(_value.copyWith(pubSpec: value));
     });
@@ -143,12 +156,19 @@ abstract class _$PackageVersionDtoCopyWith<$Res>
       __$PackageVersionDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'version') @VersionConverter() Version version,
-      @JsonKey(name: 'pubspec') PubSpecDto pubSpec,
-      @JsonKey(name: 'archive_url') String archiveUrl,
-      @JsonKey(name: 'package_url') String packageUrl,
-      @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'published') @DateTimeConverter() DateTime publishedAt});
+      {@JsonKey(name: 'version')
+          String version,
+      @JsonKey(name: 'pubspec')
+          PubSpecDto pubSpec,
+      @JsonKey(name: 'archive_url')
+          String archiveUrl,
+      @JsonKey(name: 'package_url')
+          String? packageUrl,
+      @JsonKey(name: 'url')
+          String? url,
+      @JsonKey(name: 'published')
+      @NullableDateTimeConverter()
+          DateTime? publishedAt});
 
   @override
   $PubSpecDtoCopyWith<$Res> get pubSpec;
@@ -167,23 +187,24 @@ class __$PackageVersionDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object version = freezed,
-    Object pubSpec = freezed,
-    Object archiveUrl = freezed,
-    Object packageUrl = freezed,
-    Object url = freezed,
-    Object publishedAt = freezed,
+    Object? version = freezed,
+    Object? pubSpec = freezed,
+    Object? archiveUrl = freezed,
+    Object? packageUrl = freezed,
+    Object? url = freezed,
+    Object? publishedAt = freezed,
   }) {
     return _then(_PackageVersionDto(
-      version: version == freezed ? _value.version : version as Version,
+      version: version == freezed ? _value.version : version as String,
       pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecDto,
       archiveUrl:
           archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
       packageUrl:
-          packageUrl == freezed ? _value.packageUrl : packageUrl as String,
-      url: url == freezed ? _value.url : url as String,
-      publishedAt:
-          publishedAt == freezed ? _value.publishedAt : publishedAt as DateTime,
+          packageUrl == freezed ? _value.packageUrl : packageUrl as String?,
+      url: url == freezed ? _value.url : url as String?,
+      publishedAt: publishedAt == freezed
+          ? _value.publishedAt
+          : publishedAt as DateTime?,
     ));
   }
 }
@@ -193,15 +214,19 @@ class __$PackageVersionDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$_PackageVersionDto implements _PackageVersionDto {
   const _$_PackageVersionDto(
-      {@required @JsonKey(name: 'version') @VersionConverter() this.version,
-      @required @JsonKey(name: 'pubspec') this.pubSpec,
-      @required @JsonKey(name: 'archive_url') this.archiveUrl,
-      @JsonKey(name: 'package_url') this.packageUrl,
-      @JsonKey(name: 'url') this.url,
-      @JsonKey(name: 'published') @DateTimeConverter() this.publishedAt})
-      : assert(version != null),
-        assert(pubSpec != null),
-        assert(archiveUrl != null);
+      {@JsonKey(name: 'version')
+          required this.version,
+      @JsonKey(name: 'pubspec')
+          required this.pubSpec,
+      @JsonKey(name: 'archive_url')
+          required this.archiveUrl,
+      @JsonKey(name: 'package_url')
+          this.packageUrl,
+      @JsonKey(name: 'url')
+          this.url,
+      @JsonKey(name: 'published')
+      @NullableDateTimeConverter()
+          this.publishedAt});
 
   factory _$_PackageVersionDto.fromJson(Map<String, dynamic> json) =>
       _$_$_PackageVersionDtoFromJson(json);
@@ -210,8 +235,7 @@ class _$_PackageVersionDto implements _PackageVersionDto {
 
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConverter()
-  final Version version;
+  final String version;
   @override
 
   /// Data from pubspec.yaml of the package.
@@ -226,18 +250,18 @@ class _$_PackageVersionDto implements _PackageVersionDto {
 
   /// Url to the package info.
   @JsonKey(name: 'package_url')
-  final String packageUrl;
+  final String? packageUrl;
   @override
 
   /// Url to the detailed package version info.
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
   @override
 
   /// Date and time at which the package was published.
   @JsonKey(name: 'published')
-  @DateTimeConverter()
-  final DateTime publishedAt;
+  @NullableDateTimeConverter()
+  final DateTime? publishedAt;
 
   @override
   String toString() {
@@ -290,23 +314,19 @@ class _$_PackageVersionDto implements _PackageVersionDto {
 
 abstract class _PackageVersionDto implements PackageVersionDto {
   const factory _PackageVersionDto(
-      {@required
-      @JsonKey(name: 'version')
-      @VersionConverter()
-          Version version,
-      @required
+      {@JsonKey(name: 'version')
+          required String version,
       @JsonKey(name: 'pubspec')
-          PubSpecDto pubSpec,
-      @required
+          required PubSpecDto pubSpec,
       @JsonKey(name: 'archive_url')
-          String archiveUrl,
+          required String archiveUrl,
       @JsonKey(name: 'package_url')
-          String packageUrl,
+          String? packageUrl,
       @JsonKey(name: 'url')
-          String url,
+          String? url,
       @JsonKey(name: 'published')
-      @DateTimeConverter()
-          DateTime publishedAt}) = _$_PackageVersionDto;
+      @NullableDateTimeConverter()
+          DateTime? publishedAt}) = _$_PackageVersionDto;
 
   factory _PackageVersionDto.fromJson(Map<String, dynamic> json) =
       _$_PackageVersionDto.fromJson;
@@ -315,35 +335,35 @@ abstract class _PackageVersionDto implements PackageVersionDto {
 
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConverter()
-  Version get version;
+  String get version => throw _privateConstructorUsedError;
   @override
 
   /// Data from pubspec.yaml of the package.
   @JsonKey(name: 'pubspec')
-  PubSpecDto get pubSpec;
+  PubSpecDto get pubSpec => throw _privateConstructorUsedError;
   @override
 
   /// Url to download the source code of the package.
   @JsonKey(name: 'archive_url')
-  String get archiveUrl;
+  String get archiveUrl => throw _privateConstructorUsedError;
   @override
 
   /// Url to the package info.
   @JsonKey(name: 'package_url')
-  String get packageUrl;
+  String? get packageUrl => throw _privateConstructorUsedError;
   @override
 
   /// Url to the detailed package version info.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
 
   /// Date and time at which the package was published.
   @JsonKey(name: 'published')
-  @DateTimeConverter()
-  DateTime get publishedAt;
+  @NullableDateTimeConverter()
+  DateTime? get publishedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackageVersionDtoCopyWith<_PackageVersionDto> get copyWith;
+  _$PackageVersionDtoCopyWith<_PackageVersionDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

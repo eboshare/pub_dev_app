@@ -1,3 +1,3 @@
-extension NullHelperExtension<T, R> on T {
-  R nullOrElse(R Function() get) => this == null ? null : get();
+extension NullHelperExtension<T extends Object?, R> on T {
+  R? nullOrElse(R? Function(T obj) get) => this == null ? null : get(this!);
 }

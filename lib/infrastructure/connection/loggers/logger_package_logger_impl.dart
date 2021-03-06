@@ -19,7 +19,6 @@ Level _mapLogLevelToLevel(LogLevel logLevel) {
     case LogLevel.nothing:
       return Level.nothing;
   }
-  throw AssertionError();
 }
 
 class LoggerPackageLoggerImpl implements ILogger {
@@ -36,7 +35,7 @@ class LoggerPackageLoggerImpl implements ILogger {
   void debug(
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.d(
       message,
@@ -49,7 +48,7 @@ class LoggerPackageLoggerImpl implements ILogger {
   void error(
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.e(
       message,
@@ -62,7 +61,7 @@ class LoggerPackageLoggerImpl implements ILogger {
   void info(
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.i(
       message,
@@ -76,7 +75,7 @@ class LoggerPackageLoggerImpl implements ILogger {
     LogLevel level,
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.log(
       _mapLogLevelToLevel(level),
@@ -90,7 +89,7 @@ class LoggerPackageLoggerImpl implements ILogger {
   void verbose(
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.v(
       message,
@@ -103,7 +102,7 @@ class LoggerPackageLoggerImpl implements ILogger {
   void warning(
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.w(
       message,
@@ -116,7 +115,7 @@ class LoggerPackageLoggerImpl implements ILogger {
   void wtf(
     message, {
     error,
-    StackTrace stackTrace,
+    StackTrace? stackTrace,
   }) {
     _logger.wtf(
       message,

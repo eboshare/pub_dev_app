@@ -5,13 +5,13 @@ part 'hosted_details_dto.g.dart';
 
 /// Hosted details.
 @freezed
-abstract class HostedDetailsDto with _$HostedDetailsDto {
+class HostedDetailsDto with _$HostedDetailsDto {
   const factory HostedDetailsDto({
     /// Name that gets passed to the source.
-    @required @JsonKey(name: 'name') String name,
+    @JsonKey(name: 'name') required String name,
 
     /// Source repository url.
-    @JsonKey(name: 'url') String url,
+    @JsonKey(name: 'url') String? url,
   }) = _HostedDetailsDto;
 
   factory HostedDetailsDto.fromJson(Map<String, dynamic> json) => _$HostedDetailsDtoFromJson(json);

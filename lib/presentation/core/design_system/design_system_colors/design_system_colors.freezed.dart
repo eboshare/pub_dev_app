@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'design_system_colors.dart';
 
@@ -9,17 +9,19 @@ part of 'design_system_colors.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$DesignSystemColorsTearOff {
   const _$DesignSystemColorsTearOff();
 
-// ignore: unused_element
   _DesignSystemColors call(
-      {@required Color white,
-      @required Color black,
-      @required Color softBlack,
-      @required Color blue,
-      @required Color green}) {
+      {required Color white,
+      required Color black,
+      required Color softBlack,
+      required Color blue,
+      required Color green}) {
     return _DesignSystemColors(
       white: white,
       black: black,
@@ -31,19 +33,19 @@ class _$DesignSystemColorsTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DesignSystemColors = _$DesignSystemColorsTearOff();
 
 /// @nodoc
 mixin _$DesignSystemColors {
-  Color get white;
-  Color get black;
-  Color get softBlack;
-  Color get blue;
-  Color get green;
+  Color get white => throw _privateConstructorUsedError;
+  Color get black => throw _privateConstructorUsedError;
+  Color get softBlack => throw _privateConstructorUsedError;
+  Color get blue => throw _privateConstructorUsedError;
+  Color get green => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $DesignSystemColorsCopyWith<DesignSystemColors> get copyWith;
+  $DesignSystemColorsCopyWith<DesignSystemColors> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -66,11 +68,11 @@ class _$DesignSystemColorsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object white = freezed,
-    Object black = freezed,
-    Object softBlack = freezed,
-    Object blue = freezed,
-    Object green = freezed,
+    Object? white = freezed,
+    Object? black = freezed,
+    Object? softBlack = freezed,
+    Object? blue = freezed,
+    Object? green = freezed,
   }) {
     return _then(_value.copyWith(
       white: white == freezed ? _value.white : white as Color,
@@ -106,11 +108,11 @@ class __$DesignSystemColorsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object white = freezed,
-    Object black = freezed,
-    Object softBlack = freezed,
-    Object blue = freezed,
-    Object green = freezed,
+    Object? white = freezed,
+    Object? black = freezed,
+    Object? softBlack = freezed,
+    Object? blue = freezed,
+    Object? green = freezed,
   }) {
     return _then(_DesignSystemColors(
       white: white == freezed ? _value.white : white as Color,
@@ -125,16 +127,11 @@ class __$DesignSystemColorsCopyWithImpl<$Res>
 /// @nodoc
 class _$_DesignSystemColors implements _DesignSystemColors {
   const _$_DesignSystemColors(
-      {@required this.white,
-      @required this.black,
-      @required this.softBlack,
-      @required this.blue,
-      @required this.green})
-      : assert(white != null),
-        assert(black != null),
-        assert(softBlack != null),
-        assert(blue != null),
-        assert(green != null);
+      {required this.white,
+      required this.black,
+      required this.softBlack,
+      required this.blue,
+      required this.green});
 
   @override
   final Color white;
@@ -186,23 +183,24 @@ class _$_DesignSystemColors implements _DesignSystemColors {
 
 abstract class _DesignSystemColors implements DesignSystemColors {
   const factory _DesignSystemColors(
-      {@required Color white,
-      @required Color black,
-      @required Color softBlack,
-      @required Color blue,
-      @required Color green}) = _$_DesignSystemColors;
+      {required Color white,
+      required Color black,
+      required Color softBlack,
+      required Color blue,
+      required Color green}) = _$_DesignSystemColors;
 
   @override
-  Color get white;
+  Color get white => throw _privateConstructorUsedError;
   @override
-  Color get black;
+  Color get black => throw _privateConstructorUsedError;
   @override
-  Color get softBlack;
+  Color get softBlack => throw _privateConstructorUsedError;
   @override
-  Color get blue;
+  Color get blue => throw _privateConstructorUsedError;
   @override
-  Color get green;
+  Color get green => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DesignSystemColorsCopyWith<_DesignSystemColors> get copyWith;
+  _$DesignSystemColorsCopyWith<_DesignSystemColors> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -9,7 +9,7 @@ part of 'hosted_details_dto.dart';
 _$_HostedDetailsDto _$_$_HostedDetailsDtoFromJson(Map<String, dynamic> json) {
   return _$_HostedDetailsDto(
     name: json['name'] as String,
-    url: json['url'] as String,
+    url: json['url'] as String?,
   );
 }
 

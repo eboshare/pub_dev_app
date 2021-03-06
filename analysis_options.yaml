@@ -11,11 +11,12 @@ analyzer:
     - lib/**/*.iconfig.dart
     - lib/**/*.config.dart
 
+    # Excludes flutter code generation for web
+    - lib/generated_plugin_registrant.dart
+
   errors:
     # INAPPROPRIATE
-    # always_put_control_body_on_new_line: ignore
-    # unused_field: ignore
-    # unused_import: ignore
+    sort_pub_dependencies: ignore
 
     # WORKING WELL
     missing_required_param: error

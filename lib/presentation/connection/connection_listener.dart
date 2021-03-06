@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart' hide Router, ConnectionState;
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
@@ -14,9 +13,9 @@ class ConnectionListener extends StatefulWidget {
   final Widget child;
 
   const ConnectionListener({
-    Key key,
-    @required this.onStatusChanged,
-    @required this.child,
+    Key? key,
+    required this.onStatusChanged,
+    required this.child,
   }) : super(key: key);
 
   @override
@@ -24,8 +23,7 @@ class ConnectionListener extends StatefulWidget {
 }
 
 class _ConnectionListenerState extends State<ConnectionListener> {
-  // ignore: close_sinks
-  IConnectionBloc _bloc;
+  late final IConnectionBloc _bloc;
 
   @override
   void initState() {
@@ -34,16 +32,10 @@ class _ConnectionListenerState extends State<ConnectionListener> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-    getIt.dispose(_bloc);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return BlocListener<IConnectionBloc, ConnectionState>(
       child: widget.child,
-      cubit: _bloc,
+      bloc: _bloc,
       listenWhen: _listenWhen,
       listener: (context, state) {
         state.map(

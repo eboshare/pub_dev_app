@@ -4,8 +4,8 @@ class ErrorPlaceholder extends StatelessWidget {
   final String message;
 
   const ErrorPlaceholder({
-    Key key,
-    @required this.message,
+    Key? key,
+    required this.message,
   }) : super(key: key);
 
   @override

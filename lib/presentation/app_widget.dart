@@ -1,34 +1,31 @@
 import 'package:flutter/material.dart' hide Router, ConnectionState;
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:one_context/one_context.dart';
 
 import 'package:pub_dev_app/config/injection.dart';
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
-import 'package:pub_dev_app/presentation/connection/connection_snack_bar_wrapper.dart';
 import 'package:pub_dev_app/config/localization/generated/l10n.dart';
-import 'package:pub_dev_app/presentation/core/navigation/router.gr.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system_data/design_system_data.dart';
+import 'package:pub_dev_app/presentation/package_list/package_list.dart';
 
 class App extends StatelessWidget {
-  final Widget page;
+  final Widget? page;
 
   const App._({
-    Key key,
+    Key? key,
     this.page,
   }) : super(key: key);
 
   factory App.fromRoot({
-    Key key,
+    Key? key,
   }) {
     return App._(key: key);
   }
 
   /// Required for testing.
   factory App.fromDirectPage({
-    Key key,
-    @required Widget page,
+    Key? key,
+    required Widget page,
   }) {
     return App._(key: key, page: page);
   }
@@ -41,9 +38,8 @@ class App extends StatelessWidget {
         // Builder is used to initialize context and access [DesignSystem.of(context)].
         builder: (context) {
           return MaterialApp(
-            onGenerateTitle: (context) => S.of(context).appTitle,
+            onGenerateTitle: (context) => S.of(context)!.appTitle,
             theme: ThemeData(
-              primarySwatch: DesignSystem.of(context).colors.blue,
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
             supportedLocales: S.delegate.supportedLocales,
@@ -53,19 +49,10 @@ class App extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            builder: ExtendedNavigator.builder<Router>(
-              router: Router(),
-              observers: [
-                getIt<IErrorReportRepository>().getNavigationObserver(),
-              ],
-              builder: (context, child) {
-                final targetChild = page ?? child;
-                return ConnectionStackBarWrapper(
-                  showSnackBar: OneContext.instance.showSnackBar,
-                  child: OneContext.instance.builder(context, targetChild),
-                );
-              },
-            ),
+            navigatorObservers: [
+              getIt<IErrorReportRepository>().getNavigationObserver(),
+            ],
+            home: PackageList(),
           );
         },
       ),

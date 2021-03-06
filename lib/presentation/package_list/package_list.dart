@@ -16,7 +16,7 @@ class PackageList extends StatefulWidget {
 }
 
 class _PackageListState extends State<PackageList> {
-  Future<PackageDto> _future;
+  late final Future<PackageDto> _future;
 
   @override
   void initState() {
@@ -32,9 +32,15 @@ class _PackageListState extends State<PackageList> {
           child: FutureBuilder<PackageDto>(
             future: _future,
             builder: (context, snapshot) {
-              if (!snapshot.hasData) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Text('loading...');
               }
+              if (snapshot.connectionState == ConnectionState.done && snapshot.error != null) {
+                print(snapshot.error);
+                print(snapshot.stackTrace);
+                return Text(snapshot.error.toString());
+              }
+
               return Text(snapshot.data.toString());
             },
           ),

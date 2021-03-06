@@ -11,7 +11,7 @@ Future<void> _initDependencies() async {
 }
 
 Future<Widget> initAppForTesting({
-  Widget page,
+  Widget? page,
   Environment environment = const Environment.test(),
 }) async {
   WidgetsFlutterBinding.ensureInitialized();

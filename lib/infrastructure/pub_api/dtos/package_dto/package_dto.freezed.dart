@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'package_dto.dart';
 
@@ -8,6 +8,10 @@ part of 'package_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PackageDto _$PackageDtoFromJson(Map<String, dynamic> json) {
   return _PackageDto.fromJson(json);
 }
@@ -16,18 +20,10 @@ PackageDto _$PackageDtoFromJson(Map<String, dynamic> json) {
 class _$PackageDtoTearOff {
   const _$PackageDtoTearOff();
 
-// ignore: unused_element
   _PackageDto call(
-      {@required
-      @JsonKey(name: 'name')
-          String name,
-      @required
-      @JsonKey(name: 'latest')
-          PackageVersionDto latest,
-      @required
-      @JsonKey(name: 'versions')
-      @VersionsConverter()
-          BuiltList<PackageVersionDto> versions}) {
+      {@JsonKey(name: 'name') required String name,
+      @JsonKey(name: 'latest') required PackageVersionDto latest,
+      @JsonKey(name: 'versions') required List<PackageVersionDto> versions}) {
     return _PackageDto(
       name: name,
       latest: latest,
@@ -35,34 +31,32 @@ class _$PackageDtoTearOff {
     );
   }
 
-// ignore: unused_element
   PackageDto fromJson(Map<String, Object> json) {
     return PackageDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PackageDto = _$PackageDtoTearOff();
 
 /// @nodoc
 mixin _$PackageDto {
   /// Package name.
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
 
   /// Information about the latest version of the package.
   @JsonKey(name: 'latest')
-  PackageVersionDto get latest;
+  PackageVersionDto get latest => throw _privateConstructorUsedError;
 
   /// Information about all package versions.
   @JsonKey(name: 'versions')
-  @VersionsConverter()
-  BuiltList<PackageVersionDto> get versions;
+  List<PackageVersionDto> get versions => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PackageDtoCopyWith<PackageDto> get copyWith;
+  $PackageDtoCopyWith<PackageDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -71,13 +65,9 @@ abstract class $PackageDtoCopyWith<$Res> {
           PackageDto value, $Res Function(PackageDto) then) =
       _$PackageDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'name')
-          String name,
-      @JsonKey(name: 'latest')
-          PackageVersionDto latest,
-      @JsonKey(name: 'versions')
-      @VersionsConverter()
-          BuiltList<PackageVersionDto> versions});
+      {@JsonKey(name: 'name') String name,
+      @JsonKey(name: 'latest') PackageVersionDto latest,
+      @JsonKey(name: 'versions') List<PackageVersionDto> versions});
 
   $PackageVersionDtoCopyWith<$Res> get latest;
 }
@@ -92,24 +82,21 @@ class _$PackageDtoCopyWithImpl<$Res> implements $PackageDtoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object name = freezed,
-    Object latest = freezed,
-    Object versions = freezed,
+    Object? name = freezed,
+    Object? latest = freezed,
+    Object? versions = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
       latest: latest == freezed ? _value.latest : latest as PackageVersionDto,
       versions: versions == freezed
           ? _value.versions
-          : versions as BuiltList<PackageVersionDto>,
+          : versions as List<PackageVersionDto>,
     ));
   }
 
   @override
   $PackageVersionDtoCopyWith<$Res> get latest {
-    if (_value.latest == null) {
-      return null;
-    }
     return $PackageVersionDtoCopyWith<$Res>(_value.latest, (value) {
       return _then(_value.copyWith(latest: value));
     });
@@ -123,13 +110,9 @@ abstract class _$PackageDtoCopyWith<$Res> implements $PackageDtoCopyWith<$Res> {
       __$PackageDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'name')
-          String name,
-      @JsonKey(name: 'latest')
-          PackageVersionDto latest,
-      @JsonKey(name: 'versions')
-      @VersionsConverter()
-          BuiltList<PackageVersionDto> versions});
+      {@JsonKey(name: 'name') String name,
+      @JsonKey(name: 'latest') PackageVersionDto latest,
+      @JsonKey(name: 'versions') List<PackageVersionDto> versions});
 
   @override
   $PackageVersionDtoCopyWith<$Res> get latest;
@@ -147,16 +130,16 @@ class __$PackageDtoCopyWithImpl<$Res> extends _$PackageDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object latest = freezed,
-    Object versions = freezed,
+    Object? name = freezed,
+    Object? latest = freezed,
+    Object? versions = freezed,
   }) {
     return _then(_PackageDto(
       name: name == freezed ? _value.name : name as String,
       latest: latest == freezed ? _value.latest : latest as PackageVersionDto,
       versions: versions == freezed
           ? _value.versions
-          : versions as BuiltList<PackageVersionDto>,
+          : versions as List<PackageVersionDto>,
     ));
   }
 }
@@ -166,12 +149,9 @@ class __$PackageDtoCopyWithImpl<$Res> extends _$PackageDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$_PackageDto implements _PackageDto {
   const _$_PackageDto(
-      {@required @JsonKey(name: 'name') this.name,
-      @required @JsonKey(name: 'latest') this.latest,
-      @required @JsonKey(name: 'versions') @VersionsConverter() this.versions})
-      : assert(name != null),
-        assert(latest != null),
-        assert(versions != null);
+      {@JsonKey(name: 'name') required this.name,
+      @JsonKey(name: 'latest') required this.latest,
+      @JsonKey(name: 'versions') required this.versions});
 
   factory _$_PackageDto.fromJson(Map<String, dynamic> json) =>
       _$_$_PackageDtoFromJson(json);
@@ -190,8 +170,7 @@ class _$_PackageDto implements _PackageDto {
 
   /// Information about all package versions.
   @JsonKey(name: 'versions')
-  @VersionsConverter()
-  final BuiltList<PackageVersionDto> versions;
+  final List<PackageVersionDto> versions;
 
   @override
   String toString() {
@@ -231,16 +210,12 @@ class _$_PackageDto implements _PackageDto {
 
 abstract class _PackageDto implements PackageDto {
   const factory _PackageDto(
-      {@required
-      @JsonKey(name: 'name')
-          String name,
-      @required
+      {@JsonKey(name: 'name')
+          required String name,
       @JsonKey(name: 'latest')
-          PackageVersionDto latest,
-      @required
+          required PackageVersionDto latest,
       @JsonKey(name: 'versions')
-      @VersionsConverter()
-          BuiltList<PackageVersionDto> versions}) = _$_PackageDto;
+          required List<PackageVersionDto> versions}) = _$_PackageDto;
 
   factory _PackageDto.fromJson(Map<String, dynamic> json) =
       _$_PackageDto.fromJson;
@@ -249,19 +224,19 @@ abstract class _PackageDto implements PackageDto {
 
   /// Package name.
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
 
   /// Information about the latest version of the package.
   @JsonKey(name: 'latest')
-  PackageVersionDto get latest;
+  PackageVersionDto get latest => throw _privateConstructorUsedError;
   @override
 
   /// Information about all package versions.
   @JsonKey(name: 'versions')
-  @VersionsConverter()
-  BuiltList<PackageVersionDto> get versions;
+  List<PackageVersionDto> get versions => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PackageDtoCopyWith<_PackageDto> get copyWith;
+  _$PackageDtoCopyWith<_PackageDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

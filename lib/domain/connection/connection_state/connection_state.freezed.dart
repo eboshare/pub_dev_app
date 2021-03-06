@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'connection_state.dart';
 
@@ -9,58 +9,61 @@ part of 'connection_state.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$ConnectionStateTearOff {
   const _$ConnectionStateTearOff();
 
-// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
-// ignore: unused_element
   _Connected connected() {
     return const _Connected();
   }
 
-// ignore: unused_element
   _Disconnected disconnected() {
     return const _Disconnected();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ConnectionState = _$ConnectionStateTearOff();
 
 /// @nodoc
 mixin _$ConnectionState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult connected(),
-    @required TResult disconnected(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() connected,
+    required TResult Function() disconnected,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult connected(),
-    TResult disconnected(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult connected(_Connected value),
-    @required TResult disconnected(_Disconnected value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Connected value) connected,
+    required TResult Function(_Disconnected value) disconnected,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult connected(_Connected value),
-    TResult disconnected(_Disconnected value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Connected value)? connected,
+    TResult Function(_Disconnected value)? disconnected,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -115,26 +118,22 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult connected(),
-    @required TResult disconnected(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() connected,
+    required TResult Function() disconnected,
   }) {
-    assert(initial != null);
-    assert(connected != null);
-    assert(disconnected != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult connected(),
-    TResult disconnected(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -143,26 +142,22 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult connected(_Connected value),
-    @required TResult disconnected(_Disconnected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Connected value) connected,
+    required TResult Function(_Disconnected value) disconnected,
   }) {
-    assert(initial != null);
-    assert(connected != null);
-    assert(disconnected != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult connected(_Connected value),
-    TResult disconnected(_Disconnected value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Connected value)? connected,
+    TResult Function(_Disconnected value)? disconnected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -210,26 +205,22 @@ class _$_Connected implements _Connected {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult connected(),
-    @required TResult disconnected(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() connected,
+    required TResult Function() disconnected,
   }) {
-    assert(initial != null);
-    assert(connected != null);
-    assert(disconnected != null);
     return connected();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult connected(),
-    TResult disconnected(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (connected != null) {
       return connected();
     }
@@ -238,26 +229,22 @@ class _$_Connected implements _Connected {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult connected(_Connected value),
-    @required TResult disconnected(_Disconnected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Connected value) connected,
+    required TResult Function(_Disconnected value) disconnected,
   }) {
-    assert(initial != null);
-    assert(connected != null);
-    assert(disconnected != null);
     return connected(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult connected(_Connected value),
-    TResult disconnected(_Disconnected value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Connected value)? connected,
+    TResult Function(_Disconnected value)? disconnected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (connected != null) {
       return connected(this);
     }
@@ -307,26 +294,22 @@ class _$_Disconnected implements _Disconnected {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult connected(),
-    @required TResult disconnected(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() connected,
+    required TResult Function() disconnected,
   }) {
-    assert(initial != null);
-    assert(connected != null);
-    assert(disconnected != null);
     return disconnected();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult connected(),
-    TResult disconnected(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (disconnected != null) {
       return disconnected();
     }
@@ -335,26 +318,22 @@ class _$_Disconnected implements _Disconnected {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_Initial value),
-    @required TResult connected(_Connected value),
-    @required TResult disconnected(_Disconnected value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Connected value) connected,
+    required TResult Function(_Disconnected value) disconnected,
   }) {
-    assert(initial != null);
-    assert(connected != null);
-    assert(disconnected != null);
     return disconnected(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_Initial value),
-    TResult connected(_Connected value),
-    TResult disconnected(_Disconnected value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Connected value)? connected,
+    TResult Function(_Disconnected value)? disconnected,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (disconnected != null) {
       return disconnected(this);
     }

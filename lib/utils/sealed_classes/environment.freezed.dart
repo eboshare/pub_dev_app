@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'environment.dart';
 
@@ -9,58 +9,61 @@ part of 'environment.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$EnvironmentTearOff {
   const _$EnvironmentTearOff();
 
-// ignore: unused_element
   _Development dev() {
     return const _Development();
   }
 
-// ignore: unused_element
   _Production prod() {
     return const _Production();
   }
 
-// ignore: unused_element
   _Testing test() {
     return const _Testing();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Environment = _$EnvironmentTearOff();
 
 /// @nodoc
 mixin _$Environment {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult dev(),
-    @required TResult prod(),
-    @required TResult test(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() dev,
+    required TResult Function() prod,
+    required TResult Function() test,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult dev(),
-    TResult prod(),
-    TResult test(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dev,
+    TResult Function()? prod,
+    TResult Function()? test,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult dev(_Development value),
-    @required TResult prod(_Production value),
-    @required TResult test(_Testing value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Development value) dev,
+    required TResult Function(_Production value) prod,
+    required TResult Function(_Testing value) test,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult dev(_Development value),
-    TResult prod(_Production value),
-    TResult test(_Testing value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Development value)? dev,
+    TResult Function(_Production value)? prod,
+    TResult Function(_Testing value)? test,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -116,26 +119,22 @@ class _$_Development implements _Development {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult dev(),
-    @required TResult prod(),
-    @required TResult test(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() dev,
+    required TResult Function() prod,
+    required TResult Function() test,
   }) {
-    assert(dev != null);
-    assert(prod != null);
-    assert(test != null);
     return dev();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult dev(),
-    TResult prod(),
-    TResult test(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dev,
+    TResult Function()? prod,
+    TResult Function()? test,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (dev != null) {
       return dev();
     }
@@ -144,26 +143,22 @@ class _$_Development implements _Development {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult dev(_Development value),
-    @required TResult prod(_Production value),
-    @required TResult test(_Testing value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Development value) dev,
+    required TResult Function(_Production value) prod,
+    required TResult Function(_Testing value) test,
   }) {
-    assert(dev != null);
-    assert(prod != null);
-    assert(test != null);
     return dev(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult dev(_Development value),
-    TResult prod(_Production value),
-    TResult test(_Testing value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Development value)? dev,
+    TResult Function(_Production value)? prod,
+    TResult Function(_Testing value)? test,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (dev != null) {
       return dev(this);
     }
@@ -212,26 +207,22 @@ class _$_Production implements _Production {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult dev(),
-    @required TResult prod(),
-    @required TResult test(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() dev,
+    required TResult Function() prod,
+    required TResult Function() test,
   }) {
-    assert(dev != null);
-    assert(prod != null);
-    assert(test != null);
     return prod();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult dev(),
-    TResult prod(),
-    TResult test(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dev,
+    TResult Function()? prod,
+    TResult Function()? test,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (prod != null) {
       return prod();
     }
@@ -240,26 +231,22 @@ class _$_Production implements _Production {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult dev(_Development value),
-    @required TResult prod(_Production value),
-    @required TResult test(_Testing value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Development value) dev,
+    required TResult Function(_Production value) prod,
+    required TResult Function(_Testing value) test,
   }) {
-    assert(dev != null);
-    assert(prod != null);
-    assert(test != null);
     return prod(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult dev(_Development value),
-    TResult prod(_Production value),
-    TResult test(_Testing value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Development value)? dev,
+    TResult Function(_Production value)? prod,
+    TResult Function(_Testing value)? test,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (prod != null) {
       return prod(this);
     }
@@ -306,26 +293,22 @@ class _$_Testing implements _Testing {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult dev(),
-    @required TResult prod(),
-    @required TResult test(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() dev,
+    required TResult Function() prod,
+    required TResult Function() test,
   }) {
-    assert(dev != null);
-    assert(prod != null);
-    assert(test != null);
     return test();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult dev(),
-    TResult prod(),
-    TResult test(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dev,
+    TResult Function()? prod,
+    TResult Function()? test,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (test != null) {
       return test();
     }
@@ -334,26 +317,22 @@ class _$_Testing implements _Testing {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult dev(_Development value),
-    @required TResult prod(_Production value),
-    @required TResult test(_Testing value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Development value) dev,
+    required TResult Function(_Production value) prod,
+    required TResult Function(_Testing value) test,
   }) {
-    assert(dev != null);
-    assert(prod != null);
-    assert(test != null);
     return test(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult dev(_Development value),
-    TResult prod(_Production value),
-    TResult test(_Testing value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Development value)? dev,
+    TResult Function(_Production value)? prod,
+    TResult Function(_Testing value)? test,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (test != null) {
       return test(this);
     }

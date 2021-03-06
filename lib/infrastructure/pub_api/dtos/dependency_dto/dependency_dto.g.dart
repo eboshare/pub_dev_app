@@ -9,22 +9,21 @@ part of 'dependency_dto.dart';
 _$SdkDependencyDto _$_$SdkDependencyDtoFromJson(Map<String, dynamic> json) {
   return _$SdkDependencyDto(
     sdk: json['sdk'] as String,
-    version:
-        const VersionConstraintConverter().fromJson(json['version'] as String),
+    version: json['version'] as String?,
   );
 }
 
 Map<String, dynamic> _$_$SdkDependencyDtoToJson(_$SdkDependencyDto instance) =>
     <String, dynamic>{
       'sdk': instance.sdk,
-      'version': const VersionConstraintConverter().toJson(instance.version),
+      'version': instance.version,
     };
 
 _$GitDependencyDto _$_$GitDependencyDtoFromJson(Map<String, dynamic> json) {
   return _$GitDependencyDto(
     url: json['url'] as String,
-    ref: json['ref'] as String,
-    path: json['path'] as String,
+    ref: json['ref'] as String?,
+    path: json['path'] as String?,
   );
 }
 
@@ -50,8 +49,7 @@ Map<String, dynamic> _$_$PathDependencyDtoToJson(
 _$HostedDependencyDto _$_$HostedDependencyDtoFromJson(
     Map<String, dynamic> json) {
   return _$HostedDependencyDto(
-    version:
-        const VersionConstraintConverter().fromJson(json['version'] as String),
+    version: json['version'] as String,
     hosted: json['hosted'] == null
         ? null
         : HostedDetailsDto.fromJson(json['hosted'] as Map<String, dynamic>),
@@ -61,6 +59,6 @@ _$HostedDependencyDto _$_$HostedDependencyDtoFromJson(
 Map<String, dynamic> _$_$HostedDependencyDtoToJson(
         _$HostedDependencyDto instance) =>
     <String, dynamic>{
-      'version': const VersionConstraintConverter().toJson(instance.version),
+      'version': instance.version,
       'hosted': instance.hosted?.toJson(),
     };

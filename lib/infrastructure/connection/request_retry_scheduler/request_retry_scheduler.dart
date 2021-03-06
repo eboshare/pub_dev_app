@@ -11,7 +11,7 @@ class DataConnectionRequestRetryScheduler implements IRequestRetryScheduler {
 
   @override
   Future<T> scheduleRequestRetry<T>(Future<T> Function() retryRequest) {
-    StreamSubscription subscription;
+    late final StreamSubscription subscription;
     final responseCompleter = Completer<T>();
 
     subscription = _connectionRepository.onConnectionStatusChanged.listen((status) {

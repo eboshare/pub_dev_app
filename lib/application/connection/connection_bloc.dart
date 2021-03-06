@@ -15,7 +15,6 @@ ConnectionEvent _mapStatusToEvent(ConnectionStatus status) {
     case ConnectionStatus.disconnected:
       return const ConnectionEvent.disconnected();
   }
-  throw AssertionError();
 }
 
 class ConnectionBloc extends Bloc<ConnectionEvent, ConnectionState> implements IConnectionBloc {
@@ -28,7 +27,7 @@ class ConnectionBloc extends Bloc<ConnectionEvent, ConnectionState> implements I
   ) : super(const ConnectionState.initial());
 
   factory ConnectionBloc(IConnectionRepository repository) {
-    ConnectionBloc bloc;
+    late final ConnectionBloc bloc;
 
     // ignore: cancel_subscriptions
     final subscription = repository.onConnectionStatusChanged.listen(

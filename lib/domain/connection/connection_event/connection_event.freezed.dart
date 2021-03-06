@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'connection_event.dart';
 
@@ -9,58 +9,61 @@ part of 'connection_event.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$ConnectionEventTearOff {
   const _$ConnectionEventTearOff();
 
-// ignore: unused_element
   ConnectionConnectedEvent connected() {
     return const ConnectionConnectedEvent();
   }
 
-// ignore: unused_element
   ConnectionDisconnectedEvent disconnected() {
     return const ConnectionDisconnectedEvent();
   }
 
-// ignore: unused_element
   ConnectionCheckEvent check() {
     return const ConnectionCheckEvent();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ConnectionEvent = _$ConnectionEventTearOff();
 
 /// @nodoc
 mixin _$ConnectionEvent {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult connected(),
-    @required TResult disconnected(),
-    @required TResult check(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() connected,
+    required TResult Function() disconnected,
+    required TResult Function() check,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult connected(),
-    TResult disconnected(),
-    TResult check(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    TResult Function()? check,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult connected(ConnectionConnectedEvent value),
-    @required TResult disconnected(ConnectionDisconnectedEvent value),
-    @required TResult check(ConnectionCheckEvent value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(ConnectionConnectedEvent value) connected,
+    required TResult Function(ConnectionDisconnectedEvent value) disconnected,
+    required TResult Function(ConnectionCheckEvent value) check,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult connected(ConnectionConnectedEvent value),
-    TResult disconnected(ConnectionDisconnectedEvent value),
-    TResult check(ConnectionCheckEvent value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ConnectionConnectedEvent value)? connected,
+    TResult Function(ConnectionDisconnectedEvent value)? disconnected,
+    TResult Function(ConnectionCheckEvent value)? check,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -119,26 +122,22 @@ class _$ConnectionConnectedEvent implements ConnectionConnectedEvent {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult connected(),
-    @required TResult disconnected(),
-    @required TResult check(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() connected,
+    required TResult Function() disconnected,
+    required TResult Function() check,
   }) {
-    assert(connected != null);
-    assert(disconnected != null);
-    assert(check != null);
     return connected();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult connected(),
-    TResult disconnected(),
-    TResult check(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    TResult Function()? check,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (connected != null) {
       return connected();
     }
@@ -147,26 +146,22 @@ class _$ConnectionConnectedEvent implements ConnectionConnectedEvent {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult connected(ConnectionConnectedEvent value),
-    @required TResult disconnected(ConnectionDisconnectedEvent value),
-    @required TResult check(ConnectionCheckEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(ConnectionConnectedEvent value) connected,
+    required TResult Function(ConnectionDisconnectedEvent value) disconnected,
+    required TResult Function(ConnectionCheckEvent value) check,
   }) {
-    assert(connected != null);
-    assert(disconnected != null);
-    assert(check != null);
     return connected(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult connected(ConnectionConnectedEvent value),
-    TResult disconnected(ConnectionDisconnectedEvent value),
-    TResult check(ConnectionCheckEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ConnectionConnectedEvent value)? connected,
+    TResult Function(ConnectionDisconnectedEvent value)? disconnected,
+    TResult Function(ConnectionCheckEvent value)? check,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (connected != null) {
       return connected(this);
     }
@@ -218,26 +213,22 @@ class _$ConnectionDisconnectedEvent implements ConnectionDisconnectedEvent {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult connected(),
-    @required TResult disconnected(),
-    @required TResult check(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() connected,
+    required TResult Function() disconnected,
+    required TResult Function() check,
   }) {
-    assert(connected != null);
-    assert(disconnected != null);
-    assert(check != null);
     return disconnected();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult connected(),
-    TResult disconnected(),
-    TResult check(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    TResult Function()? check,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (disconnected != null) {
       return disconnected();
     }
@@ -246,26 +237,22 @@ class _$ConnectionDisconnectedEvent implements ConnectionDisconnectedEvent {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult connected(ConnectionConnectedEvent value),
-    @required TResult disconnected(ConnectionDisconnectedEvent value),
-    @required TResult check(ConnectionCheckEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(ConnectionConnectedEvent value) connected,
+    required TResult Function(ConnectionDisconnectedEvent value) disconnected,
+    required TResult Function(ConnectionCheckEvent value) check,
   }) {
-    assert(connected != null);
-    assert(disconnected != null);
-    assert(check != null);
     return disconnected(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult connected(ConnectionConnectedEvent value),
-    TResult disconnected(ConnectionDisconnectedEvent value),
-    TResult check(ConnectionCheckEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ConnectionConnectedEvent value)? connected,
+    TResult Function(ConnectionDisconnectedEvent value)? disconnected,
+    TResult Function(ConnectionCheckEvent value)? check,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (disconnected != null) {
       return disconnected(this);
     }
@@ -315,26 +302,22 @@ class _$ConnectionCheckEvent implements ConnectionCheckEvent {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult connected(),
-    @required TResult disconnected(),
-    @required TResult check(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() connected,
+    required TResult Function() disconnected,
+    required TResult Function() check,
   }) {
-    assert(connected != null);
-    assert(disconnected != null);
-    assert(check != null);
     return check();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult connected(),
-    TResult disconnected(),
-    TResult check(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? connected,
+    TResult Function()? disconnected,
+    TResult Function()? check,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (check != null) {
       return check();
     }
@@ -343,26 +326,22 @@ class _$ConnectionCheckEvent implements ConnectionCheckEvent {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult connected(ConnectionConnectedEvent value),
-    @required TResult disconnected(ConnectionDisconnectedEvent value),
-    @required TResult check(ConnectionCheckEvent value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(ConnectionConnectedEvent value) connected,
+    required TResult Function(ConnectionDisconnectedEvent value) disconnected,
+    required TResult Function(ConnectionCheckEvent value) check,
   }) {
-    assert(connected != null);
-    assert(disconnected != null);
-    assert(check != null);
     return check(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult connected(ConnectionConnectedEvent value),
-    TResult disconnected(ConnectionDisconnectedEvent value),
-    TResult check(ConnectionCheckEvent value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ConnectionConnectedEvent value)? connected,
+    TResult Function(ConnectionDisconnectedEvent value)? disconnected,
+    TResult Function(ConnectionCheckEvent value)? check,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (check != null) {
       return check(this);
     }

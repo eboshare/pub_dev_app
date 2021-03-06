@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'config.dart';
 
@@ -8,6 +8,10 @@ part of 'config.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Config _$ConfigFromJson(Map<String, dynamic> json) {
   return _Config.fromJson(json);
 }
@@ -16,31 +20,28 @@ Config _$ConfigFromJson(Map<String, dynamic> json) {
 class _$ConfigTearOff {
   const _$ConfigTearOff();
 
-// ignore: unused_element
-  _Config call({@required @JsonKey(name: 'sentryDsn') String sentryDsn}) {
+  _Config call({@JsonKey(name: 'sentryDsn') required String sentryDsn}) {
     return _Config(
       sentryDsn: sentryDsn,
     );
   }
 
-// ignore: unused_element
   Config fromJson(Map<String, Object> json) {
     return Config.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Config = _$ConfigTearOff();
 
 /// @nodoc
 mixin _$Config {
   @JsonKey(name: 'sentryDsn')
-  String get sentryDsn;
+  String get sentryDsn => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ConfigCopyWith<Config> get copyWith;
+  $ConfigCopyWith<Config> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -60,7 +61,7 @@ class _$ConfigCopyWithImpl<$Res> implements $ConfigCopyWith<$Res> {
 
   @override
   $Res call({
-    Object sentryDsn = freezed,
+    Object? sentryDsn = freezed,
   }) {
     return _then(_value.copyWith(
       sentryDsn: sentryDsn == freezed ? _value.sentryDsn : sentryDsn as String,
@@ -87,7 +88,7 @@ class __$ConfigCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object sentryDsn = freezed,
+    Object? sentryDsn = freezed,
   }) {
     return _then(_Config(
       sentryDsn: sentryDsn == freezed ? _value.sentryDsn : sentryDsn as String,
@@ -99,8 +100,7 @@ class __$ConfigCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Config implements _Config {
-  const _$_Config({@required @JsonKey(name: 'sentryDsn') this.sentryDsn})
-      : assert(sentryDsn != null);
+  const _$_Config({@JsonKey(name: 'sentryDsn') required this.sentryDsn});
 
   factory _$_Config.fromJson(Map<String, dynamic> json) =>
       _$_$_ConfigFromJson(json);
@@ -140,14 +140,14 @@ class _$_Config implements _Config {
 
 abstract class _Config implements Config {
   const factory _Config(
-      {@required @JsonKey(name: 'sentryDsn') String sentryDsn}) = _$_Config;
+      {@JsonKey(name: 'sentryDsn') required String sentryDsn}) = _$_Config;
 
   factory _Config.fromJson(Map<String, dynamic> json) = _$_Config.fromJson;
 
   @override
   @JsonKey(name: 'sentryDsn')
-  String get sentryDsn;
+  String get sentryDsn => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ConfigCopyWith<_Config> get copyWith;
+  _$ConfigCopyWith<_Config> get copyWith => throw _privateConstructorUsedError;
 }

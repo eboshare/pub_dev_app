@@ -6,7 +6,7 @@ part 'config.g.dart';
 @freezed
 abstract class Config with _$Config {
   const factory Config({
-    @required @JsonKey(name: 'sentryDsn') String sentryDsn,
+    @JsonKey(name: 'sentryDsn') required String sentryDsn,
   }) = _Config;
 
   factory Config.fromJson(Map<String, dynamic> json) => _$ConfigFromJson(json);

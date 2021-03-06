@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'hosted_details_dto.dart';
 
@@ -8,6 +8,10 @@ part of 'hosted_details_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 HostedDetailsDto _$HostedDetailsDtoFromJson(Map<String, dynamic> json) {
   return _HostedDetailsDto.fromJson(json);
 }
@@ -16,39 +20,37 @@ HostedDetailsDto _$HostedDetailsDtoFromJson(Map<String, dynamic> json) {
 class _$HostedDetailsDtoTearOff {
   const _$HostedDetailsDtoTearOff();
 
-// ignore: unused_element
   _HostedDetailsDto call(
-      {@required @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String url}) {
+      {@JsonKey(name: 'name') required String name,
+      @JsonKey(name: 'url') String? url}) {
     return _HostedDetailsDto(
       name: name,
       url: url,
     );
   }
 
-// ignore: unused_element
   HostedDetailsDto fromJson(Map<String, Object> json) {
     return HostedDetailsDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $HostedDetailsDto = _$HostedDetailsDtoTearOff();
 
 /// @nodoc
 mixin _$HostedDetailsDto {
   /// Name that gets passed to the source.
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
 
   /// Source repository url.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HostedDetailsDtoCopyWith<HostedDetailsDto> get copyWith;
+  $HostedDetailsDtoCopyWith<HostedDetailsDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -57,7 +59,7 @@ abstract class $HostedDetailsDtoCopyWith<$Res> {
           HostedDetailsDto value, $Res Function(HostedDetailsDto) then) =
       _$HostedDetailsDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String url});
+      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
@@ -71,12 +73,12 @@ class _$HostedDetailsDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object url = freezed,
+    Object? name = freezed,
+    Object? url = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String,
+      url: url == freezed ? _value.url : url as String?,
     ));
   }
 }
@@ -89,7 +91,7 @@ abstract class _$HostedDetailsDtoCopyWith<$Res>
       __$HostedDetailsDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String url});
+      {@JsonKey(name: 'name') String name, @JsonKey(name: 'url') String? url});
 }
 
 /// @nodoc
@@ -105,12 +107,12 @@ class __$HostedDetailsDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object url = freezed,
+    Object? name = freezed,
+    Object? url = freezed,
   }) {
     return _then(_HostedDetailsDto(
       name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String,
+      url: url == freezed ? _value.url : url as String?,
     ));
   }
 }
@@ -120,9 +122,8 @@ class __$HostedDetailsDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$_HostedDetailsDto implements _HostedDetailsDto {
   const _$_HostedDetailsDto(
-      {@required @JsonKey(name: 'name') this.name,
-      @JsonKey(name: 'url') this.url})
-      : assert(name != null);
+      {@JsonKey(name: 'name') required this.name,
+      @JsonKey(name: 'url') this.url});
 
   factory _$_HostedDetailsDto.fromJson(Map<String, dynamic> json) =>
       _$_$_HostedDetailsDtoFromJson(json);
@@ -136,7 +137,7 @@ class _$_HostedDetailsDto implements _HostedDetailsDto {
 
   /// Source repository url.
   @JsonKey(name: 'url')
-  final String url;
+  final String? url;
 
   @override
   String toString() {
@@ -172,8 +173,8 @@ class _$_HostedDetailsDto implements _HostedDetailsDto {
 
 abstract class _HostedDetailsDto implements HostedDetailsDto {
   const factory _HostedDetailsDto(
-      {@required @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'url') String url}) = _$_HostedDetailsDto;
+      {@JsonKey(name: 'name') required String name,
+      @JsonKey(name: 'url') String? url}) = _$_HostedDetailsDto;
 
   factory _HostedDetailsDto.fromJson(Map<String, dynamic> json) =
       _$_HostedDetailsDto.fromJson;
@@ -182,13 +183,14 @@ abstract class _HostedDetailsDto implements HostedDetailsDto {
 
   /// Name that gets passed to the source.
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
 
   /// Source repository url.
   @JsonKey(name: 'url')
-  String get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$HostedDetailsDtoCopyWith<_HostedDetailsDto> get copyWith;
+  _$HostedDetailsDtoCopyWith<_HostedDetailsDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' hide Router, ConnectionState;
-import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart' hide ConnectionState;
 
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
 import 'package:pub_dev_app/config/localization/generated/l10n.dart';
@@ -7,7 +6,7 @@ import 'package:pub_dev_app/presentation/connection/connection_listener.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
 
 typedef ShowSnackBar = Future<ScaffoldFeatureController<SnackBar, SnackBarClosedReason>> Function({
-  @required SnackBar Function(BuildContext) builder,
+  required SnackBar Function(BuildContext) builder,
 });
 
 class ConnectionStackBarWrapper extends StatefulWidget {
@@ -15,9 +14,9 @@ class ConnectionStackBarWrapper extends StatefulWidget {
   final Widget child;
 
   const ConnectionStackBarWrapper({
-    Key key,
-    @required this.showSnackBar,
-    @required this.child,
+    Key? key,
+    required this.showSnackBar,
+    required this.child,
   }) : super(key: key);
 
   @override
@@ -25,7 +24,7 @@ class ConnectionStackBarWrapper extends StatefulWidget {
 }
 
 class _ConnectionStackBarWrapperState extends State<ConnectionStackBarWrapper> {
-  ScaffoldFeatureController _controller;
+  late ScaffoldFeatureController _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,6 @@ class _ConnectionStackBarWrapperState extends State<ConnectionStackBarWrapper> {
                   duration: infiniteDuration,
                 );
             }
-            throw AssertionError();
           },
         );
       },
@@ -62,13 +60,12 @@ class _ConnectionStackBarWrapperState extends State<ConnectionStackBarWrapper> {
   }
 
   String _mapConnectionStatusToText(BuildContext context, ConnectionStatus status) {
-    final str = S.of(context);
+    final str = S.of(context)!;
     switch (status) {
       case ConnectionStatus.connected:
         return str.connectionRestored;
       case ConnectionStatus.disconnected:
         return str.connectionLost;
     }
-    throw AssertionError();
   }
 }

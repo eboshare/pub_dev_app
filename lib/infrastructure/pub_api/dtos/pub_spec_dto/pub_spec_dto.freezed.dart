@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'pub_spec_dto.dart';
 
@@ -8,6 +8,10 @@ part of 'pub_spec_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PubSpecDto _$PubSpecDtoFromJson(Map<String, dynamic> json) {
   return _PubSpec.fromJson(json);
 }
@@ -16,45 +20,34 @@ PubSpecDto _$PubSpecDtoFromJson(Map<String, dynamic> json) {
 class _$PubSpecDtoTearOff {
   const _$PubSpecDtoTearOff();
 
-// ignore: unused_element
   _PubSpec call(
-      {@required
-      @JsonKey(name: 'name')
-          String name,
-      @required
+      {@JsonKey(name: 'name')
+          required String name,
       @JsonKey(name: 'version')
-      @VersionConverter()
-          Version version,
-      @required
+          required String version,
       @JsonKey(name: 'description')
-          String description,
-      @required
+          required String description,
       @JsonKey(name: 'environment')
-      @EnvironmentConverter()
-          BuiltMap<String, VersionConstraint> environment,
+          required Map<String, String> environment,
       @JsonKey(name: 'publish_to')
-          String publishTo,
+          String? publishTo,
       @JsonKey(name: 'repository')
-          String repository,
+          String? repository,
       @JsonKey(name: 'homepage')
-          String homePage,
+          String? homePage,
       @JsonKey(name: 'issue_tracker')
-          String issueTracker,
+          String? issueTracker,
       @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
-      @AuthorsConverter()
-          BuiltList<String> authors,
+          List<String>? authors,
       @JsonKey(name: 'documentation')
-          String documentation,
+          String? documentation,
       @JsonKey(name: 'dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencies,
+          Map<String, DependencyDto>? dependencies,
       @JsonKey(name: 'dev_dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> devDependencies,
+          Map<String, DependencyDto>? devDependencies,
       @JsonKey(name: 'dependency_overrides')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencyOverrides}) {
+          Map<String, DependencyDto>? dependencyOverrides}) {
     return _PubSpec(
       name: name,
       version: version,
@@ -72,14 +65,12 @@ class _$PubSpecDtoTearOff {
     );
   }
 
-// ignore: unused_element
   PubSpecDto fromJson(Map<String, Object> json) {
     return PubSpecDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PubSpecDto = _$PubSpecDtoTearOff();
 
 /// @nodoc
@@ -88,89 +79,87 @@ mixin _$PubSpecDto {
   /// Package name.
   /// Learn more: https://dart.dev/tools/pub/pubspec#name
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
 
   /// Required for packages that are hosted on pub.dev.
   /// Package version.
   /// Learn more: https://dart.dev/tools/pub/pubspec#version
   @JsonKey(name: 'version')
-  @VersionConverter()
-  Version get version;
+  String get version => throw _privateConstructorUsedError;
 
   /// Required for packages that are hosted on the pub.dev.
   /// Package description.
   /// Learn more: https://dart.dev/tools/pub/pubspec#description
   @JsonKey(name: 'description')
-  String get description;
+  String get description => throw _privateConstructorUsedError;
 
   /// Required as of Dart 2.
   /// Version constraint for the Dart platform itself.
   /// https://dart.dev/tools/pub/pubspec#sdk-constraints
   @JsonKey(name: 'environment')
-  @EnvironmentConverter()
-  BuiltMap<String, VersionConstraint> get environment;
+  Map<String, String> get environment => throw _privateConstructorUsedError;
 
   /// Optional.
   /// Specify where to publish a package.
   /// Learn more: https://dart.dev/tools/pub/pubspec#publish_to
   @JsonKey(name: 'publish_to')
-  String get publishTo;
+  String? get publishTo => throw _privateConstructorUsedError;
 
   /// Optional.
   /// URL pointing to the package’s source code repository.
   /// Learn more: https://dart.dev/tools/pub/pubspec#repository
   @JsonKey(name: 'repository')
-  String get repository;
+  String? get repository => throw _privateConstructorUsedError;
 
   /// Optional.
   /// URL pointing to the package’s homepage (or source code repository).
   /// Learn more: https://dart.dev/tools/pub/pubspec#homepage
   @JsonKey(name: 'homepage')
-  String get homePage;
+  String? get homePage => throw _privateConstructorUsedError;
 
   /// Optional.
   /// URL pointing to an issue tracker for the package.
   /// Learn more: https://dart.dev/tools/pub/pubspec#issue-tracker
   @JsonKey(name: 'issue_tracker')
-  String get issueTracker;
+  String? get issueTracker => throw _privateConstructorUsedError;
 
   /// Deprecated. Use a verified publisher instead.
   /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
   @Deprecated('Use a verified publisher instead.')
   @JsonKey(name: 'authors')
-  @AuthorsConverter()
-  BuiltList<String> get authors;
+  List<String>? get authors => throw _privateConstructorUsedError;
 
   /// Optional.
   /// URL pointing to documentation for the package.
   /// Lean more: https://dart.dev/tools/pub/pubspec#documentation
   @JsonKey(name: 'documentation')
-  String get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
 
   /// Can be omitted if your package has no dependencies.
   /// Package dependencies.
   /// https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependencies')
-  @DependenciesConverter()
-  BuiltMap<String, DependencyDto> get dependencies;
+  Map<String, DependencyDto>? get dependencies =>
+      throw _privateConstructorUsedError;
 
   /// Can be omitted if your package has no dev dependencies.
   /// Package dependencies that are required only during development.
   /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dev_dependencies')
-  @DependenciesConverter()
-  BuiltMap<String, DependencyDto> get devDependencies;
+  Map<String, DependencyDto>? get devDependencies =>
+      throw _privateConstructorUsedError;
 
   /// Can be omitted if you do not need to override any dependencies.
   /// Used to override a dependency.
   /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependency_overrides')
-  @DependenciesConverter()
-  BuiltMap<String, DependencyDto> get dependencyOverrides;
+  Map<String, DependencyDto>? get dependencyOverrides =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PubSpecDtoCopyWith<PubSpecDto> get copyWith;
+  $PubSpecDtoCopyWith<PubSpecDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -182,36 +171,30 @@ abstract class $PubSpecDtoCopyWith<$Res> {
       {@JsonKey(name: 'name')
           String name,
       @JsonKey(name: 'version')
-      @VersionConverter()
-          Version version,
+          String version,
       @JsonKey(name: 'description')
           String description,
       @JsonKey(name: 'environment')
-      @EnvironmentConverter()
-          BuiltMap<String, VersionConstraint> environment,
+          Map<String, String> environment,
       @JsonKey(name: 'publish_to')
-          String publishTo,
+          String? publishTo,
       @JsonKey(name: 'repository')
-          String repository,
+          String? repository,
       @JsonKey(name: 'homepage')
-          String homePage,
+          String? homePage,
       @JsonKey(name: 'issue_tracker')
-          String issueTracker,
+          String? issueTracker,
       @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
-      @AuthorsConverter()
-          BuiltList<String> authors,
+          List<String>? authors,
       @JsonKey(name: 'documentation')
-          String documentation,
+          String? documentation,
       @JsonKey(name: 'dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencies,
+          Map<String, DependencyDto>? dependencies,
       @JsonKey(name: 'dev_dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> devDependencies,
+          Map<String, DependencyDto>? devDependencies,
       @JsonKey(name: 'dependency_overrides')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencyOverrides});
+          Map<String, DependencyDto>? dependencyOverrides});
 }
 
 /// @nodoc
@@ -224,49 +207,48 @@ class _$PubSpecDtoCopyWithImpl<$Res> implements $PubSpecDtoCopyWith<$Res> {
 
   @override
   $Res call({
-    Object name = freezed,
-    Object version = freezed,
-    Object description = freezed,
-    Object environment = freezed,
-    Object publishTo = freezed,
-    Object repository = freezed,
-    Object homePage = freezed,
-    Object issueTracker = freezed,
-    Object authors = freezed,
-    Object documentation = freezed,
-    Object dependencies = freezed,
-    Object devDependencies = freezed,
-    Object dependencyOverrides = freezed,
+    Object? name = freezed,
+    Object? version = freezed,
+    Object? description = freezed,
+    Object? environment = freezed,
+    Object? publishTo = freezed,
+    Object? repository = freezed,
+    Object? homePage = freezed,
+    Object? issueTracker = freezed,
+    Object? authors = freezed,
+    Object? documentation = freezed,
+    Object? dependencies = freezed,
+    Object? devDependencies = freezed,
+    Object? dependencyOverrides = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as Version,
+      version: version == freezed ? _value.version : version as String,
       description:
           description == freezed ? _value.description : description as String,
       environment: environment == freezed
           ? _value.environment
-          : environment as BuiltMap<String, VersionConstraint>,
-      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String,
+          : environment as Map<String, String>,
+      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String?,
       repository:
-          repository == freezed ? _value.repository : repository as String,
-      homePage: homePage == freezed ? _value.homePage : homePage as String,
+          repository == freezed ? _value.repository : repository as String?,
+      homePage: homePage == freezed ? _value.homePage : homePage as String?,
       issueTracker: issueTracker == freezed
           ? _value.issueTracker
-          : issueTracker as String,
-      authors:
-          authors == freezed ? _value.authors : authors as BuiltList<String>,
+          : issueTracker as String?,
+      authors: authors == freezed ? _value.authors : authors as List<String>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String,
+          : documentation as String?,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as BuiltMap<String, DependencyDto>,
+          : dependencies as Map<String, DependencyDto>?,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as BuiltMap<String, DependencyDto>,
+          : devDependencies as Map<String, DependencyDto>?,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as BuiltMap<String, DependencyDto>,
+          : dependencyOverrides as Map<String, DependencyDto>?,
     ));
   }
 }
@@ -280,36 +262,30 @@ abstract class _$PubSpecCopyWith<$Res> implements $PubSpecDtoCopyWith<$Res> {
       {@JsonKey(name: 'name')
           String name,
       @JsonKey(name: 'version')
-      @VersionConverter()
-          Version version,
+          String version,
       @JsonKey(name: 'description')
           String description,
       @JsonKey(name: 'environment')
-      @EnvironmentConverter()
-          BuiltMap<String, VersionConstraint> environment,
+          Map<String, String> environment,
       @JsonKey(name: 'publish_to')
-          String publishTo,
+          String? publishTo,
       @JsonKey(name: 'repository')
-          String repository,
+          String? repository,
       @JsonKey(name: 'homepage')
-          String homePage,
+          String? homePage,
       @JsonKey(name: 'issue_tracker')
-          String issueTracker,
+          String? issueTracker,
       @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
-      @AuthorsConverter()
-          BuiltList<String> authors,
+          List<String>? authors,
       @JsonKey(name: 'documentation')
-          String documentation,
+          String? documentation,
       @JsonKey(name: 'dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencies,
+          Map<String, DependencyDto>? dependencies,
       @JsonKey(name: 'dev_dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> devDependencies,
+          Map<String, DependencyDto>? devDependencies,
       @JsonKey(name: 'dependency_overrides')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencyOverrides});
+          Map<String, DependencyDto>? dependencyOverrides});
 }
 
 /// @nodoc
@@ -323,49 +299,48 @@ class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object name = freezed,
-    Object version = freezed,
-    Object description = freezed,
-    Object environment = freezed,
-    Object publishTo = freezed,
-    Object repository = freezed,
-    Object homePage = freezed,
-    Object issueTracker = freezed,
-    Object authors = freezed,
-    Object documentation = freezed,
-    Object dependencies = freezed,
-    Object devDependencies = freezed,
-    Object dependencyOverrides = freezed,
+    Object? name = freezed,
+    Object? version = freezed,
+    Object? description = freezed,
+    Object? environment = freezed,
+    Object? publishTo = freezed,
+    Object? repository = freezed,
+    Object? homePage = freezed,
+    Object? issueTracker = freezed,
+    Object? authors = freezed,
+    Object? documentation = freezed,
+    Object? dependencies = freezed,
+    Object? devDependencies = freezed,
+    Object? dependencyOverrides = freezed,
   }) {
     return _then(_PubSpec(
       name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as Version,
+      version: version == freezed ? _value.version : version as String,
       description:
           description == freezed ? _value.description : description as String,
       environment: environment == freezed
           ? _value.environment
-          : environment as BuiltMap<String, VersionConstraint>,
-      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String,
+          : environment as Map<String, String>,
+      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String?,
       repository:
-          repository == freezed ? _value.repository : repository as String,
-      homePage: homePage == freezed ? _value.homePage : homePage as String,
+          repository == freezed ? _value.repository : repository as String?,
+      homePage: homePage == freezed ? _value.homePage : homePage as String?,
       issueTracker: issueTracker == freezed
           ? _value.issueTracker
-          : issueTracker as String,
-      authors:
-          authors == freezed ? _value.authors : authors as BuiltList<String>,
+          : issueTracker as String?,
+      authors: authors == freezed ? _value.authors : authors as List<String>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String,
+          : documentation as String?,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as BuiltMap<String, DependencyDto>,
+          : dependencies as Map<String, DependencyDto>?,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as BuiltMap<String, DependencyDto>,
+          : devDependencies as Map<String, DependencyDto>?,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as BuiltMap<String, DependencyDto>,
+          : dependencyOverrides as Map<String, DependencyDto>?,
     ));
   }
 }
@@ -375,20 +350,14 @@ class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$_PubSpec implements _PubSpec {
   const _$_PubSpec(
-      {@required
-      @JsonKey(name: 'name')
-          this.name,
-      @required
+      {@JsonKey(name: 'name')
+          required this.name,
       @JsonKey(name: 'version')
-      @VersionConverter()
-          this.version,
-      @required
+          required this.version,
       @JsonKey(name: 'description')
-          this.description,
-      @required
+          required this.description,
       @JsonKey(name: 'environment')
-      @EnvironmentConverter()
-          this.environment,
+          required this.environment,
       @JsonKey(name: 'publish_to')
           this.publishTo,
       @JsonKey(name: 'repository')
@@ -399,23 +368,15 @@ class _$_PubSpec implements _PubSpec {
           this.issueTracker,
       @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
-      @AuthorsConverter()
           this.authors,
       @JsonKey(name: 'documentation')
           this.documentation,
       @JsonKey(name: 'dependencies')
-      @DependenciesConverter()
           this.dependencies,
       @JsonKey(name: 'dev_dependencies')
-      @DependenciesConverter()
           this.devDependencies,
       @JsonKey(name: 'dependency_overrides')
-      @DependenciesConverter()
-          this.dependencyOverrides})
-      : assert(name != null),
-        assert(version != null),
-        assert(description != null),
-        assert(environment != null);
+          this.dependencyOverrides});
 
   factory _$_PubSpec.fromJson(Map<String, dynamic> json) =>
       _$_$_PubSpecFromJson(json);
@@ -433,8 +394,7 @@ class _$_PubSpec implements _PubSpec {
   /// Package version.
   /// Learn more: https://dart.dev/tools/pub/pubspec#version
   @JsonKey(name: 'version')
-  @VersionConverter()
-  final Version version;
+  final String version;
   @override
 
   /// Required for packages that are hosted on the pub.dev.
@@ -448,75 +408,70 @@ class _$_PubSpec implements _PubSpec {
   /// Version constraint for the Dart platform itself.
   /// https://dart.dev/tools/pub/pubspec#sdk-constraints
   @JsonKey(name: 'environment')
-  @EnvironmentConverter()
-  final BuiltMap<String, VersionConstraint> environment;
+  final Map<String, String> environment;
   @override
 
   /// Optional.
   /// Specify where to publish a package.
   /// Learn more: https://dart.dev/tools/pub/pubspec#publish_to
   @JsonKey(name: 'publish_to')
-  final String publishTo;
+  final String? publishTo;
   @override
 
   /// Optional.
   /// URL pointing to the package’s source code repository.
   /// Learn more: https://dart.dev/tools/pub/pubspec#repository
   @JsonKey(name: 'repository')
-  final String repository;
+  final String? repository;
   @override
 
   /// Optional.
   /// URL pointing to the package’s homepage (or source code repository).
   /// Learn more: https://dart.dev/tools/pub/pubspec#homepage
   @JsonKey(name: 'homepage')
-  final String homePage;
+  final String? homePage;
   @override
 
   /// Optional.
   /// URL pointing to an issue tracker for the package.
   /// Learn more: https://dart.dev/tools/pub/pubspec#issue-tracker
   @JsonKey(name: 'issue_tracker')
-  final String issueTracker;
+  final String? issueTracker;
   @override
 
   /// Deprecated. Use a verified publisher instead.
   /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
   @Deprecated('Use a verified publisher instead.')
   @JsonKey(name: 'authors')
-  @AuthorsConverter()
-  final BuiltList<String> authors;
+  final List<String>? authors;
   @override
 
   /// Optional.
   /// URL pointing to documentation for the package.
   /// Lean more: https://dart.dev/tools/pub/pubspec#documentation
   @JsonKey(name: 'documentation')
-  final String documentation;
+  final String? documentation;
   @override
 
   /// Can be omitted if your package has no dependencies.
   /// Package dependencies.
   /// https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependencies')
-  @DependenciesConverter()
-  final BuiltMap<String, DependencyDto> dependencies;
+  final Map<String, DependencyDto>? dependencies;
   @override
 
   /// Can be omitted if your package has no dev dependencies.
   /// Package dependencies that are required only during development.
   /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dev_dependencies')
-  @DependenciesConverter()
-  final BuiltMap<String, DependencyDto> devDependencies;
+  final Map<String, DependencyDto>? devDependencies;
   @override
 
   /// Can be omitted if you do not need to override any dependencies.
   /// Used to override a dependency.
   /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependency_overrides')
-  @DependenciesConverter()
-  final BuiltMap<String, DependencyDto> dependencyOverrides;
+  final Map<String, DependencyDto>? dependencyOverrides;
 
   @override
   String toString() {
@@ -597,43 +552,33 @@ class _$_PubSpec implements _PubSpec {
 
 abstract class _PubSpec implements PubSpecDto {
   const factory _PubSpec(
-      {@required
-      @JsonKey(name: 'name')
-          String name,
-      @required
+      {@JsonKey(name: 'name')
+          required String name,
       @JsonKey(name: 'version')
-      @VersionConverter()
-          Version version,
-      @required
+          required String version,
       @JsonKey(name: 'description')
-          String description,
-      @required
+          required String description,
       @JsonKey(name: 'environment')
-      @EnvironmentConverter()
-          BuiltMap<String, VersionConstraint> environment,
+          required Map<String, String> environment,
       @JsonKey(name: 'publish_to')
-          String publishTo,
+          String? publishTo,
       @JsonKey(name: 'repository')
-          String repository,
+          String? repository,
       @JsonKey(name: 'homepage')
-          String homePage,
+          String? homePage,
       @JsonKey(name: 'issue_tracker')
-          String issueTracker,
+          String? issueTracker,
       @Deprecated('Use a verified publisher instead.')
       @JsonKey(name: 'authors')
-      @AuthorsConverter()
-          BuiltList<String> authors,
+          List<String>? authors,
       @JsonKey(name: 'documentation')
-          String documentation,
+          String? documentation,
       @JsonKey(name: 'dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencies,
+          Map<String, DependencyDto>? dependencies,
       @JsonKey(name: 'dev_dependencies')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> devDependencies,
+          Map<String, DependencyDto>? devDependencies,
       @JsonKey(name: 'dependency_overrides')
-      @DependenciesConverter()
-          BuiltMap<String, DependencyDto> dependencyOverrides}) = _$_PubSpec;
+          Map<String, DependencyDto>? dependencyOverrides}) = _$_PubSpec;
 
   factory _PubSpec.fromJson(Map<String, dynamic> json) = _$_PubSpec.fromJson;
 
@@ -643,98 +588,96 @@ abstract class _PubSpec implements PubSpecDto {
   /// Package name.
   /// Learn more: https://dart.dev/tools/pub/pubspec#name
   @JsonKey(name: 'name')
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
 
   /// Required for packages that are hosted on pub.dev.
   /// Package version.
   /// Learn more: https://dart.dev/tools/pub/pubspec#version
   @JsonKey(name: 'version')
-  @VersionConverter()
-  Version get version;
+  String get version => throw _privateConstructorUsedError;
   @override
 
   /// Required for packages that are hosted on the pub.dev.
   /// Package description.
   /// Learn more: https://dart.dev/tools/pub/pubspec#description
   @JsonKey(name: 'description')
-  String get description;
+  String get description => throw _privateConstructorUsedError;
   @override
 
   /// Required as of Dart 2.
   /// Version constraint for the Dart platform itself.
   /// https://dart.dev/tools/pub/pubspec#sdk-constraints
   @JsonKey(name: 'environment')
-  @EnvironmentConverter()
-  BuiltMap<String, VersionConstraint> get environment;
+  Map<String, String> get environment => throw _privateConstructorUsedError;
   @override
 
   /// Optional.
   /// Specify where to publish a package.
   /// Learn more: https://dart.dev/tools/pub/pubspec#publish_to
   @JsonKey(name: 'publish_to')
-  String get publishTo;
+  String? get publishTo => throw _privateConstructorUsedError;
   @override
 
   /// Optional.
   /// URL pointing to the package’s source code repository.
   /// Learn more: https://dart.dev/tools/pub/pubspec#repository
   @JsonKey(name: 'repository')
-  String get repository;
+  String? get repository => throw _privateConstructorUsedError;
   @override
 
   /// Optional.
   /// URL pointing to the package’s homepage (or source code repository).
   /// Learn more: https://dart.dev/tools/pub/pubspec#homepage
   @JsonKey(name: 'homepage')
-  String get homePage;
+  String? get homePage => throw _privateConstructorUsedError;
   @override
 
   /// Optional.
   /// URL pointing to an issue tracker for the package.
   /// Learn more: https://dart.dev/tools/pub/pubspec#issue-tracker
   @JsonKey(name: 'issue_tracker')
-  String get issueTracker;
+  String? get issueTracker => throw _privateConstructorUsedError;
   @override
 
   /// Deprecated. Use a verified publisher instead.
   /// Learn more: https://dart.dev/tools/pub/pubspec#authorauthors
   @Deprecated('Use a verified publisher instead.')
   @JsonKey(name: 'authors')
-  @AuthorsConverter()
-  BuiltList<String> get authors;
+  List<String>? get authors => throw _privateConstructorUsedError;
   @override
 
   /// Optional.
   /// URL pointing to documentation for the package.
   /// Lean more: https://dart.dev/tools/pub/pubspec#documentation
   @JsonKey(name: 'documentation')
-  String get documentation;
+  String? get documentation => throw _privateConstructorUsedError;
   @override
 
   /// Can be omitted if your package has no dependencies.
   /// Package dependencies.
   /// https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependencies')
-  @DependenciesConverter()
-  BuiltMap<String, DependencyDto> get dependencies;
+  Map<String, DependencyDto>? get dependencies =>
+      throw _privateConstructorUsedError;
   @override
 
   /// Can be omitted if your package has no dev dependencies.
   /// Package dependencies that are required only during development.
   /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dev_dependencies')
-  @DependenciesConverter()
-  BuiltMap<String, DependencyDto> get devDependencies;
+  Map<String, DependencyDto>? get devDependencies =>
+      throw _privateConstructorUsedError;
   @override
 
   /// Can be omitted if you do not need to override any dependencies.
   /// Used to override a dependency.
   /// Learn more: https://dart.dev/tools/pub/pubspec#dependencies
   @JsonKey(name: 'dependency_overrides')
-  @DependenciesConverter()
-  BuiltMap<String, DependencyDto> get dependencyOverrides;
+  Map<String, DependencyDto>? get dependencyOverrides =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PubSpecCopyWith<_PubSpec> get copyWith;
+  _$PubSpecCopyWith<_PubSpec> get copyWith =>
+      throw _privateConstructorUsedError;
 }

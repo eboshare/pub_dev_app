@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pub_semver/pub_semver.dart';
 
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency_dto/dependency_dto.dart';
 
@@ -17,22 +16,23 @@ abstract class SourceKeys {
   ];
 }
 
-DependencyDto dependencyFromJson(Object json) {
+DependencyDto dependencyFromJson(Object? json) {
   // dependencies:
   //   transmogrify: ^1.4.0
-  //
+  if (json is String) {
+    return DependencyDto.hosted(version: json);
+  }
+
   // dependencies:
   //   transmogrify: any
   //
   // dependencies:
   //   transmogrify:          (with no version)
-  if (json is String || json == null) {
-    return DependencyDto.hosted(
-      version: VersionConstraint.parse(json),
-    );
+  if (json == null) {
+    return const DependencyDto.hosted(version: 'any');
   }
 
-  if (json is Map) {
+  if (json is Map<String, dynamic>) {
     final matchedKeys = json.keys.cast<String>().where((key) => key != 'version').toList();
     final jsonHasOnlyVersion = matchedKeys.isEmpty && json.containsKey('version');
 
@@ -47,9 +47,8 @@ DependencyDto dependencyFromJson(Object json) {
     }
 
     // Unknown dependency option.
-    final firstUnrecognizedKey = matchedKeys.firstWhere(
+    final firstUnrecognizedKey = matchedKeys.firstWhereOrNull(
       (key) => !SourceKeys.values.contains(key),
-      orElse: () => null,
     );
     if (firstUnrecognizedKey != null) {
       throw UnrecognizedKeysException(
@@ -85,7 +84,7 @@ DependencyDto dependencyFromJson(Object json) {
         //     git:
         //       url: git@github.com:munificent/kittens.git
         //       ref: some-branch
-        if (value is Map) {
+        if (value is Map<String, dynamic>) {
           return GitDependencyDto.fromJson(value);
         }
         throw AssertionError();
@@ -117,10 +116,22 @@ DependencyDto dependencyFromJson(Object json) {
   throw AssertionError('Unhandled case in the dependency parsing.');
 }
 
+class NullableDependencyDtoConverter implements JsonConverter<DependencyDto?, Object?> {
+  const NullableDependencyDtoConverter();
+
+  @override
+  DependencyDto? fromJson(Object? json) => dependencyFromJson(json);
+
+  @override
+  Object? toJson(DependencyDto? dependency) => dependency?.toJson();
+}
+
 class DependencyDtoConverter implements JsonConverter<DependencyDto, Object> {
+  const DependencyDtoConverter();
+
   @override
   DependencyDto fromJson(Object json) => dependencyFromJson(json);
 
   @override
-  Object toJson(DependencyDto dependency) => dependency?.toJson();
+  Object toJson(DependencyDto dependency) => dependency.toJson();
 }

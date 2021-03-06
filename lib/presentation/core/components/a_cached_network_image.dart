@@ -7,10 +7,10 @@ class ACachedNetworkImage extends StatelessWidget {
   final double height;
 
   const ACachedNetworkImage({
-    Key key,
-    @required this.url,
-    @required this.width,
-    @required this.height,
+    Key? key,
+    required this.url,
+    required this.width,
+    required this.height,
   }) : super(key: key);
 
   @override

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'design_system_text.dart';
 
@@ -9,15 +9,17 @@ part of 'design_system_text.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$DesignSystemTextTearOff {
   const _$DesignSystemTextTearOff();
 
-// ignore: unused_element
   _DesignSystemText call(
-      {@required TextStyle button,
-      @required TextStyle h1,
-      @required TextStyle h4}) {
+      {required TextStyle button,
+      required TextStyle h1,
+      required TextStyle h4}) {
     return _DesignSystemText(
       button: button,
       h1: h1,
@@ -27,17 +29,17 @@ class _$DesignSystemTextTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DesignSystemText = _$DesignSystemTextTearOff();
 
 /// @nodoc
 mixin _$DesignSystemText {
-  TextStyle get button;
-  TextStyle get h1;
-  TextStyle get h4;
+  TextStyle get button => throw _privateConstructorUsedError;
+  TextStyle get h1 => throw _privateConstructorUsedError;
+  TextStyle get h4 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $DesignSystemTextCopyWith<DesignSystemText> get copyWith;
+  $DesignSystemTextCopyWith<DesignSystemText> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -59,9 +61,9 @@ class _$DesignSystemTextCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object button = freezed,
-    Object h1 = freezed,
-    Object h4 = freezed,
+    Object? button = freezed,
+    Object? h1 = freezed,
+    Object? h4 = freezed,
   }) {
     return _then(_value.copyWith(
       button: button == freezed ? _value.button : button as TextStyle,
@@ -94,9 +96,9 @@ class __$DesignSystemTextCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object button = freezed,
-    Object h1 = freezed,
-    Object h4 = freezed,
+    Object? button = freezed,
+    Object? h1 = freezed,
+    Object? h4 = freezed,
   }) {
     return _then(_DesignSystemText(
       button: button == freezed ? _value.button : button as TextStyle,
@@ -109,10 +111,7 @@ class __$DesignSystemTextCopyWithImpl<$Res>
 /// @nodoc
 class _$_DesignSystemText implements _DesignSystemText {
   const _$_DesignSystemText(
-      {@required this.button, @required this.h1, @required this.h4})
-      : assert(button != null),
-        assert(h1 != null),
-        assert(h4 != null);
+      {required this.button, required this.h1, required this.h4});
 
   @override
   final TextStyle button;
@@ -153,17 +152,18 @@ class _$_DesignSystemText implements _DesignSystemText {
 
 abstract class _DesignSystemText implements DesignSystemText {
   const factory _DesignSystemText(
-      {@required TextStyle button,
-      @required TextStyle h1,
-      @required TextStyle h4}) = _$_DesignSystemText;
+      {required TextStyle button,
+      required TextStyle h1,
+      required TextStyle h4}) = _$_DesignSystemText;
 
   @override
-  TextStyle get button;
+  TextStyle get button => throw _privateConstructorUsedError;
   @override
-  TextStyle get h1;
+  TextStyle get h1 => throw _privateConstructorUsedError;
   @override
-  TextStyle get h4;
+  TextStyle get h4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DesignSystemTextCopyWith<_DesignSystemText> get copyWith;
+  _$DesignSystemTextCopyWith<_DesignSystemText> get copyWith =>
+      throw _privateConstructorUsedError;
 }

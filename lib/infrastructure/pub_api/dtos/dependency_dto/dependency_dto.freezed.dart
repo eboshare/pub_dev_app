@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'dependency_dto.dart';
 
@@ -8,6 +8,10 @@ part of 'dependency_dto.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 DependencyDto _$DependencyDtoFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType'] as String) {
     case 'sdk':
@@ -28,25 +32,19 @@ DependencyDto _$DependencyDtoFromJson(Map<String, dynamic> json) {
 class _$DependencyDtoTearOff {
   const _$DependencyDtoTearOff();
 
-// ignore: unused_element
   SdkDependencyDto sdk(
-      {@required
-      @JsonKey(name: 'sdk')
-          String sdk,
-      @JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          VersionConstraint version}) {
+      {@JsonKey(name: 'sdk') required String sdk,
+      @JsonKey(name: 'version') String? version}) {
     return SdkDependencyDto(
       sdk: sdk,
       version: version,
     );
   }
 
-// ignore: unused_element
   GitDependencyDto git(
-      {@required @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'ref') String ref,
-      @JsonKey(name: 'path') String path}) {
+      {@JsonKey(name: 'url') required String url,
+      @JsonKey(name: 'ref') String? ref,
+      @JsonKey(name: 'path') String? path}) {
     return GitDependencyDto(
       url: url,
       ref: ref,
@@ -54,97 +52,82 @@ class _$DependencyDtoTearOff {
     );
   }
 
-// ignore: unused_element
-  PathDependencyDto path({@required @JsonKey(name: 'path') String path}) {
+  PathDependencyDto path({@JsonKey(name: 'path') required String path}) {
     return PathDependencyDto(
       path: path,
     );
   }
 
-// ignore: unused_element
   HostedDependencyDto hosted(
-      {@required
-      @JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          VersionConstraint version,
-      @JsonKey(name: 'hosted')
-          HostedDetailsDto hosted}) {
+      {@JsonKey(name: 'version') required String version,
+      @JsonKey(name: 'hosted') HostedDetailsDto? hosted}) {
     return HostedDependencyDto(
       version: version,
       hosted: hosted,
     );
   }
 
-// ignore: unused_element
   DependencyDto fromJson(Map<String, Object> json) {
     return DependencyDto.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DependencyDto = _$DependencyDtoTearOff();
 
 /// @nodoc
 mixin _$DependencyDto {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult sdk(
-            @JsonKey(name: 'sdk')
-                String sdk,
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version),
-    @required
-        TResult git(
+  TResult when<TResult extends Object?>({
+    required TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)
+        sdk,
+    required TResult Function(
             @JsonKey(name: 'url') String url,
-            @JsonKey(name: 'ref') String ref,
-            @JsonKey(name: 'path') String path),
-    @required TResult path(@JsonKey(name: 'path') String path),
-    @required
-        TResult hosted(
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version,
-            @JsonKey(name: 'hosted')
-                HostedDetailsDto hosted),
-  });
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)
+        git,
+    required TResult Function(@JsonKey(name: 'path') String path) path,
+    required TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)
+        hosted,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult sdk(
-        @JsonKey(name: 'sdk')
-            String sdk,
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version),
-    TResult git(@JsonKey(name: 'url') String url,
-        @JsonKey(name: 'ref') String ref, @JsonKey(name: 'path') String path),
-    TResult path(@JsonKey(name: 'path') String path),
-    TResult hosted(
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version,
-        @JsonKey(name: 'hosted')
-            HostedDetailsDto hosted),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)?
+        sdk,
+    TResult Function(
+            @JsonKey(name: 'url') String url,
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)?
+        git,
+    TResult Function(@JsonKey(name: 'path') String path)? path,
+    TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)?
+        hosted,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependencyDto value),
-    @required TResult git(GitDependencyDto value),
-    @required TResult path(PathDependencyDto value),
-    @required TResult hosted(HostedDependencyDto value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(SdkDependencyDto value) sdk,
+    required TResult Function(GitDependencyDto value) git,
+    required TResult Function(PathDependencyDto value) path,
+    required TResult Function(HostedDependencyDto value) hosted,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependencyDto value),
-    TResult git(GitDependencyDto value),
-    TResult path(PathDependencyDto value),
-    TResult hosted(HostedDependencyDto value),
-    @required TResult orElse(),
-  });
-  Map<String, dynamic> toJson();
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SdkDependencyDto value)? sdk,
+    TResult Function(GitDependencyDto value)? git,
+    TResult Function(PathDependencyDto value)? path,
+    TResult Function(HostedDependencyDto value)? hosted,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -170,11 +153,8 @@ abstract class $SdkDependencyDtoCopyWith<$Res> {
           SdkDependencyDto value, $Res Function(SdkDependencyDto) then) =
       _$SdkDependencyDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'sdk')
-          String sdk,
-      @JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          VersionConstraint version});
+      {@JsonKey(name: 'sdk') String sdk,
+      @JsonKey(name: 'version') String? version});
 }
 
 /// @nodoc
@@ -190,13 +170,12 @@ class _$SdkDependencyDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object sdk = freezed,
-    Object version = freezed,
+    Object? sdk = freezed,
+    Object? version = freezed,
   }) {
     return _then(SdkDependencyDto(
       sdk: sdk == freezed ? _value.sdk : sdk as String,
-      version:
-          version == freezed ? _value.version : version as VersionConstraint,
+      version: version == freezed ? _value.version : version as String?,
     ));
   }
 }
@@ -206,9 +185,8 @@ class _$SdkDependencyDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$SdkDependencyDto implements SdkDependencyDto {
   const _$SdkDependencyDto(
-      {@required @JsonKey(name: 'sdk') this.sdk,
-      @JsonKey(name: 'version') @VersionConstraintConverter() this.version})
-      : assert(sdk != null);
+      {@JsonKey(name: 'sdk') required this.sdk,
+      @JsonKey(name: 'version') this.version});
 
   factory _$SdkDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$SdkDependencyDtoFromJson(json);
@@ -222,8 +200,7 @@ class _$SdkDependencyDto implements SdkDependencyDto {
 
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConstraintConverter()
-  final VersionConstraint version;
+  final String? version;
 
   @override
   String toString() {
@@ -253,56 +230,40 @@ class _$SdkDependencyDto implements SdkDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult sdk(
-            @JsonKey(name: 'sdk')
-                String sdk,
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version),
-    @required
-        TResult git(
+  TResult when<TResult extends Object?>({
+    required TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)
+        sdk,
+    required TResult Function(
             @JsonKey(name: 'url') String url,
-            @JsonKey(name: 'ref') String ref,
-            @JsonKey(name: 'path') String path),
-    @required TResult path(@JsonKey(name: 'path') String path),
-    @required
-        TResult hosted(
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version,
-            @JsonKey(name: 'hosted')
-                HostedDetailsDto hosted),
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)
+        git,
+    required TResult Function(@JsonKey(name: 'path') String path) path,
+    required TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)
+        hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return sdk(this.sdk, version);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult sdk(
-        @JsonKey(name: 'sdk')
-            String sdk,
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version),
-    TResult git(@JsonKey(name: 'url') String url,
-        @JsonKey(name: 'ref') String ref, @JsonKey(name: 'path') String path),
-    TResult path(@JsonKey(name: 'path') String path),
-    TResult hosted(
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version,
-        @JsonKey(name: 'hosted')
-            HostedDetailsDto hosted),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)?
+        sdk,
+    TResult Function(
+            @JsonKey(name: 'url') String url,
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)?
+        git,
+    TResult Function(@JsonKey(name: 'path') String path)? path,
+    TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)?
+        hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (sdk != null) {
       return sdk(this.sdk, version);
     }
@@ -311,29 +272,24 @@ class _$SdkDependencyDto implements SdkDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependencyDto value),
-    @required TResult git(GitDependencyDto value),
-    @required TResult path(PathDependencyDto value),
-    @required TResult hosted(HostedDependencyDto value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SdkDependencyDto value) sdk,
+    required TResult Function(GitDependencyDto value) git,
+    required TResult Function(PathDependencyDto value) path,
+    required TResult Function(HostedDependencyDto value) hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return sdk(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependencyDto value),
-    TResult git(GitDependencyDto value),
-    TResult path(PathDependencyDto value),
-    TResult hosted(HostedDependencyDto value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SdkDependencyDto value)? sdk,
+    TResult Function(GitDependencyDto value)? git,
+    TResult Function(PathDependencyDto value)? path,
+    TResult Function(HostedDependencyDto value)? hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (sdk != null) {
       return sdk(this);
     }
@@ -348,26 +304,22 @@ class _$SdkDependencyDto implements SdkDependencyDto {
 
 abstract class SdkDependencyDto implements DependencyDto {
   const factory SdkDependencyDto(
-      {@required
-      @JsonKey(name: 'sdk')
-          String sdk,
-      @JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          VersionConstraint version}) = _$SdkDependencyDto;
+      {@JsonKey(name: 'sdk') required String sdk,
+      @JsonKey(name: 'version') String? version}) = _$SdkDependencyDto;
 
   factory SdkDependencyDto.fromJson(Map<String, dynamic> json) =
       _$SdkDependencyDto.fromJson;
 
   /// Which SDK the package comes from.
   @JsonKey(name: 'sdk')
-  String get sdk;
+  String get sdk => throw _privateConstructorUsedError;
 
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConstraintConverter()
-  VersionConstraint get version;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SdkDependencyDtoCopyWith<SdkDependencyDto> get copyWith;
+  $SdkDependencyDtoCopyWith<SdkDependencyDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -377,8 +329,8 @@ abstract class $GitDependencyDtoCopyWith<$Res> {
       _$GitDependencyDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'url') String url,
-      @JsonKey(name: 'ref') String ref,
-      @JsonKey(name: 'path') String path});
+      @JsonKey(name: 'ref') String? ref,
+      @JsonKey(name: 'path') String? path});
 }
 
 /// @nodoc
@@ -394,14 +346,14 @@ class _$GitDependencyDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object url = freezed,
-    Object ref = freezed,
-    Object path = freezed,
+    Object? url = freezed,
+    Object? ref = freezed,
+    Object? path = freezed,
   }) {
     return _then(GitDependencyDto(
       url: url == freezed ? _value.url : url as String,
-      ref: ref == freezed ? _value.ref : ref as String,
-      path: path == freezed ? _value.path : path as String,
+      ref: ref == freezed ? _value.ref : ref as String?,
+      path: path == freezed ? _value.path : path as String?,
     ));
   }
 }
@@ -411,10 +363,9 @@ class _$GitDependencyDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$GitDependencyDto implements GitDependencyDto {
   const _$GitDependencyDto(
-      {@required @JsonKey(name: 'url') this.url,
+      {@JsonKey(name: 'url') required this.url,
       @JsonKey(name: 'ref') this.ref,
-      @JsonKey(name: 'path') this.path})
-      : assert(url != null);
+      @JsonKey(name: 'path') this.path});
 
   factory _$GitDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$GitDependencyDtoFromJson(json);
@@ -429,12 +380,12 @@ class _$GitDependencyDto implements GitDependencyDto {
   /// The ref can be anything that Git allows to identify a commit.
   /// See: https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html#naming-commits
   @JsonKey(name: 'ref')
-  final String ref;
+  final String? ref;
   @override
 
   /// Specifies a different location in the repository.
   @JsonKey(name: 'path')
-  final String path;
+  final String? path;
 
   @override
   String toString() {
@@ -467,56 +418,40 @@ class _$GitDependencyDto implements GitDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult sdk(
-            @JsonKey(name: 'sdk')
-                String sdk,
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version),
-    @required
-        TResult git(
+  TResult when<TResult extends Object?>({
+    required TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)
+        sdk,
+    required TResult Function(
             @JsonKey(name: 'url') String url,
-            @JsonKey(name: 'ref') String ref,
-            @JsonKey(name: 'path') String path),
-    @required TResult path(@JsonKey(name: 'path') String path),
-    @required
-        TResult hosted(
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version,
-            @JsonKey(name: 'hosted')
-                HostedDetailsDto hosted),
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)
+        git,
+    required TResult Function(@JsonKey(name: 'path') String path) path,
+    required TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)
+        hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return git(url, ref, this.path);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult sdk(
-        @JsonKey(name: 'sdk')
-            String sdk,
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version),
-    TResult git(@JsonKey(name: 'url') String url,
-        @JsonKey(name: 'ref') String ref, @JsonKey(name: 'path') String path),
-    TResult path(@JsonKey(name: 'path') String path),
-    TResult hosted(
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version,
-        @JsonKey(name: 'hosted')
-            HostedDetailsDto hosted),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)?
+        sdk,
+    TResult Function(
+            @JsonKey(name: 'url') String url,
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)?
+        git,
+    TResult Function(@JsonKey(name: 'path') String path)? path,
+    TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)?
+        hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (git != null) {
       return git(url, ref, this.path);
     }
@@ -525,29 +460,24 @@ class _$GitDependencyDto implements GitDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependencyDto value),
-    @required TResult git(GitDependencyDto value),
-    @required TResult path(PathDependencyDto value),
-    @required TResult hosted(HostedDependencyDto value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SdkDependencyDto value) sdk,
+    required TResult Function(GitDependencyDto value) git,
+    required TResult Function(PathDependencyDto value) path,
+    required TResult Function(HostedDependencyDto value) hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return git(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependencyDto value),
-    TResult git(GitDependencyDto value),
-    TResult path(PathDependencyDto value),
-    TResult hosted(HostedDependencyDto value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SdkDependencyDto value)? sdk,
+    TResult Function(GitDependencyDto value)? git,
+    TResult Function(PathDependencyDto value)? path,
+    TResult Function(HostedDependencyDto value)? hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (git != null) {
       return git(this);
     }
@@ -562,27 +492,28 @@ class _$GitDependencyDto implements GitDependencyDto {
 
 abstract class GitDependencyDto implements DependencyDto {
   const factory GitDependencyDto(
-      {@required @JsonKey(name: 'url') String url,
-      @JsonKey(name: 'ref') String ref,
-      @JsonKey(name: 'path') String path}) = _$GitDependencyDto;
+      {@JsonKey(name: 'url') required String url,
+      @JsonKey(name: 'ref') String? ref,
+      @JsonKey(name: 'path') String? path}) = _$GitDependencyDto;
 
   factory GitDependencyDto.fromJson(Map<String, dynamic> json) =
       _$GitDependencyDto.fromJson;
 
   /// Git URL that can be used to clone the package.
   @JsonKey(name: 'url')
-  String get url;
+  String get url => throw _privateConstructorUsedError;
 
   /// The ref can be anything that Git allows to identify a commit.
   /// See: https://mirrors.edge.kernel.org/pub/software/scm/git/docs/user-manual.html#naming-commits
   @JsonKey(name: 'ref')
-  String get ref;
+  String? get ref => throw _privateConstructorUsedError;
 
   /// Specifies a different location in the repository.
   @JsonKey(name: 'path')
-  String get path;
+  String? get path => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GitDependencyDtoCopyWith<GitDependencyDto> get copyWith;
+  $GitDependencyDtoCopyWith<GitDependencyDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -606,7 +537,7 @@ class _$PathDependencyDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object path = freezed,
+    Object? path = freezed,
   }) {
     return _then(PathDependencyDto(
       path: path == freezed ? _value.path : path as String,
@@ -618,8 +549,7 @@ class _$PathDependencyDtoCopyWithImpl<$Res>
 
 /// @nodoc
 class _$PathDependencyDto implements PathDependencyDto {
-  const _$PathDependencyDto({@required @JsonKey(name: 'path') this.path})
-      : assert(path != null);
+  const _$PathDependencyDto({@JsonKey(name: 'path') required this.path});
 
   factory _$PathDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$PathDependencyDtoFromJson(json);
@@ -654,56 +584,40 @@ class _$PathDependencyDto implements PathDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult sdk(
-            @JsonKey(name: 'sdk')
-                String sdk,
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version),
-    @required
-        TResult git(
+  TResult when<TResult extends Object?>({
+    required TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)
+        sdk,
+    required TResult Function(
             @JsonKey(name: 'url') String url,
-            @JsonKey(name: 'ref') String ref,
-            @JsonKey(name: 'path') String path),
-    @required TResult path(@JsonKey(name: 'path') String path),
-    @required
-        TResult hosted(
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version,
-            @JsonKey(name: 'hosted')
-                HostedDetailsDto hosted),
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)
+        git,
+    required TResult Function(@JsonKey(name: 'path') String path) path,
+    required TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)
+        hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return path(this.path);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult sdk(
-        @JsonKey(name: 'sdk')
-            String sdk,
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version),
-    TResult git(@JsonKey(name: 'url') String url,
-        @JsonKey(name: 'ref') String ref, @JsonKey(name: 'path') String path),
-    TResult path(@JsonKey(name: 'path') String path),
-    TResult hosted(
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version,
-        @JsonKey(name: 'hosted')
-            HostedDetailsDto hosted),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)?
+        sdk,
+    TResult Function(
+            @JsonKey(name: 'url') String url,
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)?
+        git,
+    TResult Function(@JsonKey(name: 'path') String path)? path,
+    TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)?
+        hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (path != null) {
       return path(this.path);
     }
@@ -712,29 +626,24 @@ class _$PathDependencyDto implements PathDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependencyDto value),
-    @required TResult git(GitDependencyDto value),
-    @required TResult path(PathDependencyDto value),
-    @required TResult hosted(HostedDependencyDto value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SdkDependencyDto value) sdk,
+    required TResult Function(GitDependencyDto value) git,
+    required TResult Function(PathDependencyDto value) path,
+    required TResult Function(HostedDependencyDto value) hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return path(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependencyDto value),
-    TResult git(GitDependencyDto value),
-    TResult path(PathDependencyDto value),
-    TResult hosted(HostedDependencyDto value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SdkDependencyDto value)? sdk,
+    TResult Function(GitDependencyDto value)? git,
+    TResult Function(PathDependencyDto value)? path,
+    TResult Function(HostedDependencyDto value)? hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (path != null) {
       return path(this);
     }
@@ -749,16 +658,17 @@ class _$PathDependencyDto implements PathDependencyDto {
 
 abstract class PathDependencyDto implements DependencyDto {
   const factory PathDependencyDto(
-      {@required @JsonKey(name: 'path') String path}) = _$PathDependencyDto;
+      {@JsonKey(name: 'path') required String path}) = _$PathDependencyDto;
 
   factory PathDependencyDto.fromJson(Map<String, dynamic> json) =
       _$PathDependencyDto.fromJson;
 
   /// Path to the live version of that package on your local file system
   @JsonKey(name: 'path')
-  String get path;
+  String get path => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PathDependencyDtoCopyWith<PathDependencyDto> get copyWith;
+  $PathDependencyDtoCopyWith<PathDependencyDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -767,13 +677,10 @@ abstract class $HostedDependencyDtoCopyWith<$Res> {
           HostedDependencyDto value, $Res Function(HostedDependencyDto) then) =
       _$HostedDependencyDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          VersionConstraint version,
-      @JsonKey(name: 'hosted')
-          HostedDetailsDto hosted});
+      {@JsonKey(name: 'version') String version,
+      @JsonKey(name: 'hosted') HostedDetailsDto? hosted});
 
-  $HostedDetailsDtoCopyWith<$Res> get hosted;
+  $HostedDetailsDtoCopyWith<$Res>? get hosted;
 }
 
 /// @nodoc
@@ -789,22 +696,22 @@ class _$HostedDependencyDtoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object version = freezed,
-    Object hosted = freezed,
+    Object? version = freezed,
+    Object? hosted = freezed,
   }) {
     return _then(HostedDependencyDto(
-      version:
-          version == freezed ? _value.version : version as VersionConstraint,
-      hosted: hosted == freezed ? _value.hosted : hosted as HostedDetailsDto,
+      version: version == freezed ? _value.version : version as String,
+      hosted: hosted == freezed ? _value.hosted : hosted as HostedDetailsDto?,
     ));
   }
 
   @override
-  $HostedDetailsDtoCopyWith<$Res> get hosted {
+  $HostedDetailsDtoCopyWith<$Res>? get hosted {
     if (_value.hosted == null) {
       return null;
     }
-    return $HostedDetailsDtoCopyWith<$Res>(_value.hosted, (value) {
+
+    return $HostedDetailsDtoCopyWith<$Res>(_value.hosted!, (value) {
       return _then(_value.copyWith(hosted: value));
     });
   }
@@ -815,13 +722,8 @@ class _$HostedDependencyDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$HostedDependencyDto implements HostedDependencyDto {
   const _$HostedDependencyDto(
-      {@required
-      @JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          this.version,
-      @JsonKey(name: 'hosted')
-          this.hosted})
-      : assert(version != null);
+      {@JsonKey(name: 'version') required this.version,
+      @JsonKey(name: 'hosted') this.hosted});
 
   factory _$HostedDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$HostedDependencyDtoFromJson(json);
@@ -830,13 +732,12 @@ class _$HostedDependencyDto implements HostedDependencyDto {
 
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConstraintConverter()
-  final VersionConstraint version;
+  final String version;
   @override
 
   /// Used if you want to specify a source which the package comes from.
   @JsonKey(name: 'hosted')
-  final HostedDetailsDto hosted;
+  final HostedDetailsDto? hosted;
 
   @override
   String toString() {
@@ -867,56 +768,40 @@ class _$HostedDependencyDto implements HostedDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult sdk(
-            @JsonKey(name: 'sdk')
-                String sdk,
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version),
-    @required
-        TResult git(
+  TResult when<TResult extends Object?>({
+    required TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)
+        sdk,
+    required TResult Function(
             @JsonKey(name: 'url') String url,
-            @JsonKey(name: 'ref') String ref,
-            @JsonKey(name: 'path') String path),
-    @required TResult path(@JsonKey(name: 'path') String path),
-    @required
-        TResult hosted(
-            @JsonKey(name: 'version')
-            @VersionConstraintConverter()
-                VersionConstraint version,
-            @JsonKey(name: 'hosted')
-                HostedDetailsDto hosted),
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)
+        git,
+    required TResult Function(@JsonKey(name: 'path') String path) path,
+    required TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)
+        hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return hosted(version, this.hosted);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult sdk(
-        @JsonKey(name: 'sdk')
-            String sdk,
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version),
-    TResult git(@JsonKey(name: 'url') String url,
-        @JsonKey(name: 'ref') String ref, @JsonKey(name: 'path') String path),
-    TResult path(@JsonKey(name: 'path') String path),
-    TResult hosted(
-        @JsonKey(name: 'version')
-        @VersionConstraintConverter()
-            VersionConstraint version,
-        @JsonKey(name: 'hosted')
-            HostedDetailsDto hosted),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(@JsonKey(name: 'sdk') String sdk,
+            @JsonKey(name: 'version') String? version)?
+        sdk,
+    TResult Function(
+            @JsonKey(name: 'url') String url,
+            @JsonKey(name: 'ref') String? ref,
+            @JsonKey(name: 'path') String? path)?
+        git,
+    TResult Function(@JsonKey(name: 'path') String path)? path,
+    TResult Function(@JsonKey(name: 'version') String version,
+            @JsonKey(name: 'hosted') HostedDetailsDto? hosted)?
+        hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (hosted != null) {
       return hosted(version, this.hosted);
     }
@@ -925,29 +810,24 @@ class _$HostedDependencyDto implements HostedDependencyDto {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult sdk(SdkDependencyDto value),
-    @required TResult git(GitDependencyDto value),
-    @required TResult path(PathDependencyDto value),
-    @required TResult hosted(HostedDependencyDto value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SdkDependencyDto value) sdk,
+    required TResult Function(GitDependencyDto value) git,
+    required TResult Function(PathDependencyDto value) path,
+    required TResult Function(HostedDependencyDto value) hosted,
   }) {
-    assert(sdk != null);
-    assert(git != null);
-    assert(path != null);
-    assert(hosted != null);
     return hosted(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult sdk(SdkDependencyDto value),
-    TResult git(GitDependencyDto value),
-    TResult path(PathDependencyDto value),
-    TResult hosted(HostedDependencyDto value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SdkDependencyDto value)? sdk,
+    TResult Function(GitDependencyDto value)? git,
+    TResult Function(PathDependencyDto value)? path,
+    TResult Function(HostedDependencyDto value)? hosted,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (hosted != null) {
       return hosted(this);
     }
@@ -962,24 +842,21 @@ class _$HostedDependencyDto implements HostedDependencyDto {
 
 abstract class HostedDependencyDto implements DependencyDto {
   const factory HostedDependencyDto(
-      {@required
-      @JsonKey(name: 'version')
-      @VersionConstraintConverter()
-          VersionConstraint version,
-      @JsonKey(name: 'hosted')
-          HostedDetailsDto hosted}) = _$HostedDependencyDto;
+          {@JsonKey(name: 'version') required String version,
+          @JsonKey(name: 'hosted') HostedDetailsDto? hosted}) =
+      _$HostedDependencyDto;
 
   factory HostedDependencyDto.fromJson(Map<String, dynamic> json) =
       _$HostedDependencyDto.fromJson;
 
   /// Package version.
   @JsonKey(name: 'version')
-  @VersionConstraintConverter()
-  VersionConstraint get version;
+  String get version => throw _privateConstructorUsedError;
 
   /// Used if you want to specify a source which the package comes from.
   @JsonKey(name: 'hosted')
-  HostedDetailsDto get hosted;
+  HostedDetailsDto? get hosted => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HostedDependencyDtoCopyWith<HostedDependencyDto> get copyWith;
+  $HostedDependencyDtoCopyWith<HostedDependencyDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

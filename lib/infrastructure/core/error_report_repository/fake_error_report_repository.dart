@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:meta/meta.dart';
 
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 
@@ -9,15 +8,15 @@ class FakeErrorReportRepository implements IErrorReportRepository {
 
   @override
   Future<void> init({
-    @required RunApp runApp,
+    required RunApp runApp,
   }) async {
     runApp();
   }
 
   @override
   Future<void> reportException({
-    @required Exception exception,
-    StackTrace stackTrace,
+    required Exception exception,
+    StackTrace? stackTrace,
   }) {
     return Future.value();
   }

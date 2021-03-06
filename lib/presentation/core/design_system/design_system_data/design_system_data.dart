@@ -10,9 +10,9 @@ part 'design_system_data.freezed.dart';
 @freezed
 abstract class DesignSystemData with _$DesignSystemData {
   const factory DesignSystemData({
-    @required DesignSystemColors colors,
-    @required DesignSystemText text,
-    @required DesignSystemDimensions dimensions,
+    required DesignSystemColors colors,
+    required DesignSystemText text,
+    required DesignSystemDimensions dimensions,
   }) = _DesignSystemData;
 
   factory DesignSystemData.main() {

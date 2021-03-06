@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'design_system_dimensions.dart';
 
@@ -9,16 +9,18 @@ part of 'design_system_dimensions.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$DesignSystemDimensionsTearOff {
   const _$DesignSystemDimensionsTearOff();
 
-// ignore: unused_element
   _DesignSystemDimensions call(
-      {@required double imageInListSize,
-      @required double listViewPadding,
-      @required double galleryTileInnerPadding,
-      @required double maxInteractiveViewerScale}) {
+      {required double imageInListSize,
+      required double listViewPadding,
+      required double galleryTileInnerPadding,
+      required double maxInteractiveViewerScale}) {
     return _DesignSystemDimensions(
       imageInListSize: imageInListSize,
       listViewPadding: listViewPadding,
@@ -29,18 +31,18 @@ class _$DesignSystemDimensionsTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DesignSystemDimensions = _$DesignSystemDimensionsTearOff();
 
 /// @nodoc
 mixin _$DesignSystemDimensions {
-  double get imageInListSize;
-  double get listViewPadding;
-  double get galleryTileInnerPadding;
-  double get maxInteractiveViewerScale;
+  double get imageInListSize => throw _privateConstructorUsedError;
+  double get listViewPadding => throw _privateConstructorUsedError;
+  double get galleryTileInnerPadding => throw _privateConstructorUsedError;
+  double get maxInteractiveViewerScale => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $DesignSystemDimensionsCopyWith<DesignSystemDimensions> get copyWith;
+  $DesignSystemDimensionsCopyWith<DesignSystemDimensions> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -66,10 +68,10 @@ class _$DesignSystemDimensionsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object imageInListSize = freezed,
-    Object listViewPadding = freezed,
-    Object galleryTileInnerPadding = freezed,
-    Object maxInteractiveViewerScale = freezed,
+    Object? imageInListSize = freezed,
+    Object? listViewPadding = freezed,
+    Object? galleryTileInnerPadding = freezed,
+    Object? maxInteractiveViewerScale = freezed,
   }) {
     return _then(_value.copyWith(
       imageInListSize: imageInListSize == freezed
@@ -115,10 +117,10 @@ class __$DesignSystemDimensionsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object imageInListSize = freezed,
-    Object listViewPadding = freezed,
-    Object galleryTileInnerPadding = freezed,
-    Object maxInteractiveViewerScale = freezed,
+    Object? imageInListSize = freezed,
+    Object? listViewPadding = freezed,
+    Object? galleryTileInnerPadding = freezed,
+    Object? maxInteractiveViewerScale = freezed,
   }) {
     return _then(_DesignSystemDimensions(
       imageInListSize: imageInListSize == freezed
@@ -140,14 +142,10 @@ class __$DesignSystemDimensionsCopyWithImpl<$Res>
 /// @nodoc
 class _$_DesignSystemDimensions implements _DesignSystemDimensions {
   const _$_DesignSystemDimensions(
-      {@required this.imageInListSize,
-      @required this.listViewPadding,
-      @required this.galleryTileInnerPadding,
-      @required this.maxInteractiveViewerScale})
-      : assert(imageInListSize != null),
-        assert(listViewPadding != null),
-        assert(galleryTileInnerPadding != null),
-        assert(maxInteractiveViewerScale != null);
+      {required this.imageInListSize,
+      required this.listViewPadding,
+      required this.galleryTileInnerPadding,
+      required this.maxInteractiveViewerScale});
 
   @override
   final double imageInListSize;
@@ -201,20 +199,21 @@ class _$_DesignSystemDimensions implements _DesignSystemDimensions {
 
 abstract class _DesignSystemDimensions implements DesignSystemDimensions {
   const factory _DesignSystemDimensions(
-      {@required double imageInListSize,
-      @required double listViewPadding,
-      @required double galleryTileInnerPadding,
-      @required double maxInteractiveViewerScale}) = _$_DesignSystemDimensions;
+      {required double imageInListSize,
+      required double listViewPadding,
+      required double galleryTileInnerPadding,
+      required double maxInteractiveViewerScale}) = _$_DesignSystemDimensions;
 
   @override
-  double get imageInListSize;
+  double get imageInListSize => throw _privateConstructorUsedError;
   @override
-  double get listViewPadding;
+  double get listViewPadding => throw _privateConstructorUsedError;
   @override
-  double get galleryTileInnerPadding;
+  double get galleryTileInnerPadding => throw _privateConstructorUsedError;
   @override
-  double get maxInteractiveViewerScale;
+  double get maxInteractiveViewerScale => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DesignSystemDimensionsCopyWith<_DesignSystemDimensions> get copyWith;
+  _$DesignSystemDimensionsCopyWith<_DesignSystemDimensions> get copyWith =>
+      throw _privateConstructorUsedError;
 }
