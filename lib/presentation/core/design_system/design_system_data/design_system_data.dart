@@ -8,7 +8,7 @@ import 'package:pub_dev_app/presentation/core/design_system/design_system_dimens
 part 'design_system_data.freezed.dart';
 
 @freezed
-abstract class DesignSystemData with _$DesignSystemData {
+class DesignSystemData with _$DesignSystemData {
   const factory DesignSystemData({
     required DesignSystemColors colors,
     required DesignSystemText text,

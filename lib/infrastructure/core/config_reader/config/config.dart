@@ -4,7 +4,7 @@ part 'config.freezed.dart';
 part 'config.g.dart';
 
 @freezed
-abstract class Config with _$Config {
+class Config with _$Config {
   const factory Config({
     @JsonKey(name: 'sentryDsn') required String sentryDsn,
   }) = _Config;
