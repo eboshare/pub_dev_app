@@ -21,10 +21,10 @@ Level _mapLogLevelToLevel(LogLevel logLevel) {
   }
 }
 
-class LoggerPackageLoggerImpl implements ILogger {
+class ConsoleLogger implements ILogger {
   final Logger _logger;
 
-  const LoggerPackageLoggerImpl(this._logger);
+  const ConsoleLogger(this._logger);
 
   @override
   void close() {
