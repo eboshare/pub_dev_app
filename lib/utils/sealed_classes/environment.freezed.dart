@@ -101,8 +101,8 @@ class __$DevelopmentCopyWithImpl<$Res> extends _$EnvironmentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_Development implements _Development {
-  const _$_Development();
+class _$_Development extends _Development {
+  const _$_Development() : super._();
 
   @override
   String toString() {
@@ -166,7 +166,8 @@ class _$_Development implements _Development {
   }
 }
 
-abstract class _Development implements Environment {
+abstract class _Development extends Environment {
+  const _Development._() : super._();
   const factory _Development() = _$_Development;
 }
 
@@ -189,8 +190,8 @@ class __$ProductionCopyWithImpl<$Res> extends _$EnvironmentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_Production implements _Production {
-  const _$_Production();
+class _$_Production extends _Production {
+  const _$_Production() : super._();
 
   @override
   String toString() {
@@ -254,7 +255,8 @@ class _$_Production implements _Production {
   }
 }
 
-abstract class _Production implements Environment {
+abstract class _Production extends Environment {
+  const _Production._() : super._();
   const factory _Production() = _$_Production;
 }
 
@@ -275,8 +277,8 @@ class __$TestingCopyWithImpl<$Res> extends _$EnvironmentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_Testing implements _Testing {
-  const _$_Testing();
+class _$_Testing extends _Testing {
+  const _$_Testing() : super._();
 
   @override
   String toString() {
@@ -340,6 +342,7 @@ class _$_Testing implements _Testing {
   }
 }
 
-abstract class _Testing implements Environment {
+abstract class _Testing extends Environment {
+  const _Testing._() : super._();
   const factory _Testing() = _$_Testing;
 }
