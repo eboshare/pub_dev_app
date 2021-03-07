@@ -5,58 +5,57 @@ import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/presentation/connection/connection_listener.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
 
-typedef ShowSnackBar = Future<ScaffoldFeatureController<SnackBar, SnackBarClosedReason>> Function({
-  required SnackBar Function(BuildContext) builder,
-});
+typedef ShowSnackBar = ScaffoldFeatureController<SnackBar, SnackBarClosedReason> Function(SnackBar snackBar);
 
-class ConnectionStackBarWrapper extends StatefulWidget {
+class ConnectionSnackBarWrapper extends StatefulWidget {
   final ShowSnackBar showSnackBar;
   final Widget child;
 
-  const ConnectionStackBarWrapper({
+  const ConnectionSnackBarWrapper({
     Key? key,
     required this.showSnackBar,
     required this.child,
   }) : super(key: key);
 
   @override
-  _ConnectionStackBarWrapperState createState() => _ConnectionStackBarWrapperState();
+  _ConnectionSnackBarWrapperState createState() => _ConnectionSnackBarWrapperState();
 }
 
-class _ConnectionStackBarWrapperState extends State<ConnectionStackBarWrapper> {
+class _ConnectionSnackBarWrapperState extends State<ConnectionSnackBarWrapper> {
   late ScaffoldFeatureController _controller;
 
   @override
   Widget build(BuildContext context) {
     return ConnectionListener(
       child: widget.child,
-      onStatusChanged: (status) async {
-        _controller = await widget.showSnackBar(
-          builder: (context) {
-            final design = DesignSystem.of(context);
-
-            final content = Text(
-              _mapConnectionStatusToText(context, status),
-            );
-
-            switch (status) {
-              case ConnectionStatus.connected:
-                _controller.close();
-                return SnackBar(
-                  content: content,
-                  backgroundColor: design.colors.green,
-                );
-              case ConnectionStatus.disconnected:
-                const infiniteDuration = Duration(days: 365);
-                return SnackBar(
-                  content: content,
-                  duration: infiniteDuration,
-                );
-            }
-          },
+      onStatusChanged: (status) {
+        _controller = widget.showSnackBar(
+          _buildSnackBar(context, status),
         );
       },
     );
+  }
+
+  SnackBar _buildSnackBar(BuildContext context, ConnectionStatus status) {
+    final design = DesignSystem.of(context);
+    final content = Text(
+      _mapConnectionStatusToText(context, status),
+    );
+
+    switch (status) {
+      case ConnectionStatus.connected:
+        _controller.close();
+        return SnackBar(
+          content: content,
+          backgroundColor: design.colors.green,
+        );
+      case ConnectionStatus.disconnected:
+        const infiniteDuration = Duration(days: 365);
+        return SnackBar(
+          content: content,
+          duration: infiniteDuration,
+        );
+    }
   }
 
   String _mapConnectionStatusToText(BuildContext context, ConnectionStatus status) {
