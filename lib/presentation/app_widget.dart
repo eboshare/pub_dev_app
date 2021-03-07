@@ -2,8 +2,8 @@ import 'package:flutter/material.dart' hide Router, ConnectionState;
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:pub_dev_app/config/injection.dart';
+import 'package:pub_dev_app/config/localization/s.dart';
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
-import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/presentation/connection/connection_snack_bar_wrapper.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system_data/design_system_data.dart';
@@ -39,7 +39,7 @@ class App extends StatelessWidget {
         // Builder is used to initialize context and access [DesignSystem.of(context)].
         builder: (context) {
           return MaterialApp(
-            onGenerateTitle: (context) => S.of(context)!.appTitle,
+            onGenerateTitle: (context) => S.of(context).appTitle,
             theme: ThemeData(
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),

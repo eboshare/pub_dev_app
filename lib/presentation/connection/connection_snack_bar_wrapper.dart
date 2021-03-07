@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' hide ConnectionState;
 
+import 'package:pub_dev_app/config/localization/s.dart';
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
-import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/presentation/connection/connection_listener.dart';
 import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
 
@@ -59,7 +59,7 @@ class _ConnectionSnackBarWrapperState extends State<ConnectionSnackBarWrapper> {
   }
 
   String _mapConnectionStatusToText(BuildContext context, ConnectionStatus status) {
-    final str = S.of(context)!;
+    final str = S.of(context);
     switch (status) {
       case ConnectionStatus.connected:
         return str.connectionRestored;

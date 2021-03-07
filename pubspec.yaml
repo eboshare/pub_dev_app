@@ -60,7 +60,7 @@ flutter:
 
 flutter_intl:
   enabled: false
-  class_name: S
+  class_name: GeneratedL10n
   main_locale: en
   arb_dir: lib/config/localization/arb
   output_dir: lib/config/localization/generated
