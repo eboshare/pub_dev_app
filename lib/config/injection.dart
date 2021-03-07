@@ -1,3 +1,4 @@
+import 'package:connectivity/connectivity.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:logger/logger.dart';
@@ -5,10 +6,11 @@ import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:pub_dev_app/domain/core/i_logger.dart';
-import 'package:pub_dev_app/infrastructure/connection/loggers/logger_package_logger_impl.dart';
-import 'package:pub_dev_app/utils/config_reader/config/config.dart';
+import 'package:pub_dev_app/infrastructure/connection/connection_repository/connectivity_connection_repository.dart';
+import 'package:pub_dev_app/infrastructure/core/config_reader/config/config.dart';
+import 'package:pub_dev_app/infrastructure/core/config_reader/reader.dart';
+import 'package:pub_dev_app/infrastructure/core/loggers/console_logger.dart';
 import 'package:pub_dev_app/infrastructure/core/error_report_repository/fake_error_report_repository.dart';
-import 'package:pub_dev_app/utils/config_reader/reader.dart';
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 import 'package:pub_dev_app/domain/connection/i_request_retry_scheduler.dart';
 import 'package:pub_dev_app/infrastructure/connection/request_retry_interceptor.dart';
@@ -60,7 +62,7 @@ Future<void> configureDependencies(Environment env) async {
   // Own types with interfaces
   getIt
     ..registerLazySingleton<ILogger>(
-      () => LoggerPackageLoggerImpl(
+      () => ConsoleLogger(
         Logger(
           printer: SimplePrinter(
             colors: false,
@@ -76,11 +78,14 @@ Future<void> configureDependencies(Environment env) async {
     )
     ..registerLazySingleton<IConnectionRepository>(
       () {
-        IConnectionRepository getFake() => FakeConnectionRepository();
+        IConnectionRepository whenDevOrProd() {
+          return ConnectivityConnectionRepository(Connectivity());
+        }
+
         return env.when(
-          dev: getFake,
-          prod: getFake,
-          test: getFake,
+          dev: whenDevOrProd,
+          prod: whenDevOrProd,
+          test: () => FakeConnectionRepository(),
         );
       },
     )

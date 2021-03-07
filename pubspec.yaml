@@ -30,6 +30,7 @@ dependencies:
   pub_semver: ^2.0.0
   path_provider: ^2.0.1
   shared_preferences: ^2.0.3
+  connectivity: ^3.0.2
 
   # utils
   meta: ^1.2.4
