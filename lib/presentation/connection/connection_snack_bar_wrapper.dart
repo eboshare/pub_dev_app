@@ -3,7 +3,7 @@ import 'package:flutter/material.dart' hide ConnectionState;
 import 'package:pub_dev_app/config/localization/s.dart';
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
 import 'package:pub_dev_app/presentation/connection/connection_listener.dart';
-import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
+import 'package:pub_dev_app/presentation/core/app_theme/app_theme.dart';
 
 typedef ShowSnackBar = ScaffoldFeatureController<SnackBar, SnackBarClosedReason> Function(SnackBar snackBar);
 
@@ -37,7 +37,7 @@ class _ConnectionSnackBarWrapperState extends State<ConnectionSnackBarWrapper> {
   }
 
   SnackBar _buildSnackBar(BuildContext context, ConnectionStatus status) {
-    final design = DesignSystem.of(context);
+    final design = AppTheme.of(context);
     final content = Text(
       _mapConnectionStatusToText(context, status),
     );
@@ -47,7 +47,7 @@ class _ConnectionSnackBarWrapperState extends State<ConnectionSnackBarWrapper> {
         _controller.close();
         return SnackBar(
           content: content,
-          backgroundColor: design.colors.green,
+          backgroundColor: design.colors.connectionRestored,
         );
       case ConnectionStatus.disconnected:
         const infiniteDuration = Duration(days: 365);

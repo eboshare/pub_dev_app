@@ -5,8 +5,8 @@ import 'package:pub_dev_app/config/injection.dart';
 import 'package:pub_dev_app/config/localization/s.dart';
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 import 'package:pub_dev_app/presentation/connection/connection_snack_bar_wrapper.dart';
-import 'package:pub_dev_app/presentation/core/design_system/design_system.dart';
-import 'package:pub_dev_app/presentation/core/design_system/design_system_data/design_system_data.dart';
+import 'package:pub_dev_app/presentation/core/app_theme/app_theme.dart';
+import 'package:pub_dev_app/presentation/core/app_theme/app_theme_data/app_theme_data.dart';
 import 'package:pub_dev_app/presentation/package_list/package_list.dart';
 
 class App extends StatelessWidget {
@@ -33,8 +33,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DesignSystem(
-      data: DesignSystemData.main(),
+    return AppTheme(
+      data: AppThemeData.main(),
       child: Builder(
         // Builder is used to initialize context and access [DesignSystem.of(context)].
         builder: (context) {
