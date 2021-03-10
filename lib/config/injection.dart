@@ -9,6 +9,7 @@ import 'package:pub_dev_app/domain/core/i_logger.dart';
 import 'package:pub_dev_app/infrastructure/connection/connection_repository/connectivity_connection_repository.dart';
 import 'package:pub_dev_app/infrastructure/core/config_reader/config/config.dart';
 import 'package:pub_dev_app/infrastructure/core/config_reader/reader.dart';
+import 'package:pub_dev_app/infrastructure/core/error_report_repository/sentry_report_repository.dart';
 import 'package:pub_dev_app/infrastructure/core/loggers/console_logger.dart';
 import 'package:pub_dev_app/infrastructure/core/error_report_repository/fake_error_report_repository.dart';
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
@@ -91,11 +92,16 @@ Future<void> configureDependencies(Environment env) async {
     )
     ..registerLazySingleton<IErrorReportRepository>(
       () {
-        IErrorReportRepository getFake() => FakeErrorReportRepository();
+        IErrorReportRepository whenDevOrProd() {
+          return SentryReportRepository(
+            dsn: getIt<Config>().sentryDsn,
+          );
+        }
+
         return env.when(
-          dev: getFake,
-          prod: getFake,
-          test: getFake,
+          dev: whenDevOrProd,
+          prod: whenDevOrProd,
+          test: () => FakeErrorReportRepository(),
         );
       },
     );
