@@ -4,6 +4,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:logger/logger.dart';
 import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import 'package:pub_dev_app/domain/core/i_logger.dart';
 import 'package:pub_dev_app/infrastructure/connection/connection_repository/connectivity_connection_repository.dart';
@@ -39,6 +40,7 @@ Future<void> configureDependencies(Environment env) async {
       () {
         final dio = Dio();
         dio.interceptors.addAll([
+          PrettyDioLogger(logPrint: getIt<ILogger>().info),
           RequestRetryInterceptor(getIt<IRequestRetryScheduler>(), dio),
         ]);
         return dio;
