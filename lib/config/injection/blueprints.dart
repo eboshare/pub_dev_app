@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:lovely_di/lovely_di.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:pub_dev_app/config/environment_store.dart';
 
 import 'package:pub_dev_app/domain/core/i_logger.dart';
 import 'package:pub_dev_app/infrastructure/connection/connection_repository/connectivity_connection_repository.dart';
@@ -25,9 +26,7 @@ import 'package:pub_dev_app/infrastructure/core/storages/fake_storage.dart';
 import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
 
 // Configuration.
-// [envBlueprint] has to be late final variable due to it has to be initialized in runtime.
-// late final LazySingleton<Environment> envBlueprint;
-final envBlueprint = LazySingleton<Environment>((_) => const Environment.dev());
+final envBlueprint = LazySingleton<Environment>((_) => getEnvironment());
 
 final configBlueprint = AsyncLazySingleton<Config>(
   (_) => loadConfig('config/app_config.json'),
@@ -61,11 +60,13 @@ final storageBlueprint = AsyncLazySingleton<Storage>(
     }
 
     final env = scope.get(envBlueprint);
-    return env.when(
+    final storage = await env.when(
       dev: whenDevOrProd,
       prod: whenDevOrProd,
-      test: () => FakeStorage(),
+      test: () async => FakeStorage(),
     );
+    HydratedBloc.storage = storage;
+    return storage;
   },
 );
 

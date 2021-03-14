@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
 
+import 'package:pub_dev_app/config/environment_store.dart';
 import 'package:pub_dev_app/config/injection/injection.dart';
 import 'package:pub_dev_app/presentation/app_widget.dart';
 import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
 
-Future<void> _initDependencies() async {
-  HydratedBloc.storage = await container.getAsync(storageBlueprint);
+Future<void> _initDependencies(Environment environment) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  setEnvironment(environment);
 }
 
 Future<Widget> initAppForTesting({
   Widget? page,
-  Environment environment = const Environment.test(),
 }) async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await _initDependencies();
+  await _initDependencies(const Environment.test());
 
   if (page != null) {
     return App.fromDirectPage(page: page);
@@ -23,11 +22,11 @@ Future<Widget> initAppForTesting({
 }
 
 Future<void> initAndRunApp(Environment environment) async {
-  WidgetsFlutterBinding.ensureInitialized();
+  await _initDependencies(environment);
+
   final errorReportRepository = await container.getAsync(errorReportRepositoryBlueprint);
   await errorReportRepository.init(
     runApp: () async {
-      await _initDependencies();
       runApp(App.fromRoot());
     },
   );
