@@ -20,7 +20,7 @@ import 'package:pub_dev_app/infrastructure/connection/request_retry_interceptor.
 import 'package:pub_dev_app/application/connection/connection_bloc.dart';
 import 'package:pub_dev_app/domain/connection/i_connection_bloc.dart';
 import 'package:pub_dev_app/domain/connection/i_connection_repository.dart';
-import 'package:pub_dev_app/infrastructure/connection/request_retry_scheduler/request_retry_scheduler.dart';
+import 'package:pub_dev_app/infrastructure/connection/request_retry_scheduler.dart';
 import 'package:pub_dev_app/infrastructure/connection/connection_repository/fake_connection_repository.dart';
 import 'package:pub_dev_app/infrastructure/core/storages/fake_storage.dart';
 import 'package:pub_dev_app/utils/sealed_classes/environment.dart';
@@ -95,7 +95,7 @@ final connectionRepositoryBlueprint = LazySingleton<IConnectionRepository>(
 );
 
 final retrySchedulerBlueprint = LazySingleton<IRequestRetryScheduler>(
-  (scope) => DataConnectionRequestRetryScheduler(
+  (scope) => RequestRetryScheduler(
     scope.get(connectionRepositoryBlueprint),
   ),
 );

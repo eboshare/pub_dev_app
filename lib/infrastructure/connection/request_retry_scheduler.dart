@@ -4,10 +4,10 @@ import 'package:pub_dev_app/domain/connection/connection_status.dart';
 import 'package:pub_dev_app/domain/connection/i_connection_repository.dart';
 import 'package:pub_dev_app/domain/connection/i_request_retry_scheduler.dart';
 
-class DataConnectionRequestRetryScheduler implements IRequestRetryScheduler {
+class RequestRetryScheduler implements IRequestRetryScheduler {
   final IConnectionRepository _connectionRepository;
 
-  const DataConnectionRequestRetryScheduler(this._connectionRepository);
+  const RequestRetryScheduler(this._connectionRepository);
 
   @override
   Future<T> scheduleRequestRetry<T>(Future<T> Function() retryRequest) {
