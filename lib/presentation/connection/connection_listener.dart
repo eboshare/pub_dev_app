@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
 import 'package:pub_dev_app/domain/connection/i_connection_bloc.dart';
-import 'package:pub_dev_app/config/injection.dart';
+import 'package:pub_dev_app/config/injection/injection.dart';
 import 'package:pub_dev_app/domain/connection/connection_state/connection_state.dart';
 
 typedef OnStatusChanged = void Function(ConnectionStatus status);
@@ -23,12 +23,19 @@ class ConnectionListener extends StatefulWidget {
 }
 
 class _ConnectionListenerState extends State<ConnectionListener> {
+  // ignore: close_sinks
   late final IConnectionBloc _bloc;
 
   @override
   void initState() {
     super.initState();
-    _bloc = getIt();
+    _bloc = container.get(connectionBlocBlueprint);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    container.dispose(connectionBlocBlueprint, _bloc);
   }
 
   @override

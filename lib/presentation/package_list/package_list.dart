@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
 
-import 'package:pub_dev_app/config/injection.dart';
+import 'package:pub_dev_app/config/injection/injection.dart';
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/package_dto/package_dto.dart';
+import 'package:pub_dev_app/presentation/core/components/app_future_builder.dart';
 
-/// This function is required only for testing
+/// This function is required only for testing.
 Future<PackageDto> fetchPackage() async {
-  final response = await getIt<Dio>().get('https://pub.dev/api/packages/bloc');
+  final dio = container.get(dioBlueprint);
+  final response = await dio.get('https://pub.dev/api/packages/bloc');
   return PackageDto.fromJson(response.data);
 }
 
@@ -29,20 +30,11 @@ class _PackageListState extends State<PackageList> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: FutureBuilder<PackageDto>(
+          child: AppFutureBuilder<PackageDto>(
             future: _future,
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Text('loading...');
-              }
-              if (snapshot.connectionState == ConnectionState.done && snapshot.error != null) {
-                print(snapshot.error);
-                print(snapshot.stackTrace);
-                return Text(snapshot.error.toString());
-              }
-
-              return Text(snapshot.data.toString());
-            },
+            waitingBuilder: (context) => const Text('loading...'),
+            errorBuilder: (context, _, __) => const Text('error'),
+            dataBuilder: (context, data) => Text(data.toString()),
           ),
         ),
       ),

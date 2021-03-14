@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class ACachedNetworkImage extends StatelessWidget {
+class AppCachedNetworkImage extends StatelessWidget {
   final String url;
   final double width;
   final double height;
 
-  const ACachedNetworkImage({
+  const AppCachedNetworkImage({
     Key? key,
     required this.url,
     required this.width,

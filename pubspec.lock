@@ -315,13 +315,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.14.0"
-  get_it:
-    dependency: "direct main"
-    description:
-      name: get_it
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "6.0.0"
   glob:
     dependency: transitive
     description:
@@ -434,6 +427,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  lovely_di:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "13f72f53c8db7b6811aae6eabc9f2b09033fa4b2"
+      resolved-ref: "13f72f53c8db7b6811aae6eabc9f2b09033fa4b2"
+      url: "https://github.com/eboshare/lovely_di.git"
+    source: git
+    version: "0.5.0-dev"
   matcher:
     dependency: transitive
     description:

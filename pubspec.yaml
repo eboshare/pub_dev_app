@@ -37,11 +37,14 @@ dependencies:
   # utils
   meta: ^1.2.4
   supercharged: ^2.0.0
-  get_it: ^6.0.0
   freezed_annotation: ^0.14.0
   json_annotation: ^4.0.0
   dartz: ^0.10.0-nullsafety.1
   built_collection: ^5.0.0
+  lovely_di:
+    git:
+      url: https://github.com/eboshare/lovely_di.git
+      ref: 13f72f53c8db7b6811aae6eabc9f2b09033fa4b2
 
 dev_dependencies:
   flutter_test:
