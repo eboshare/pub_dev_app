@@ -4,6 +4,7 @@ import 'package:pub_dev_app/config/injection/injection.dart';
 import 'package:pub_dev_app/domain/pub/entities/package_entity/package_entity.dart';
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/package_dto/package_dto.dart';
 import 'package:pub_dev_app/presentation/core/components/app_future_builder.dart';
+import 'package:pub_dev_app/presentation/package_list/package_list_tile.dart';
 
 /// This function is required only for testing.
 Future<PackageEntity> fetchPackage() async {
@@ -31,11 +32,18 @@ class _PackageListState extends State<PackageList> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: AppFutureBuilder<PackageEntity>(
-            future: _future,
-            waitingBuilder: (context) => const Text('loading...'),
-            errorBuilder: (context, _, __) => const Text('error'),
-            dataBuilder: (context, data) => Text(data.toString()),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              AppFutureBuilder<PackageEntity>(
+                future: _future,
+                waitingBuilder: (context) => const Text('loading...'),
+                errorBuilder: (context, _, __) => const Text('error'),
+                dataBuilder: (context, entity) {
+                  return PackageListTile(package: entity);
+                },
+              ),
+            ],
           ),
         ),
       ),

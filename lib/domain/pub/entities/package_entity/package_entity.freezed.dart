@@ -134,9 +134,10 @@ class __$PackageEntityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_PackageEntity implements _PackageEntity {
+class _$_PackageEntity extends _PackageEntity {
   const _$_PackageEntity(
-      {required this.name, required this.latest, required this.versions});
+      {required this.name, required this.latest, required this.versions})
+      : super._();
 
   @override
   final String name;
@@ -176,7 +177,8 @@ class _$_PackageEntity implements _PackageEntity {
       __$PackageEntityCopyWithImpl<_PackageEntity>(this, _$identity);
 }
 
-abstract class _PackageEntity implements PackageEntity {
+abstract class _PackageEntity extends PackageEntity {
+  const _PackageEntity._() : super._();
   const factory _PackageEntity(
       {required String name,
       required PackageVersionEntity latest,

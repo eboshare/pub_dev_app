@@ -41,6 +41,7 @@ dependencies:
   json_annotation: ^4.0.0
   dartz: ^0.10.0-nullsafety.1
   built_collection: ^5.0.0
+  dart_extensions: ^2.0.1
   lovely_di:
     git:
       url: https://github.com/eboshare/lovely_di.git

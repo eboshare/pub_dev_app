@@ -6,7 +6,11 @@ part 'app_theme_text.freezed.dart';
 @freezed
 class AppThemeText with _$AppThemeText {
   const factory AppThemeText({
-    required TextStyle headline1,
-    required TextStyle headline2,
+    required TextStyle packageTitle,
+    required TextStyle packageDescription,
+    required TextStyle packageScoreItemCounter,
+    required TextStyle packageScoreItemTitle,
+    required TextStyle tagSectionTitle,
+    required TextStyle tagTitle,
   }) = _AppThemeText;
 }

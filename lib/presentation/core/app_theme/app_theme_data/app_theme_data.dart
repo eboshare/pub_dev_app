@@ -21,28 +21,59 @@ class AppThemeData with _$AppThemeData {
 
   factory AppThemeData.light() {
     const colors = AppThemeColors(
-      scaffoldBackground: Color(0xFFFFFFFF),
+      primary: Color(0xFFFAFAFA),
+      accent: Color(0xFF0175C2),
+      tag: Color(0xFF1967D2),
+      appBar: Color(0xFF1C2834),
       connectionRestored: Colors.green,
+      packageDescription: Color(0xFF4A4A4A),
+      packageScoreItemTitle: Color(0xFF6D7278),
+      tagSectionBackground: Color(0xFFE7F8FF),
     );
 
     const roboto = TextStyle(
       fontFamily: 'Roboto',
+      fontWeight: FontWeight.normal,
+    );
+
+    const dimensions = AppThemeDimensions(
+      imageInListSize: 100,
+      maxInteractiveViewerScale: 5,
+    );
+
+    final text = AppThemeText(
+      packageTitle: roboto.copyWith(
+        fontSize: 22,
+        fontWeight: FontWeight.w500,
+        color: colors.accent,
+      ),
+      packageDescription: roboto.copyWith(
+        fontSize: 16,
+        color: colors.packageDescription,
+      ),
+      packageScoreItemTitle: roboto.copyWith(
+        fontSize: 10,
+        color: colors.packageScoreItemTitle,
+      ),
+      packageScoreItemCounter: roboto.copyWith(
+        fontSize: 18,
+        color: colors.accent,
+      ),
+      tagSectionTitle: roboto.copyWith(
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+        color: colors.tag,
+      ),
+      tagTitle: roboto.copyWith(
+        fontSize: 12,
+        color: colors.tag,
+      ),
     );
 
     return AppThemeData(
       colors: colors,
-      dimensions: const AppThemeDimensions(
-        imageInListSize: 100,
-        maxInteractiveViewerScale: 5,
-      ),
-      text: AppThemeText(
-        headline1: roboto.copyWith(
-          fontSize: 20,
-        ),
-        headline2: roboto.copyWith(
-          fontSize: 18,
-        ),
-      ),
+      dimensions: dimensions,
+      text: text,
     );
   }
 }

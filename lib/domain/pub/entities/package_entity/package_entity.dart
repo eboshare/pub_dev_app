@@ -7,9 +7,14 @@ part 'package_entity.freezed.dart';
 
 @freezed
 class PackageEntity with _$PackageEntity {
+  // ignore: unused_element
+  const PackageEntity._();
+
   const factory PackageEntity({
     required String name,
     required PackageVersionEntity latest,
     required BuiltList<PackageVersionEntity> versions,
   }) = _PackageEntity;
+
+  String get description => latest.pubSpec.description;
 }

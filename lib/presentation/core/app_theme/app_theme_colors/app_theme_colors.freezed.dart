@@ -17,10 +17,23 @@ class _$AppThemeColorsTearOff {
   const _$AppThemeColorsTearOff();
 
   _AppThemeColors call(
-      {required Color scaffoldBackground, required Color connectionRestored}) {
+      {required Color primary,
+      required Color appBar,
+      required Color accent,
+      required Color connectionRestored,
+      required Color packageDescription,
+      required Color packageScoreItemTitle,
+      required Color tag,
+      required Color tagSectionBackground}) {
     return _AppThemeColors(
-      scaffoldBackground: scaffoldBackground,
+      primary: primary,
+      appBar: appBar,
+      accent: accent,
       connectionRestored: connectionRestored,
+      packageDescription: packageDescription,
+      packageScoreItemTitle: packageScoreItemTitle,
+      tag: tag,
+      tagSectionBackground: tagSectionBackground,
     );
   }
 }
@@ -30,8 +43,14 @@ const $AppThemeColors = _$AppThemeColorsTearOff();
 
 /// @nodoc
 mixin _$AppThemeColors {
-  Color get scaffoldBackground => throw _privateConstructorUsedError;
+  Color get primary => throw _privateConstructorUsedError;
+  Color get appBar => throw _privateConstructorUsedError;
+  Color get accent => throw _privateConstructorUsedError;
   Color get connectionRestored => throw _privateConstructorUsedError;
+  Color get packageDescription => throw _privateConstructorUsedError;
+  Color get packageScoreItemTitle => throw _privateConstructorUsedError;
+  Color get tag => throw _privateConstructorUsedError;
+  Color get tagSectionBackground => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppThemeColorsCopyWith<AppThemeColors> get copyWith =>
@@ -43,7 +62,15 @@ abstract class $AppThemeColorsCopyWith<$Res> {
   factory $AppThemeColorsCopyWith(
           AppThemeColors value, $Res Function(AppThemeColors) then) =
       _$AppThemeColorsCopyWithImpl<$Res>;
-  $Res call({Color scaffoldBackground, Color connectionRestored});
+  $Res call(
+      {Color primary,
+      Color appBar,
+      Color accent,
+      Color connectionRestored,
+      Color packageDescription,
+      Color packageScoreItemTitle,
+      Color tag,
+      Color tagSectionBackground});
 }
 
 /// @nodoc
@@ -57,16 +84,32 @@ class _$AppThemeColorsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? scaffoldBackground = freezed,
+    Object? primary = freezed,
+    Object? appBar = freezed,
+    Object? accent = freezed,
     Object? connectionRestored = freezed,
+    Object? packageDescription = freezed,
+    Object? packageScoreItemTitle = freezed,
+    Object? tag = freezed,
+    Object? tagSectionBackground = freezed,
   }) {
     return _then(_value.copyWith(
-      scaffoldBackground: scaffoldBackground == freezed
-          ? _value.scaffoldBackground
-          : scaffoldBackground as Color,
+      primary: primary == freezed ? _value.primary : primary as Color,
+      appBar: appBar == freezed ? _value.appBar : appBar as Color,
+      accent: accent == freezed ? _value.accent : accent as Color,
       connectionRestored: connectionRestored == freezed
           ? _value.connectionRestored
           : connectionRestored as Color,
+      packageDescription: packageDescription == freezed
+          ? _value.packageDescription
+          : packageDescription as Color,
+      packageScoreItemTitle: packageScoreItemTitle == freezed
+          ? _value.packageScoreItemTitle
+          : packageScoreItemTitle as Color,
+      tag: tag == freezed ? _value.tag : tag as Color,
+      tagSectionBackground: tagSectionBackground == freezed
+          ? _value.tagSectionBackground
+          : tagSectionBackground as Color,
     ));
   }
 }
@@ -78,7 +121,15 @@ abstract class _$AppThemeColorsCopyWith<$Res>
           _AppThemeColors value, $Res Function(_AppThemeColors) then) =
       __$AppThemeColorsCopyWithImpl<$Res>;
   @override
-  $Res call({Color scaffoldBackground, Color connectionRestored});
+  $Res call(
+      {Color primary,
+      Color appBar,
+      Color accent,
+      Color connectionRestored,
+      Color packageDescription,
+      Color packageScoreItemTitle,
+      Color tag,
+      Color tagSectionBackground});
 }
 
 /// @nodoc
@@ -94,16 +145,32 @@ class __$AppThemeColorsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? scaffoldBackground = freezed,
+    Object? primary = freezed,
+    Object? appBar = freezed,
+    Object? accent = freezed,
     Object? connectionRestored = freezed,
+    Object? packageDescription = freezed,
+    Object? packageScoreItemTitle = freezed,
+    Object? tag = freezed,
+    Object? tagSectionBackground = freezed,
   }) {
     return _then(_AppThemeColors(
-      scaffoldBackground: scaffoldBackground == freezed
-          ? _value.scaffoldBackground
-          : scaffoldBackground as Color,
+      primary: primary == freezed ? _value.primary : primary as Color,
+      appBar: appBar == freezed ? _value.appBar : appBar as Color,
+      accent: accent == freezed ? _value.accent : accent as Color,
       connectionRestored: connectionRestored == freezed
           ? _value.connectionRestored
           : connectionRestored as Color,
+      packageDescription: packageDescription == freezed
+          ? _value.packageDescription
+          : packageDescription as Color,
+      packageScoreItemTitle: packageScoreItemTitle == freezed
+          ? _value.packageScoreItemTitle
+          : packageScoreItemTitle as Color,
+      tag: tag == freezed ? _value.tag : tag as Color,
+      tagSectionBackground: tagSectionBackground == freezed
+          ? _value.tagSectionBackground
+          : tagSectionBackground as Color,
     ));
   }
 }
@@ -111,35 +178,75 @@ class __$AppThemeColorsCopyWithImpl<$Res>
 /// @nodoc
 class _$_AppThemeColors implements _AppThemeColors {
   const _$_AppThemeColors(
-      {required this.scaffoldBackground, required this.connectionRestored});
+      {required this.primary,
+      required this.appBar,
+      required this.accent,
+      required this.connectionRestored,
+      required this.packageDescription,
+      required this.packageScoreItemTitle,
+      required this.tag,
+      required this.tagSectionBackground});
 
   @override
-  final Color scaffoldBackground;
+  final Color primary;
+  @override
+  final Color appBar;
+  @override
+  final Color accent;
   @override
   final Color connectionRestored;
+  @override
+  final Color packageDescription;
+  @override
+  final Color packageScoreItemTitle;
+  @override
+  final Color tag;
+  @override
+  final Color tagSectionBackground;
 
   @override
   String toString() {
-    return 'AppThemeColors(scaffoldBackground: $scaffoldBackground, connectionRestored: $connectionRestored)';
+    return 'AppThemeColors(primary: $primary, appBar: $appBar, accent: $accent, connectionRestored: $connectionRestored, packageDescription: $packageDescription, packageScoreItemTitle: $packageScoreItemTitle, tag: $tag, tagSectionBackground: $tagSectionBackground)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _AppThemeColors &&
-            (identical(other.scaffoldBackground, scaffoldBackground) ||
+            (identical(other.primary, primary) ||
                 const DeepCollectionEquality()
-                    .equals(other.scaffoldBackground, scaffoldBackground)) &&
+                    .equals(other.primary, primary)) &&
+            (identical(other.appBar, appBar) ||
+                const DeepCollectionEquality().equals(other.appBar, appBar)) &&
+            (identical(other.accent, accent) ||
+                const DeepCollectionEquality().equals(other.accent, accent)) &&
             (identical(other.connectionRestored, connectionRestored) ||
                 const DeepCollectionEquality()
-                    .equals(other.connectionRestored, connectionRestored)));
+                    .equals(other.connectionRestored, connectionRestored)) &&
+            (identical(other.packageDescription, packageDescription) ||
+                const DeepCollectionEquality()
+                    .equals(other.packageDescription, packageDescription)) &&
+            (identical(other.packageScoreItemTitle, packageScoreItemTitle) ||
+                const DeepCollectionEquality().equals(
+                    other.packageScoreItemTitle, packageScoreItemTitle)) &&
+            (identical(other.tag, tag) ||
+                const DeepCollectionEquality().equals(other.tag, tag)) &&
+            (identical(other.tagSectionBackground, tagSectionBackground) ||
+                const DeepCollectionEquality()
+                    .equals(other.tagSectionBackground, tagSectionBackground)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(scaffoldBackground) ^
-      const DeepCollectionEquality().hash(connectionRestored);
+      const DeepCollectionEquality().hash(primary) ^
+      const DeepCollectionEquality().hash(appBar) ^
+      const DeepCollectionEquality().hash(accent) ^
+      const DeepCollectionEquality().hash(connectionRestored) ^
+      const DeepCollectionEquality().hash(packageDescription) ^
+      const DeepCollectionEquality().hash(packageScoreItemTitle) ^
+      const DeepCollectionEquality().hash(tag) ^
+      const DeepCollectionEquality().hash(tagSectionBackground);
 
   @JsonKey(ignore: true)
   @override
@@ -149,13 +256,31 @@ class _$_AppThemeColors implements _AppThemeColors {
 
 abstract class _AppThemeColors implements AppThemeColors {
   const factory _AppThemeColors(
-      {required Color scaffoldBackground,
-      required Color connectionRestored}) = _$_AppThemeColors;
+      {required Color primary,
+      required Color appBar,
+      required Color accent,
+      required Color connectionRestored,
+      required Color packageDescription,
+      required Color packageScoreItemTitle,
+      required Color tag,
+      required Color tagSectionBackground}) = _$_AppThemeColors;
 
   @override
-  Color get scaffoldBackground => throw _privateConstructorUsedError;
+  Color get primary => throw _privateConstructorUsedError;
+  @override
+  Color get appBar => throw _privateConstructorUsedError;
+  @override
+  Color get accent => throw _privateConstructorUsedError;
   @override
   Color get connectionRestored => throw _privateConstructorUsedError;
+  @override
+  Color get packageDescription => throw _privateConstructorUsedError;
+  @override
+  Color get packageScoreItemTitle => throw _privateConstructorUsedError;
+  @override
+  Color get tag => throw _privateConstructorUsedError;
+  @override
+  Color get tagSectionBackground => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AppThemeColorsCopyWith<_AppThemeColors> get copyWith =>

@@ -17,10 +17,19 @@ class _$AppThemeTextTearOff {
   const _$AppThemeTextTearOff();
 
   _AppThemeText call(
-      {required TextStyle headline1, required TextStyle headline2}) {
+      {required TextStyle packageTitle,
+      required TextStyle packageDescription,
+      required TextStyle packageScoreItemCounter,
+      required TextStyle packageScoreItemTitle,
+      required TextStyle tagSectionTitle,
+      required TextStyle tagTitle}) {
     return _AppThemeText(
-      headline1: headline1,
-      headline2: headline2,
+      packageTitle: packageTitle,
+      packageDescription: packageDescription,
+      packageScoreItemCounter: packageScoreItemCounter,
+      packageScoreItemTitle: packageScoreItemTitle,
+      tagSectionTitle: tagSectionTitle,
+      tagTitle: tagTitle,
     );
   }
 }
@@ -30,8 +39,12 @@ const $AppThemeText = _$AppThemeTextTearOff();
 
 /// @nodoc
 mixin _$AppThemeText {
-  TextStyle get headline1 => throw _privateConstructorUsedError;
-  TextStyle get headline2 => throw _privateConstructorUsedError;
+  TextStyle get packageTitle => throw _privateConstructorUsedError;
+  TextStyle get packageDescription => throw _privateConstructorUsedError;
+  TextStyle get packageScoreItemCounter => throw _privateConstructorUsedError;
+  TextStyle get packageScoreItemTitle => throw _privateConstructorUsedError;
+  TextStyle get tagSectionTitle => throw _privateConstructorUsedError;
+  TextStyle get tagTitle => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppThemeTextCopyWith<AppThemeText> get copyWith =>
@@ -43,7 +56,13 @@ abstract class $AppThemeTextCopyWith<$Res> {
   factory $AppThemeTextCopyWith(
           AppThemeText value, $Res Function(AppThemeText) then) =
       _$AppThemeTextCopyWithImpl<$Res>;
-  $Res call({TextStyle headline1, TextStyle headline2});
+  $Res call(
+      {TextStyle packageTitle,
+      TextStyle packageDescription,
+      TextStyle packageScoreItemCounter,
+      TextStyle packageScoreItemTitle,
+      TextStyle tagSectionTitle,
+      TextStyle tagTitle});
 }
 
 /// @nodoc
@@ -56,14 +75,30 @@ class _$AppThemeTextCopyWithImpl<$Res> implements $AppThemeTextCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? headline1 = freezed,
-    Object? headline2 = freezed,
+    Object? packageTitle = freezed,
+    Object? packageDescription = freezed,
+    Object? packageScoreItemCounter = freezed,
+    Object? packageScoreItemTitle = freezed,
+    Object? tagSectionTitle = freezed,
+    Object? tagTitle = freezed,
   }) {
     return _then(_value.copyWith(
-      headline1:
-          headline1 == freezed ? _value.headline1 : headline1 as TextStyle,
-      headline2:
-          headline2 == freezed ? _value.headline2 : headline2 as TextStyle,
+      packageTitle: packageTitle == freezed
+          ? _value.packageTitle
+          : packageTitle as TextStyle,
+      packageDescription: packageDescription == freezed
+          ? _value.packageDescription
+          : packageDescription as TextStyle,
+      packageScoreItemCounter: packageScoreItemCounter == freezed
+          ? _value.packageScoreItemCounter
+          : packageScoreItemCounter as TextStyle,
+      packageScoreItemTitle: packageScoreItemTitle == freezed
+          ? _value.packageScoreItemTitle
+          : packageScoreItemTitle as TextStyle,
+      tagSectionTitle: tagSectionTitle == freezed
+          ? _value.tagSectionTitle
+          : tagSectionTitle as TextStyle,
+      tagTitle: tagTitle == freezed ? _value.tagTitle : tagTitle as TextStyle,
     ));
   }
 }
@@ -75,7 +110,13 @@ abstract class _$AppThemeTextCopyWith<$Res>
           _AppThemeText value, $Res Function(_AppThemeText) then) =
       __$AppThemeTextCopyWithImpl<$Res>;
   @override
-  $Res call({TextStyle headline1, TextStyle headline2});
+  $Res call(
+      {TextStyle packageTitle,
+      TextStyle packageDescription,
+      TextStyle packageScoreItemCounter,
+      TextStyle packageScoreItemTitle,
+      TextStyle tagSectionTitle,
+      TextStyle tagTitle});
 }
 
 /// @nodoc
@@ -90,49 +131,96 @@ class __$AppThemeTextCopyWithImpl<$Res> extends _$AppThemeTextCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? headline1 = freezed,
-    Object? headline2 = freezed,
+    Object? packageTitle = freezed,
+    Object? packageDescription = freezed,
+    Object? packageScoreItemCounter = freezed,
+    Object? packageScoreItemTitle = freezed,
+    Object? tagSectionTitle = freezed,
+    Object? tagTitle = freezed,
   }) {
     return _then(_AppThemeText(
-      headline1:
-          headline1 == freezed ? _value.headline1 : headline1 as TextStyle,
-      headline2:
-          headline2 == freezed ? _value.headline2 : headline2 as TextStyle,
+      packageTitle: packageTitle == freezed
+          ? _value.packageTitle
+          : packageTitle as TextStyle,
+      packageDescription: packageDescription == freezed
+          ? _value.packageDescription
+          : packageDescription as TextStyle,
+      packageScoreItemCounter: packageScoreItemCounter == freezed
+          ? _value.packageScoreItemCounter
+          : packageScoreItemCounter as TextStyle,
+      packageScoreItemTitle: packageScoreItemTitle == freezed
+          ? _value.packageScoreItemTitle
+          : packageScoreItemTitle as TextStyle,
+      tagSectionTitle: tagSectionTitle == freezed
+          ? _value.tagSectionTitle
+          : tagSectionTitle as TextStyle,
+      tagTitle: tagTitle == freezed ? _value.tagTitle : tagTitle as TextStyle,
     ));
   }
 }
 
 /// @nodoc
 class _$_AppThemeText implements _AppThemeText {
-  const _$_AppThemeText({required this.headline1, required this.headline2});
+  const _$_AppThemeText(
+      {required this.packageTitle,
+      required this.packageDescription,
+      required this.packageScoreItemCounter,
+      required this.packageScoreItemTitle,
+      required this.tagSectionTitle,
+      required this.tagTitle});
 
   @override
-  final TextStyle headline1;
+  final TextStyle packageTitle;
   @override
-  final TextStyle headline2;
+  final TextStyle packageDescription;
+  @override
+  final TextStyle packageScoreItemCounter;
+  @override
+  final TextStyle packageScoreItemTitle;
+  @override
+  final TextStyle tagSectionTitle;
+  @override
+  final TextStyle tagTitle;
 
   @override
   String toString() {
-    return 'AppThemeText(headline1: $headline1, headline2: $headline2)';
+    return 'AppThemeText(packageTitle: $packageTitle, packageDescription: $packageDescription, packageScoreItemCounter: $packageScoreItemCounter, packageScoreItemTitle: $packageScoreItemTitle, tagSectionTitle: $tagSectionTitle, tagTitle: $tagTitle)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _AppThemeText &&
-            (identical(other.headline1, headline1) ||
+            (identical(other.packageTitle, packageTitle) ||
                 const DeepCollectionEquality()
-                    .equals(other.headline1, headline1)) &&
-            (identical(other.headline2, headline2) ||
+                    .equals(other.packageTitle, packageTitle)) &&
+            (identical(other.packageDescription, packageDescription) ||
                 const DeepCollectionEquality()
-                    .equals(other.headline2, headline2)));
+                    .equals(other.packageDescription, packageDescription)) &&
+            (identical(
+                    other.packageScoreItemCounter, packageScoreItemCounter) ||
+                const DeepCollectionEquality().equals(
+                    other.packageScoreItemCounter, packageScoreItemCounter)) &&
+            (identical(other.packageScoreItemTitle, packageScoreItemTitle) ||
+                const DeepCollectionEquality().equals(
+                    other.packageScoreItemTitle, packageScoreItemTitle)) &&
+            (identical(other.tagSectionTitle, tagSectionTitle) ||
+                const DeepCollectionEquality()
+                    .equals(other.tagSectionTitle, tagSectionTitle)) &&
+            (identical(other.tagTitle, tagTitle) ||
+                const DeepCollectionEquality()
+                    .equals(other.tagTitle, tagTitle)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(headline1) ^
-      const DeepCollectionEquality().hash(headline2);
+      const DeepCollectionEquality().hash(packageTitle) ^
+      const DeepCollectionEquality().hash(packageDescription) ^
+      const DeepCollectionEquality().hash(packageScoreItemCounter) ^
+      const DeepCollectionEquality().hash(packageScoreItemTitle) ^
+      const DeepCollectionEquality().hash(tagSectionTitle) ^
+      const DeepCollectionEquality().hash(tagTitle);
 
   @JsonKey(ignore: true)
   @override
@@ -142,13 +230,25 @@ class _$_AppThemeText implements _AppThemeText {
 
 abstract class _AppThemeText implements AppThemeText {
   const factory _AppThemeText(
-      {required TextStyle headline1,
-      required TextStyle headline2}) = _$_AppThemeText;
+      {required TextStyle packageTitle,
+      required TextStyle packageDescription,
+      required TextStyle packageScoreItemCounter,
+      required TextStyle packageScoreItemTitle,
+      required TextStyle tagSectionTitle,
+      required TextStyle tagTitle}) = _$_AppThemeText;
 
   @override
-  TextStyle get headline1 => throw _privateConstructorUsedError;
+  TextStyle get packageTitle => throw _privateConstructorUsedError;
   @override
-  TextStyle get headline2 => throw _privateConstructorUsedError;
+  TextStyle get packageDescription => throw _privateConstructorUsedError;
+  @override
+  TextStyle get packageScoreItemCounter => throw _privateConstructorUsedError;
+  @override
+  TextStyle get packageScoreItemTitle => throw _privateConstructorUsedError;
+  @override
+  TextStyle get tagSectionTitle => throw _privateConstructorUsedError;
+  @override
+  TextStyle get tagTitle => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AppThemeTextCopyWith<_AppThemeText> get copyWith =>
