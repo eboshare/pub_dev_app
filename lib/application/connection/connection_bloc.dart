@@ -49,18 +49,14 @@ class ConnectionBloc extends Bloc<ConnectionEvent, ConnectionState> implements I
   @override
   Stream<ConnectionState> mapEventToState(ConnectionEvent event) async* {
     yield* event.map(
-      connected: _mapConnectedEvent,
-      disconnected: _mapDisconnectedEvent,
       check: _mapCheckEvent,
+      connected: (_) => Stream.value(
+        const ConnectionState.connected(),
+      ),
+      disconnected: (_) => Stream.value(
+        const ConnectionState.disconnected(),
+      ),
     );
-  }
-
-  Stream<ConnectionState> _mapConnectedEvent(ConnectionConnectedEvent event) async* {
-    yield const ConnectionState.connected();
-  }
-
-  Stream<ConnectionState> _mapDisconnectedEvent(ConnectionDisconnectedEvent event) async* {
-    yield const ConnectionState.disconnected();
   }
 
   Stream<ConnectionState> _mapCheckEvent(ConnectionCheckEvent event) async* {
