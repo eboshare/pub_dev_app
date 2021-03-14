@@ -10,7 +10,7 @@ Future<void> _initDependencies(Environment environment) async {
   setEnvironment(environment);
 }
 
-Future<Widget> initAppForTesting({
+Future<App> getInitializedApp({
   Widget? page,
 }) async {
   await _initDependencies(const Environment.test());

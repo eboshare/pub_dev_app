@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 
-typedef RunApp = FutureOr<void> Function();
+typedef RunApp = Future<void> Function();
 
 abstract class IErrorReportRepository {
   Future<void> init({
