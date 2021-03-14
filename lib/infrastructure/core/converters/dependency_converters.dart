@@ -1,6 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'package:pub_dev_app/domain/pub/entities/dependency_entity/dependency_entity.dart';
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency_dto/dependency_dto.dart';
+import 'package:pub_dev_app/utils/extensions/extensions.dart';
 
 abstract class SourceKeys {
   static const sdk = 'sdk';
@@ -114,4 +116,14 @@ DependencyDto dependencyFromJson(Object? json) {
   }
 
   throw AssertionError('Unhandled case in the dependency parsing.');
+}
+
+BuiltList<DependencyEntity>? mapDependencyDtosToEntities(
+  Map<String, DependencyDto>? dtoDependencies,
+) {
+  return dtoDependencies?.entries
+      .map(
+        (entry) => entry.value.toEntity(entry.key),
+      )
+      .toBuiltList();
 }

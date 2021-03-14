@@ -5,8 +5,8 @@ import 'package:dio/dio.dart';
 import 'package:lovely_di/lovely_di.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:pub_dev_app/config/environment_store.dart';
 
+import 'package:pub_dev_app/config/environment_store.dart';
 import 'package:pub_dev_app/domain/core/i_logger.dart';
 import 'package:pub_dev_app/infrastructure/connection/connection_repository/connectivity_connection_repository.dart';
 import 'package:pub_dev_app/infrastructure/core/config_reader/config/config.dart';

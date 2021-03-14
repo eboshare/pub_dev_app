@@ -6,7 +6,7 @@ class NullableDateTimeConverter implements JsonConverter<DateTime?, String?> {
   const NullableDateTimeConverter();
 
   @override
-  DateTime? fromJson(String? sourceString) => sourceString.nullOrElse((string) => DateTime.parse(string!));
+  DateTime? fromJson(String? sourceString) => sourceString.nullOrElse(DateTime.parse);
 
   @override
   String? toJson(DateTime? dateTime) => dateTime?.toIso8601String();

@@ -183,10 +183,11 @@ class _$SdkDependencyDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$SdkDependencyDto implements SdkDependencyDto {
+class _$SdkDependencyDto extends SdkDependencyDto {
   const _$SdkDependencyDto(
       {@JsonKey(name: 'sdk') required this.sdk,
-      @JsonKey(name: 'version') this.version});
+      @JsonKey(name: 'version') this.version})
+      : super._();
 
   factory _$SdkDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$SdkDependencyDtoFromJson(json);
@@ -302,7 +303,8 @@ class _$SdkDependencyDto implements SdkDependencyDto {
   }
 }
 
-abstract class SdkDependencyDto implements DependencyDto {
+abstract class SdkDependencyDto extends DependencyDto {
+  const SdkDependencyDto._() : super._();
   const factory SdkDependencyDto(
       {@JsonKey(name: 'sdk') required String sdk,
       @JsonKey(name: 'version') String? version}) = _$SdkDependencyDto;
@@ -361,11 +363,12 @@ class _$GitDependencyDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$GitDependencyDto implements GitDependencyDto {
+class _$GitDependencyDto extends GitDependencyDto {
   const _$GitDependencyDto(
       {@JsonKey(name: 'url') required this.url,
       @JsonKey(name: 'ref') this.ref,
-      @JsonKey(name: 'path') this.path});
+      @JsonKey(name: 'path') this.path})
+      : super._();
 
   factory _$GitDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$GitDependencyDtoFromJson(json);
@@ -490,7 +493,8 @@ class _$GitDependencyDto implements GitDependencyDto {
   }
 }
 
-abstract class GitDependencyDto implements DependencyDto {
+abstract class GitDependencyDto extends DependencyDto {
+  const GitDependencyDto._() : super._();
   const factory GitDependencyDto(
       {@JsonKey(name: 'url') required String url,
       @JsonKey(name: 'ref') String? ref,
@@ -548,8 +552,9 @@ class _$PathDependencyDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$PathDependencyDto implements PathDependencyDto {
-  const _$PathDependencyDto({@JsonKey(name: 'path') required this.path});
+class _$PathDependencyDto extends PathDependencyDto {
+  const _$PathDependencyDto({@JsonKey(name: 'path') required this.path})
+      : super._();
 
   factory _$PathDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$PathDependencyDtoFromJson(json);
@@ -656,7 +661,8 @@ class _$PathDependencyDto implements PathDependencyDto {
   }
 }
 
-abstract class PathDependencyDto implements DependencyDto {
+abstract class PathDependencyDto extends DependencyDto {
+  const PathDependencyDto._() : super._();
   const factory PathDependencyDto(
       {@JsonKey(name: 'path') required String path}) = _$PathDependencyDto;
 
@@ -720,10 +726,11 @@ class _$HostedDependencyDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$HostedDependencyDto implements HostedDependencyDto {
+class _$HostedDependencyDto extends HostedDependencyDto {
   const _$HostedDependencyDto(
       {@JsonKey(name: 'version') required this.version,
-      @JsonKey(name: 'hosted') this.hosted});
+      @JsonKey(name: 'hosted') this.hosted})
+      : super._();
 
   factory _$HostedDependencyDto.fromJson(Map<String, dynamic> json) =>
       _$_$HostedDependencyDtoFromJson(json);
@@ -840,7 +847,8 @@ class _$HostedDependencyDto implements HostedDependencyDto {
   }
 }
 
-abstract class HostedDependencyDto implements DependencyDto {
+abstract class HostedDependencyDto extends DependencyDto {
+  const HostedDependencyDto._() : super._();
   const factory HostedDependencyDto(
           {@JsonKey(name: 'version') required String version,
           @JsonKey(name: 'hosted') HostedDetailsDto? hosted}) =

@@ -212,7 +212,7 @@ class __$PackageVersionDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_PackageVersionDto implements _PackageVersionDto {
+class _$_PackageVersionDto extends _PackageVersionDto {
   const _$_PackageVersionDto(
       {@JsonKey(name: 'version')
           required this.version,
@@ -226,7 +226,8 @@ class _$_PackageVersionDto implements _PackageVersionDto {
           this.url,
       @JsonKey(name: 'published')
       @NullableDateTimeConverter()
-          this.publishedAt});
+          this.publishedAt})
+      : super._();
 
   factory _$_PackageVersionDto.fromJson(Map<String, dynamic> json) =>
       _$_$_PackageVersionDtoFromJson(json);
@@ -312,7 +313,8 @@ class _$_PackageVersionDto implements _PackageVersionDto {
   }
 }
 
-abstract class _PackageVersionDto implements PackageVersionDto {
+abstract class _PackageVersionDto extends PackageVersionDto {
+  const _PackageVersionDto._() : super._();
   const factory _PackageVersionDto(
       {@JsonKey(name: 'version')
           required String version,

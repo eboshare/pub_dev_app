@@ -120,10 +120,11 @@ class __$HostedDetailsDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_HostedDetailsDto implements _HostedDetailsDto {
+class _$_HostedDetailsDto extends _HostedDetailsDto {
   const _$_HostedDetailsDto(
       {@JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'url') this.url});
+      @JsonKey(name: 'url') this.url})
+      : super._();
 
   factory _$_HostedDetailsDto.fromJson(Map<String, dynamic> json) =>
       _$_$_HostedDetailsDtoFromJson(json);
@@ -171,7 +172,8 @@ class _$_HostedDetailsDto implements _HostedDetailsDto {
   }
 }
 
-abstract class _HostedDetailsDto implements HostedDetailsDto {
+abstract class _HostedDetailsDto extends HostedDetailsDto {
+  const _HostedDetailsDto._() : super._();
   const factory _HostedDetailsDto(
       {@JsonKey(name: 'name') required String name,
       @JsonKey(name: 'url') String? url}) = _$_HostedDetailsDto;

@@ -147,11 +147,12 @@ class __$PackageDtoCopyWithImpl<$Res> extends _$PackageDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_PackageDto implements _PackageDto {
+class _$_PackageDto extends _PackageDto {
   const _$_PackageDto(
       {@JsonKey(name: 'name') required this.name,
       @JsonKey(name: 'latest') required this.latest,
-      @JsonKey(name: 'versions') required this.versions});
+      @JsonKey(name: 'versions') required this.versions})
+      : super._();
 
   factory _$_PackageDto.fromJson(Map<String, dynamic> json) =>
       _$_$_PackageDtoFromJson(json);
@@ -208,7 +209,8 @@ class _$_PackageDto implements _PackageDto {
   }
 }
 
-abstract class _PackageDto implements PackageDto {
+abstract class _PackageDto extends PackageDto {
+  const _PackageDto._() : super._();
   const factory _PackageDto(
       {@JsonKey(name: 'name')
           required String name,

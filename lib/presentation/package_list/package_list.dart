@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:pub_dev_app/config/injection/injection.dart';
+import 'package:pub_dev_app/domain/pub/entities/package_entity/package_entity.dart';
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/package_dto/package_dto.dart';
 import 'package:pub_dev_app/presentation/core/components/app_future_builder.dart';
 
 /// This function is required only for testing.
-Future<PackageDto> fetchPackage() async {
+Future<PackageEntity> fetchPackage() async {
   final dio = container.get(dioBlueprint);
   final response = await dio.get('https://pub.dev/api/packages/bloc');
-  return PackageDto.fromJson(response.data);
+  return PackageDto.fromJson(response.data).toEntity();
 }
 
 class PackageList extends StatefulWidget {
@@ -17,7 +18,7 @@ class PackageList extends StatefulWidget {
 }
 
 class _PackageListState extends State<PackageList> {
-  late final Future<PackageDto> _future;
+  late final Future<PackageEntity> _future;
 
   @override
   void initState() {
@@ -30,7 +31,7 @@ class _PackageListState extends State<PackageList> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: AppFutureBuilder<PackageDto>(
+          child: AppFutureBuilder<PackageEntity>(
             future: _future,
             waitingBuilder: (context) => const Text('loading...'),
             errorBuilder: (context, _, __) => const Text('error'),

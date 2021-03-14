@@ -1,6 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'package:pub_dev_app/infrastructure/core/converters/dependency_converters.dart';
+import 'package:pub_dev_app/domain/pub/entities/environment_item_entity/environment_item_entity.dart';
+import 'package:pub_dev_app/domain/pub/entities/pub_spec_entity/pub_spec_entity.dart';
 import 'package:pub_dev_app/infrastructure/pub_api/dtos/dependency_dto/dependency_dto.dart';
+import 'package:pub_dev_app/utils/extensions/extensions.dart';
 
 part 'pub_spec_dto.freezed.dart';
 part 'pub_spec_dto.g.dart';
@@ -8,6 +12,9 @@ part 'pub_spec_dto.g.dart';
 /// Pubspec model.
 @freezed
 class PubSpecDto with _$PubSpecDto {
+  // ignore: unused_element
+  const PubSpecDto._();
+
   const factory PubSpecDto({
     /// Required for every package.
     /// Package name.
@@ -75,4 +82,29 @@ class PubSpecDto with _$PubSpecDto {
   }) = _PubSpec;
 
   factory PubSpecDto.fromJson(Map<String, dynamic> json) => _$PubSpecDtoFromJson(json);
+
+  PubSpecEntity toEntity() {
+    return PubSpecEntity(
+      name: name,
+      version: version.toVersion(),
+      description: description,
+      environment: environment.entries
+          .map(
+            (entry) => EnvironmentItemEntity(
+              name: entry.key,
+              version: entry.value.toVersionConstraint(),
+            ),
+          )
+          .toBuiltList(),
+      publishTo: publishTo,
+      repository: repository,
+      homePage: homePage,
+      issueTracker: issueTracker,
+      // ignore: deprecated_member_use_from_same_package
+      authors: authors?.toBuiltList(),
+      dependencies: mapDependencyDtosToEntities(dependencies),
+      devDependencies: mapDependencyDtosToEntities(devDependencies),
+      dependencyOverrides: mapDependencyDtosToEntities(dependencyOverrides),
+    );
+  }
 }

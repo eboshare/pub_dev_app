@@ -348,7 +348,7 @@ class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_PubSpec implements _PubSpec {
+class _$_PubSpec extends _PubSpec {
   const _$_PubSpec(
       {@JsonKey(name: 'name')
           required this.name,
@@ -376,7 +376,8 @@ class _$_PubSpec implements _PubSpec {
       @JsonKey(name: 'dev_dependencies')
           this.devDependencies,
       @JsonKey(name: 'dependency_overrides')
-          this.dependencyOverrides});
+          this.dependencyOverrides})
+      : super._();
 
   factory _$_PubSpec.fromJson(Map<String, dynamic> json) =>
       _$_$_PubSpecFromJson(json);
@@ -550,7 +551,8 @@ class _$_PubSpec implements _PubSpec {
   }
 }
 
-abstract class _PubSpec implements PubSpecDto {
+abstract class _PubSpec extends PubSpecDto {
+  const _PubSpec._() : super._();
   const factory _PubSpec(
       {@JsonKey(name: 'name')
           required String name,
