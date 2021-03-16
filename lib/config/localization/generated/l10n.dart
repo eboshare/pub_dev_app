@@ -12,39 +12,39 @@ import 'intl/messages_all.dart';
 // ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
 // ignore_for_file: avoid_redundant_argument_values
 
-class GeneratedL10n {
-  GeneratedL10n();
+class L10n {
+  L10n();
 
-  static GeneratedL10n? _current;
+  static L10n? _current;
 
-  static GeneratedL10n get current {
-    assert(_current != null, 'No instance of GeneratedL10n was loaded. Try to initialize the GeneratedL10n delegate before accessing GeneratedL10n.current.');
+  static L10n get current {
+    assert(_current != null, 'No instance of L10n was loaded. Try to initialize the L10n delegate before accessing L10n.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate =
     AppLocalizationDelegate();
 
-  static Future<GeneratedL10n> load(Locale locale) {
+  static Future<L10n> load(Locale locale) {
     final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
     final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
-      final instance = GeneratedL10n();
-      GeneratedL10n._current = instance;
+      final instance = L10n();
+      L10n._current = instance;
  
       return instance;
     });
   } 
 
-  static GeneratedL10n of(BuildContext context) {
-    final instance = GeneratedL10n.maybeOf(context);
-    assert(instance != null, 'No instance of GeneratedL10n present in the widget tree. Did you add GeneratedL10n.delegate in localizationsDelegates?');
+  static L10n of(BuildContext context) {
+    final instance = L10n.maybeOf(context);
+    assert(instance != null, 'No instance of L10n present in the widget tree. Did you add L10n.delegate in localizationsDelegates?');
     return instance!;
   }
 
-  static GeneratedL10n? maybeOf(BuildContext context) {
-    return Localizations.of<GeneratedL10n>(context, GeneratedL10n);
+  static L10n? maybeOf(BuildContext context) {
+    return Localizations.of<L10n>(context, L10n);
   }
 
   /// `Pub.dev`
@@ -238,7 +238,7 @@ class GeneratedL10n {
   }
 }
 
-class AppLocalizationDelegate extends LocalizationsDelegate<GeneratedL10n> {
+class AppLocalizationDelegate extends LocalizationsDelegate<L10n> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
@@ -250,7 +250,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<GeneratedL10n> {
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
   @override
-  Future<GeneratedL10n> load(Locale locale) => GeneratedL10n.load(locale);
+  Future<L10n> load(Locale locale) => L10n.load(locale);
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
 

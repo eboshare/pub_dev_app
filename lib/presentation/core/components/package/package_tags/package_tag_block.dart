@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:built_collection/built_collection.dart';
 
-import 'package:pub_dev_app/config/localization/l10n.dart';
+import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/domain/pub/entities/derived_tags/derived_tags.dart';
 import 'package:pub_dev_app/domain/pub/enums/platform_tag.dart';
 import 'package:pub_dev_app/domain/pub/enums/runtime_tag.dart';

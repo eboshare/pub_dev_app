@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' hide ConnectionState;
 
-import 'package:pub_dev_app/config/localization/l10n.dart';
+import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/domain/connection/connection_status.dart';
 import 'package:pub_dev_app/presentation/connection/connection_listener.dart';
 import 'package:pub_dev_app/presentation/core/app_theme/app_theme.dart';

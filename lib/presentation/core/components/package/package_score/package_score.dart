@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pub_dev_app/config/localization/l10n.dart';
 
+import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/domain/pub/entities/package_score/package_score_entity.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_score/package_score_tile.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pub_dev_app/domain/pub/entities/derived_tags/derived_tags.dart';
 
+import 'package:pub_dev_app/domain/pub/entities/derived_tags/derived_tags.dart';
 import 'package:pub_dev_app/domain/pub/entities/package_entity/package_entity.dart';
 import 'package:pub_dev_app/domain/pub/entities/package_score/package_score_entity.dart';
 import 'package:pub_dev_app/domain/pub/enums/platform_tag.dart';

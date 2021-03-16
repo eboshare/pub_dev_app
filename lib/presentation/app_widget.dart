@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:pub_dev_app/config/injection/injection.dart';
-import 'package:pub_dev_app/config/localization/l10n.dart';
+import 'package:pub_dev_app/config/localization/generated/l10n.dart';
 import 'package:pub_dev_app/domain/core/i_error_report_repository.dart';
 import 'package:pub_dev_app/presentation/connection/connection_snack_bar_wrapper.dart';
 import 'package:pub_dev_app/presentation/core/app_theme/app_theme.dart';
