@@ -61,9 +61,14 @@ class _$EnvironmentItemEntityCopyWithImpl<$Res>
     Object? version = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      version:
-          version == freezed ? _value.version : version as VersionConstraint,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as VersionConstraint,
     ));
   }
 }
@@ -95,9 +100,14 @@ class __$EnvironmentItemEntityCopyWithImpl<$Res>
     Object? version = freezed,
   }) {
     return _then(_EnvironmentItemEntity(
-      name: name == freezed ? _value.name : name as String,
-      version:
-          version == freezed ? _value.version : version as VersionConstraint,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as VersionConstraint,
     ));
   }
 }

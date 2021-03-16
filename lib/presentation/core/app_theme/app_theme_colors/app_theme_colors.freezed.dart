@@ -94,22 +94,38 @@ class _$AppThemeColorsCopyWithImpl<$Res>
     Object? tagSectionBackground = freezed,
   }) {
     return _then(_value.copyWith(
-      primary: primary == freezed ? _value.primary : primary as Color,
-      appBar: appBar == freezed ? _value.appBar : appBar as Color,
-      accent: accent == freezed ? _value.accent : accent as Color,
+      primary: primary == freezed
+          ? _value.primary
+          : primary // ignore: cast_nullable_to_non_nullable
+              as Color,
+      appBar: appBar == freezed
+          ? _value.appBar
+          : appBar // ignore: cast_nullable_to_non_nullable
+              as Color,
+      accent: accent == freezed
+          ? _value.accent
+          : accent // ignore: cast_nullable_to_non_nullable
+              as Color,
       connectionRestored: connectionRestored == freezed
           ? _value.connectionRestored
-          : connectionRestored as Color,
+          : connectionRestored // ignore: cast_nullable_to_non_nullable
+              as Color,
       packageDescription: packageDescription == freezed
           ? _value.packageDescription
-          : packageDescription as Color,
+          : packageDescription // ignore: cast_nullable_to_non_nullable
+              as Color,
       packageScoreItemTitle: packageScoreItemTitle == freezed
           ? _value.packageScoreItemTitle
-          : packageScoreItemTitle as Color,
-      tag: tag == freezed ? _value.tag : tag as Color,
+          : packageScoreItemTitle // ignore: cast_nullable_to_non_nullable
+              as Color,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as Color,
       tagSectionBackground: tagSectionBackground == freezed
           ? _value.tagSectionBackground
-          : tagSectionBackground as Color,
+          : tagSectionBackground // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }
@@ -155,22 +171,38 @@ class __$AppThemeColorsCopyWithImpl<$Res>
     Object? tagSectionBackground = freezed,
   }) {
     return _then(_AppThemeColors(
-      primary: primary == freezed ? _value.primary : primary as Color,
-      appBar: appBar == freezed ? _value.appBar : appBar as Color,
-      accent: accent == freezed ? _value.accent : accent as Color,
+      primary: primary == freezed
+          ? _value.primary
+          : primary // ignore: cast_nullable_to_non_nullable
+              as Color,
+      appBar: appBar == freezed
+          ? _value.appBar
+          : appBar // ignore: cast_nullable_to_non_nullable
+              as Color,
+      accent: accent == freezed
+          ? _value.accent
+          : accent // ignore: cast_nullable_to_non_nullable
+              as Color,
       connectionRestored: connectionRestored == freezed
           ? _value.connectionRestored
-          : connectionRestored as Color,
+          : connectionRestored // ignore: cast_nullable_to_non_nullable
+              as Color,
       packageDescription: packageDescription == freezed
           ? _value.packageDescription
-          : packageDescription as Color,
+          : packageDescription // ignore: cast_nullable_to_non_nullable
+              as Color,
       packageScoreItemTitle: packageScoreItemTitle == freezed
           ? _value.packageScoreItemTitle
-          : packageScoreItemTitle as Color,
-      tag: tag == freezed ? _value.tag : tag as Color,
+          : packageScoreItemTitle // ignore: cast_nullable_to_non_nullable
+              as Color,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as Color,
       tagSectionBackground: tagSectionBackground == freezed
           ? _value.tagSectionBackground
-          : tagSectionBackground as Color,
+          : tagSectionBackground // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }

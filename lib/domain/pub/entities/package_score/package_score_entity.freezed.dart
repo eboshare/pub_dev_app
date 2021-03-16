@@ -81,15 +81,24 @@ class _$PackageScoreEntityCopyWithImpl<$Res>
     return _then(_value.copyWith(
       grantedPoints: grantedPoints == freezed
           ? _value.grantedPoints
-          : grantedPoints as int,
-      maxPoints: maxPoints == freezed ? _value.maxPoints : maxPoints as int,
-      likeCount: likeCount == freezed ? _value.likeCount : likeCount as int,
+          : grantedPoints // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxPoints: maxPoints == freezed
+          ? _value.maxPoints
+          : maxPoints // ignore: cast_nullable_to_non_nullable
+              as int,
+      likeCount: likeCount == freezed
+          ? _value.likeCount
+          : likeCount // ignore: cast_nullable_to_non_nullable
+              as int,
       popularityScore: popularityScore == freezed
           ? _value.popularityScore
-          : popularityScore as double,
+          : popularityScore // ignore: cast_nullable_to_non_nullable
+              as double,
       lastUpdatedAt: lastUpdatedAt == freezed
           ? _value.lastUpdatedAt
-          : lastUpdatedAt as DateTime,
+          : lastUpdatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -131,15 +140,24 @@ class __$PackageScoreEntityCopyWithImpl<$Res>
     return _then(_PackageScoreEntity(
       grantedPoints: grantedPoints == freezed
           ? _value.grantedPoints
-          : grantedPoints as int,
-      maxPoints: maxPoints == freezed ? _value.maxPoints : maxPoints as int,
-      likeCount: likeCount == freezed ? _value.likeCount : likeCount as int,
+          : grantedPoints // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxPoints: maxPoints == freezed
+          ? _value.maxPoints
+          : maxPoints // ignore: cast_nullable_to_non_nullable
+              as int,
+      likeCount: likeCount == freezed
+          ? _value.likeCount
+          : likeCount // ignore: cast_nullable_to_non_nullable
+              as int,
       popularityScore: popularityScore == freezed
           ? _value.popularityScore
-          : popularityScore as double,
+          : popularityScore // ignore: cast_nullable_to_non_nullable
+              as double,
       lastUpdatedAt: lastUpdatedAt == freezed
           ? _value.lastUpdatedAt
-          : lastUpdatedAt as DateTime,
+          : lastUpdatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }

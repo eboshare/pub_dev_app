@@ -127,16 +127,30 @@ class _$PackageVersionDtoCopyWithImpl<$Res>
     Object? publishedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      version: version == freezed ? _value.version : version as String,
-      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecDto,
-      archiveUrl:
-          archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
-      packageUrl:
-          packageUrl == freezed ? _value.packageUrl : packageUrl as String?,
-      url: url == freezed ? _value.url : url as String?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      pubSpec: pubSpec == freezed
+          ? _value.pubSpec
+          : pubSpec // ignore: cast_nullable_to_non_nullable
+              as PubSpecDto,
+      archiveUrl: archiveUrl == freezed
+          ? _value.archiveUrl
+          : archiveUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      packageUrl: packageUrl == freezed
+          ? _value.packageUrl
+          : packageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
       publishedAt: publishedAt == freezed
           ? _value.publishedAt
-          : publishedAt as DateTime?,
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
@@ -195,16 +209,30 @@ class __$PackageVersionDtoCopyWithImpl<$Res>
     Object? publishedAt = freezed,
   }) {
     return _then(_PackageVersionDto(
-      version: version == freezed ? _value.version : version as String,
-      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecDto,
-      archiveUrl:
-          archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
-      packageUrl:
-          packageUrl == freezed ? _value.packageUrl : packageUrl as String?,
-      url: url == freezed ? _value.url : url as String?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      pubSpec: pubSpec == freezed
+          ? _value.pubSpec
+          : pubSpec // ignore: cast_nullable_to_non_nullable
+              as PubSpecDto,
+      archiveUrl: archiveUrl == freezed
+          ? _value.archiveUrl
+          : archiveUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      packageUrl: packageUrl == freezed
+          ? _value.packageUrl
+          : packageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
       publishedAt: publishedAt == freezed
           ? _value.publishedAt
-          : publishedAt as DateTime?,
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -314,7 +342,6 @@ class _$_PackageVersionDto extends _PackageVersionDto {
 }
 
 abstract class _PackageVersionDto extends PackageVersionDto {
-  const _PackageVersionDto._() : super._();
   const factory _PackageVersionDto(
       {@JsonKey(name: 'version')
           required String version,
@@ -329,6 +356,7 @@ abstract class _PackageVersionDto extends PackageVersionDto {
       @JsonKey(name: 'published')
       @NullableDateTimeConverter()
           DateTime? publishedAt}) = _$_PackageVersionDto;
+  const _PackageVersionDto._() : super._();
 
   factory _PackageVersionDto.fromJson(Map<String, dynamic> json) =
       _$_PackageVersionDto.fromJson;

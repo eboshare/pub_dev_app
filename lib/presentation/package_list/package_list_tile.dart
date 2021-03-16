@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:pub_dev_app/domain/pub/entities/derived_tags/derived_tags.dart';
 
 import 'package:pub_dev_app/domain/pub/entities/package_entity/package_entity.dart';
 import 'package:pub_dev_app/domain/pub/entities/package_score/package_score_entity.dart';
+import 'package:pub_dev_app/domain/pub/enums/platform_tag.dart';
+import 'package:pub_dev_app/domain/pub/enums/runtime_tag.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_description.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_score/package_score.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_tags/package_tag_block.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_title.dart';
+import 'package:pub_dev_app/utils/extensions/extensions.dart';
 
 // TODO: Replace with a real entity
 final _mockScoreEntity = PackageScoreEntity(
@@ -48,7 +52,20 @@ class PackageListTile extends StatelessWidget {
               description: package.description,
             ),
             const SizedBox(height: 12),
-            TagBlock(),
+            // TODO: Replace with actual data.
+            TagBlock(
+              tags: DerivedTags(
+                platformTags: BuiltSet.from({
+                  PlatformTag.android,
+                  PlatformTag.ios,
+                }),
+                runtimeTags: BuiltSet.from({
+                  RuntimeTag.nativeAot,
+                  RuntimeTag.web,
+                }),
+                sdkTags: BuiltSet.of({}),
+              ),
+            ),
           ],
         ),
       ),

@@ -1,4 +1,4 @@
-enum PlatformTags {
+enum PlatformTag {
   android,
   ios,
   windows,

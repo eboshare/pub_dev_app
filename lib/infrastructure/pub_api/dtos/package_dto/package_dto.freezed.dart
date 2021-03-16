@@ -87,11 +87,18 @@ class _$PackageDtoCopyWithImpl<$Res> implements $PackageDtoCopyWith<$Res> {
     Object? versions = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      latest: latest == freezed ? _value.latest : latest as PackageVersionDto,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      latest: latest == freezed
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as PackageVersionDto,
       versions: versions == freezed
           ? _value.versions
-          : versions as List<PackageVersionDto>,
+          : versions // ignore: cast_nullable_to_non_nullable
+              as List<PackageVersionDto>,
     ));
   }
 
@@ -135,11 +142,18 @@ class __$PackageDtoCopyWithImpl<$Res> extends _$PackageDtoCopyWithImpl<$Res>
     Object? versions = freezed,
   }) {
     return _then(_PackageDto(
-      name: name == freezed ? _value.name : name as String,
-      latest: latest == freezed ? _value.latest : latest as PackageVersionDto,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      latest: latest == freezed
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as PackageVersionDto,
       versions: versions == freezed
           ? _value.versions
-          : versions as List<PackageVersionDto>,
+          : versions // ignore: cast_nullable_to_non_nullable
+              as List<PackageVersionDto>,
     ));
   }
 }
@@ -210,7 +224,6 @@ class _$_PackageDto extends _PackageDto {
 }
 
 abstract class _PackageDto extends PackageDto {
-  const _PackageDto._() : super._();
   const factory _PackageDto(
       {@JsonKey(name: 'name')
           required String name,
@@ -218,6 +231,7 @@ abstract class _PackageDto extends PackageDto {
           required PackageVersionDto latest,
       @JsonKey(name: 'versions')
           required List<PackageVersionDto> versions}) = _$_PackageDto;
+  const _PackageDto._() : super._();
 
   factory _PackageDto.fromJson(Map<String, dynamic> json) =
       _$_PackageDto.fromJson;

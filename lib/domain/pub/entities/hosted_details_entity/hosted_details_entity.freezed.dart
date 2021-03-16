@@ -60,8 +60,14 @@ class _$HostedDetailsEntityCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -93,8 +99,14 @@ class __$HostedDetailsEntityCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_HostedDetailsEntity(
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }

@@ -167,8 +167,8 @@ class _$_Development extends _Development {
 }
 
 abstract class _Development extends Environment {
-  const _Development._() : super._();
   const factory _Development() = _$_Development;
+  const _Development._() : super._();
 }
 
 /// @nodoc
@@ -256,8 +256,8 @@ class _$_Production extends _Production {
 }
 
 abstract class _Production extends Environment {
-  const _Production._() : super._();
   const factory _Production() = _$_Production;
+  const _Production._() : super._();
 }
 
 /// @nodoc
@@ -343,6 +343,6 @@ class _$_Testing extends _Testing {
 }
 
 abstract class _Testing extends Environment {
-  const _Testing._() : super._();
   const factory _Testing() = _$_Testing;
+  const _Testing._() : super._();
 }

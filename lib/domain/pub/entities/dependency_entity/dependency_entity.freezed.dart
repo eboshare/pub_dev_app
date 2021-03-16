@@ -131,7 +131,10 @@ class _$DependencyEntityCopyWithImpl<$Res>
     Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -164,10 +167,18 @@ class _$SdkDependencyEntityCopyWithImpl<$Res>
     Object? version = freezed,
   }) {
     return _then(SdkDependencyEntity(
-      name: name == freezed ? _value.name : name as String,
-      sdk: sdk == freezed ? _value.sdk : sdk as String,
-      version:
-          version == freezed ? _value.version : version as VersionConstraint?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      sdk: sdk == freezed
+          ? _value.sdk
+          : sdk // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as VersionConstraint?,
     ));
   }
 }
@@ -319,10 +330,22 @@ class _$GitDependencyEntityCopyWithImpl<$Res>
     Object? path = freezed,
   }) {
     return _then(GitDependencyEntity(
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String,
-      ref: ref == freezed ? _value.ref : ref as String?,
-      path: path == freezed ? _value.path : path as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      ref: ref == freezed
+          ? _value.ref
+          : ref // ignore: cast_nullable_to_non_nullable
+              as String?,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -479,8 +502,14 @@ class _$PathDependencyEntityCopyWithImpl<$Res>
     Object? path = freezed,
   }) {
     return _then(PathDependencyEntity(
-      name: name == freezed ? _value.name : name as String,
-      path: path == freezed ? _value.path : path as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -626,11 +655,18 @@ class _$HostedDependencyEntityCopyWithImpl<$Res>
     Object? hosted = freezed,
   }) {
     return _then(HostedDependencyEntity(
-      name: name == freezed ? _value.name : name as String,
-      version:
-          version == freezed ? _value.version : version as VersionConstraint,
-      hosted:
-          hosted == freezed ? _value.hosted : hosted as HostedDetailsEntity?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as VersionConstraint,
+      hosted: hosted == freezed
+          ? _value.hosted
+          : hosted // ignore: cast_nullable_to_non_nullable
+              as HostedDetailsEntity?,
     ));
   }
 

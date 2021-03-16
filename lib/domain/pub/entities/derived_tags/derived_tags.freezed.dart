@@ -17,9 +17,9 @@ class _$DerivedTagsTearOff {
   const _$DerivedTagsTearOff();
 
   _DerivedTags call(
-      {required BuiltSet<SdkTags> sdkTags,
-      required BuiltSet<PlatformTags> platformTags,
-      required BuiltSet<RuntimeTags> runtimeTags}) {
+      {required BuiltSet<SdkTag> sdkTags,
+      required BuiltSet<PlatformTag> platformTags,
+      required BuiltSet<RuntimeTag> runtimeTags}) {
     return _DerivedTags(
       sdkTags: sdkTags,
       platformTags: platformTags,
@@ -33,9 +33,9 @@ const $DerivedTags = _$DerivedTagsTearOff();
 
 /// @nodoc
 mixin _$DerivedTags {
-  BuiltSet<SdkTags> get sdkTags => throw _privateConstructorUsedError;
-  BuiltSet<PlatformTags> get platformTags => throw _privateConstructorUsedError;
-  BuiltSet<RuntimeTags> get runtimeTags => throw _privateConstructorUsedError;
+  BuiltSet<SdkTag> get sdkTags => throw _privateConstructorUsedError;
+  BuiltSet<PlatformTag> get platformTags => throw _privateConstructorUsedError;
+  BuiltSet<RuntimeTag> get runtimeTags => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DerivedTagsCopyWith<DerivedTags> get copyWith =>
@@ -48,9 +48,9 @@ abstract class $DerivedTagsCopyWith<$Res> {
           DerivedTags value, $Res Function(DerivedTags) then) =
       _$DerivedTagsCopyWithImpl<$Res>;
   $Res call(
-      {BuiltSet<SdkTags> sdkTags,
-      BuiltSet<PlatformTags> platformTags,
-      BuiltSet<RuntimeTags> runtimeTags});
+      {BuiltSet<SdkTag> sdkTags,
+      BuiltSet<PlatformTag> platformTags,
+      BuiltSet<RuntimeTag> runtimeTags});
 }
 
 /// @nodoc
@@ -68,14 +68,18 @@ class _$DerivedTagsCopyWithImpl<$Res> implements $DerivedTagsCopyWith<$Res> {
     Object? runtimeTags = freezed,
   }) {
     return _then(_value.copyWith(
-      sdkTags:
-          sdkTags == freezed ? _value.sdkTags : sdkTags as BuiltSet<SdkTags>,
+      sdkTags: sdkTags == freezed
+          ? _value.sdkTags
+          : sdkTags // ignore: cast_nullable_to_non_nullable
+              as BuiltSet<SdkTag>,
       platformTags: platformTags == freezed
           ? _value.platformTags
-          : platformTags as BuiltSet<PlatformTags>,
+          : platformTags // ignore: cast_nullable_to_non_nullable
+              as BuiltSet<PlatformTag>,
       runtimeTags: runtimeTags == freezed
           ? _value.runtimeTags
-          : runtimeTags as BuiltSet<RuntimeTags>,
+          : runtimeTags // ignore: cast_nullable_to_non_nullable
+              as BuiltSet<RuntimeTag>,
     ));
   }
 }
@@ -88,9 +92,9 @@ abstract class _$DerivedTagsCopyWith<$Res>
       __$DerivedTagsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {BuiltSet<SdkTags> sdkTags,
-      BuiltSet<PlatformTags> platformTags,
-      BuiltSet<RuntimeTags> runtimeTags});
+      {BuiltSet<SdkTag> sdkTags,
+      BuiltSet<PlatformTag> platformTags,
+      BuiltSet<RuntimeTag> runtimeTags});
 }
 
 /// @nodoc
@@ -110,14 +114,18 @@ class __$DerivedTagsCopyWithImpl<$Res> extends _$DerivedTagsCopyWithImpl<$Res>
     Object? runtimeTags = freezed,
   }) {
     return _then(_DerivedTags(
-      sdkTags:
-          sdkTags == freezed ? _value.sdkTags : sdkTags as BuiltSet<SdkTags>,
+      sdkTags: sdkTags == freezed
+          ? _value.sdkTags
+          : sdkTags // ignore: cast_nullable_to_non_nullable
+              as BuiltSet<SdkTag>,
       platformTags: platformTags == freezed
           ? _value.platformTags
-          : platformTags as BuiltSet<PlatformTags>,
+          : platformTags // ignore: cast_nullable_to_non_nullable
+              as BuiltSet<PlatformTag>,
       runtimeTags: runtimeTags == freezed
           ? _value.runtimeTags
-          : runtimeTags as BuiltSet<RuntimeTags>,
+          : runtimeTags // ignore: cast_nullable_to_non_nullable
+              as BuiltSet<RuntimeTag>,
     ));
   }
 }
@@ -130,11 +138,11 @@ class _$_DerivedTags implements _DerivedTags {
       required this.runtimeTags});
 
   @override
-  final BuiltSet<SdkTags> sdkTags;
+  final BuiltSet<SdkTag> sdkTags;
   @override
-  final BuiltSet<PlatformTags> platformTags;
+  final BuiltSet<PlatformTag> platformTags;
   @override
-  final BuiltSet<RuntimeTags> runtimeTags;
+  final BuiltSet<RuntimeTag> runtimeTags;
 
   @override
   String toString() {
@@ -171,16 +179,16 @@ class _$_DerivedTags implements _DerivedTags {
 
 abstract class _DerivedTags implements DerivedTags {
   const factory _DerivedTags(
-      {required BuiltSet<SdkTags> sdkTags,
-      required BuiltSet<PlatformTags> platformTags,
-      required BuiltSet<RuntimeTags> runtimeTags}) = _$_DerivedTags;
+      {required BuiltSet<SdkTag> sdkTags,
+      required BuiltSet<PlatformTag> platformTags,
+      required BuiltSet<RuntimeTag> runtimeTags}) = _$_DerivedTags;
 
   @override
-  BuiltSet<SdkTags> get sdkTags => throw _privateConstructorUsedError;
+  BuiltSet<SdkTag> get sdkTags => throw _privateConstructorUsedError;
   @override
-  BuiltSet<PlatformTags> get platformTags => throw _privateConstructorUsedError;
+  BuiltSet<PlatformTag> get platformTags => throw _privateConstructorUsedError;
   @override
-  BuiltSet<RuntimeTags> get runtimeTags => throw _privateConstructorUsedError;
+  BuiltSet<RuntimeTag> get runtimeTags => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DerivedTagsCopyWith<_DerivedTags> get copyWith =>

@@ -72,12 +72,18 @@ class _$PackageEntityCopyWithImpl<$Res>
     Object? versions = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      latest:
-          latest == freezed ? _value.latest : latest as PackageVersionEntity,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      latest: latest == freezed
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as PackageVersionEntity,
       versions: versions == freezed
           ? _value.versions
-          : versions as BuiltList<PackageVersionEntity>,
+          : versions // ignore: cast_nullable_to_non_nullable
+              as BuiltList<PackageVersionEntity>,
     ));
   }
 
@@ -123,12 +129,18 @@ class __$PackageEntityCopyWithImpl<$Res>
     Object? versions = freezed,
   }) {
     return _then(_PackageEntity(
-      name: name == freezed ? _value.name : name as String,
-      latest:
-          latest == freezed ? _value.latest : latest as PackageVersionEntity,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      latest: latest == freezed
+          ? _value.latest
+          : latest // ignore: cast_nullable_to_non_nullable
+              as PackageVersionEntity,
       versions: versions == freezed
           ? _value.versions
-          : versions as BuiltList<PackageVersionEntity>,
+          : versions // ignore: cast_nullable_to_non_nullable
+              as BuiltList<PackageVersionEntity>,
     ));
   }
 }
@@ -178,11 +190,11 @@ class _$_PackageEntity extends _PackageEntity {
 }
 
 abstract class _PackageEntity extends PackageEntity {
-  const _PackageEntity._() : super._();
   const factory _PackageEntity(
       {required String name,
       required PackageVersionEntity latest,
       required BuiltList<PackageVersionEntity> versions}) = _$_PackageEntity;
+  const _PackageEntity._() : super._();
 
   @override
   String get name => throw _privateConstructorUsedError;

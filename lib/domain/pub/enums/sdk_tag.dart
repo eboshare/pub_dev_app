@@ -1,4 +1,4 @@
-enum SdkTags {
+enum SdkTag {
   dart,
   flutter,
 }

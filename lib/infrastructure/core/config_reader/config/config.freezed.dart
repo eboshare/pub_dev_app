@@ -64,7 +64,10 @@ class _$ConfigCopyWithImpl<$Res> implements $ConfigCopyWith<$Res> {
     Object? sentryDsn = freezed,
   }) {
     return _then(_value.copyWith(
-      sentryDsn: sentryDsn == freezed ? _value.sentryDsn : sentryDsn as String,
+      sentryDsn: sentryDsn == freezed
+          ? _value.sentryDsn
+          : sentryDsn // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -91,7 +94,10 @@ class __$ConfigCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res>
     Object? sentryDsn = freezed,
   }) {
     return _then(_Config(
-      sentryDsn: sentryDsn == freezed ? _value.sentryDsn : sentryDsn as String,
+      sentryDsn: sentryDsn == freezed
+          ? _value.sentryDsn
+          : sentryDsn // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }

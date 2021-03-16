@@ -222,33 +222,58 @@ class _$PubSpecDtoCopyWithImpl<$Res> implements $PubSpecDtoCopyWith<$Res> {
     Object? dependencyOverrides = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as String,
-      description:
-          description == freezed ? _value.description : description as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
       environment: environment == freezed
           ? _value.environment
-          : environment as Map<String, String>,
-      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String?,
-      repository:
-          repository == freezed ? _value.repository : repository as String?,
-      homePage: homePage == freezed ? _value.homePage : homePage as String?,
+          : environment // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>,
+      publishTo: publishTo == freezed
+          ? _value.publishTo
+          : publishTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      repository: repository == freezed
+          ? _value.repository
+          : repository // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homePage: homePage == freezed
+          ? _value.homePage
+          : homePage // ignore: cast_nullable_to_non_nullable
+              as String?,
       issueTracker: issueTracker == freezed
           ? _value.issueTracker
-          : issueTracker as String?,
-      authors: authors == freezed ? _value.authors : authors as List<String>?,
+          : issueTracker // ignore: cast_nullable_to_non_nullable
+              as String?,
+      authors: authors == freezed
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as Map<String, DependencyDto>?,
+          : dependencies // ignore: cast_nullable_to_non_nullable
+              as Map<String, DependencyDto>?,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as Map<String, DependencyDto>?,
+          : devDependencies // ignore: cast_nullable_to_non_nullable
+              as Map<String, DependencyDto>?,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as Map<String, DependencyDto>?,
+          : dependencyOverrides // ignore: cast_nullable_to_non_nullable
+              as Map<String, DependencyDto>?,
     ));
   }
 }
@@ -314,33 +339,58 @@ class __$PubSpecCopyWithImpl<$Res> extends _$PubSpecDtoCopyWithImpl<$Res>
     Object? dependencyOverrides = freezed,
   }) {
     return _then(_PubSpec(
-      name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as String,
-      description:
-          description == freezed ? _value.description : description as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
       environment: environment == freezed
           ? _value.environment
-          : environment as Map<String, String>,
-      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String?,
-      repository:
-          repository == freezed ? _value.repository : repository as String?,
-      homePage: homePage == freezed ? _value.homePage : homePage as String?,
+          : environment // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>,
+      publishTo: publishTo == freezed
+          ? _value.publishTo
+          : publishTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      repository: repository == freezed
+          ? _value.repository
+          : repository // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homePage: homePage == freezed
+          ? _value.homePage
+          : homePage // ignore: cast_nullable_to_non_nullable
+              as String?,
       issueTracker: issueTracker == freezed
           ? _value.issueTracker
-          : issueTracker as String?,
-      authors: authors == freezed ? _value.authors : authors as List<String>?,
+          : issueTracker // ignore: cast_nullable_to_non_nullable
+              as String?,
+      authors: authors == freezed
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as Map<String, DependencyDto>?,
+          : dependencies // ignore: cast_nullable_to_non_nullable
+              as Map<String, DependencyDto>?,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as Map<String, DependencyDto>?,
+          : devDependencies // ignore: cast_nullable_to_non_nullable
+              as Map<String, DependencyDto>?,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as Map<String, DependencyDto>?,
+          : dependencyOverrides // ignore: cast_nullable_to_non_nullable
+              as Map<String, DependencyDto>?,
     ));
   }
 }
@@ -552,7 +602,6 @@ class _$_PubSpec extends _PubSpec {
 }
 
 abstract class _PubSpec extends PubSpecDto {
-  const _PubSpec._() : super._();
   const factory _PubSpec(
       {@JsonKey(name: 'name')
           required String name,
@@ -581,6 +630,7 @@ abstract class _PubSpec extends PubSpecDto {
           Map<String, DependencyDto>? devDependencies,
       @JsonKey(name: 'dependency_overrides')
           Map<String, DependencyDto>? dependencyOverrides}) = _$_PubSpec;
+  const _PubSpec._() : super._();
 
   factory _PubSpec.fromJson(Map<String, dynamic> json) = _$_PubSpec.fromJson;
 

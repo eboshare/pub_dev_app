@@ -1,4 +1,4 @@
-enum RuntimeTags {
+enum RuntimeTag {
   nativeAot,
   nativeJit,
   web,

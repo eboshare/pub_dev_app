@@ -126,34 +126,58 @@ class _$PubSpecEntityCopyWithImpl<$Res>
     Object? dependencyOverrides = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as Version,
-      description:
-          description == freezed ? _value.description : description as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as Version,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
       environment: environment == freezed
           ? _value.environment
-          : environment as BuiltList<EnvironmentItemEntity>,
-      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String?,
-      repository:
-          repository == freezed ? _value.repository : repository as String?,
-      homePage: homePage == freezed ? _value.homePage : homePage as String?,
+          : environment // ignore: cast_nullable_to_non_nullable
+              as BuiltList<EnvironmentItemEntity>,
+      publishTo: publishTo == freezed
+          ? _value.publishTo
+          : publishTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      repository: repository == freezed
+          ? _value.repository
+          : repository // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homePage: homePage == freezed
+          ? _value.homePage
+          : homePage // ignore: cast_nullable_to_non_nullable
+              as String?,
       issueTracker: issueTracker == freezed
           ? _value.issueTracker
-          : issueTracker as String?,
-      authors:
-          authors == freezed ? _value.authors : authors as BuiltList<String>?,
+          : issueTracker // ignore: cast_nullable_to_non_nullable
+              as String?,
+      authors: authors == freezed
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as BuiltList<String>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as BuiltList<DependencyEntity>?,
+          : dependencies // ignore: cast_nullable_to_non_nullable
+              as BuiltList<DependencyEntity>?,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as BuiltList<DependencyEntity>?,
+          : devDependencies // ignore: cast_nullable_to_non_nullable
+              as BuiltList<DependencyEntity>?,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as BuiltList<DependencyEntity>?,
+          : dependencyOverrides // ignore: cast_nullable_to_non_nullable
+              as BuiltList<DependencyEntity>?,
     ));
   }
 }
@@ -210,34 +234,58 @@ class __$PubSpecEntityCopyWithImpl<$Res>
     Object? dependencyOverrides = freezed,
   }) {
     return _then(_PubSpecEntity(
-      name: name == freezed ? _value.name : name as String,
-      version: version == freezed ? _value.version : version as Version,
-      description:
-          description == freezed ? _value.description : description as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as Version,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
       environment: environment == freezed
           ? _value.environment
-          : environment as BuiltList<EnvironmentItemEntity>,
-      publishTo: publishTo == freezed ? _value.publishTo : publishTo as String?,
-      repository:
-          repository == freezed ? _value.repository : repository as String?,
-      homePage: homePage == freezed ? _value.homePage : homePage as String?,
+          : environment // ignore: cast_nullable_to_non_nullable
+              as BuiltList<EnvironmentItemEntity>,
+      publishTo: publishTo == freezed
+          ? _value.publishTo
+          : publishTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      repository: repository == freezed
+          ? _value.repository
+          : repository // ignore: cast_nullable_to_non_nullable
+              as String?,
+      homePage: homePage == freezed
+          ? _value.homePage
+          : homePage // ignore: cast_nullable_to_non_nullable
+              as String?,
       issueTracker: issueTracker == freezed
           ? _value.issueTracker
-          : issueTracker as String?,
-      authors:
-          authors == freezed ? _value.authors : authors as BuiltList<String>?,
+          : issueTracker // ignore: cast_nullable_to_non_nullable
+              as String?,
+      authors: authors == freezed
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as BuiltList<String>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as String?,
+          : documentation // ignore: cast_nullable_to_non_nullable
+              as String?,
       dependencies: dependencies == freezed
           ? _value.dependencies
-          : dependencies as BuiltList<DependencyEntity>?,
+          : dependencies // ignore: cast_nullable_to_non_nullable
+              as BuiltList<DependencyEntity>?,
       devDependencies: devDependencies == freezed
           ? _value.devDependencies
-          : devDependencies as BuiltList<DependencyEntity>?,
+          : devDependencies // ignore: cast_nullable_to_non_nullable
+              as BuiltList<DependencyEntity>?,
       dependencyOverrides: dependencyOverrides == freezed
           ? _value.dependencyOverrides
-          : dependencyOverrides as BuiltList<DependencyEntity>?,
+          : dependencyOverrides // ignore: cast_nullable_to_non_nullable
+              as BuiltList<DependencyEntity>?,
     ));
   }
 }

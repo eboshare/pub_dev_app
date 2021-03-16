@@ -77,8 +77,14 @@ class _$HostedDetailsDtoCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -111,8 +117,14 @@ class __$HostedDetailsDtoCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_HostedDetailsDto(
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -173,10 +185,10 @@ class _$_HostedDetailsDto extends _HostedDetailsDto {
 }
 
 abstract class _HostedDetailsDto extends HostedDetailsDto {
-  const _HostedDetailsDto._() : super._();
   const factory _HostedDetailsDto(
       {@JsonKey(name: 'name') required String name,
       @JsonKey(name: 'url') String? url}) = _$_HostedDetailsDto;
+  const _HostedDetailsDto._() : super._();
 
   factory _HostedDetailsDto.fromJson(Map<String, dynamic> json) =
       _$_HostedDetailsDto.fromJson;

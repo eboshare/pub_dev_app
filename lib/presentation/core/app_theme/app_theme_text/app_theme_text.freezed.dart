@@ -85,20 +85,28 @@ class _$AppThemeTextCopyWithImpl<$Res> implements $AppThemeTextCopyWith<$Res> {
     return _then(_value.copyWith(
       packageTitle: packageTitle == freezed
           ? _value.packageTitle
-          : packageTitle as TextStyle,
+          : packageTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       packageDescription: packageDescription == freezed
           ? _value.packageDescription
-          : packageDescription as TextStyle,
+          : packageDescription // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       packageScoreItemCounter: packageScoreItemCounter == freezed
           ? _value.packageScoreItemCounter
-          : packageScoreItemCounter as TextStyle,
+          : packageScoreItemCounter // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       packageScoreItemTitle: packageScoreItemTitle == freezed
           ? _value.packageScoreItemTitle
-          : packageScoreItemTitle as TextStyle,
+          : packageScoreItemTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       tagSectionTitle: tagSectionTitle == freezed
           ? _value.tagSectionTitle
-          : tagSectionTitle as TextStyle,
-      tagTitle: tagTitle == freezed ? _value.tagTitle : tagTitle as TextStyle,
+          : tagSectionTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
+      tagTitle: tagTitle == freezed
+          ? _value.tagTitle
+          : tagTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
     ));
   }
 }
@@ -141,20 +149,28 @@ class __$AppThemeTextCopyWithImpl<$Res> extends _$AppThemeTextCopyWithImpl<$Res>
     return _then(_AppThemeText(
       packageTitle: packageTitle == freezed
           ? _value.packageTitle
-          : packageTitle as TextStyle,
+          : packageTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       packageDescription: packageDescription == freezed
           ? _value.packageDescription
-          : packageDescription as TextStyle,
+          : packageDescription // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       packageScoreItemCounter: packageScoreItemCounter == freezed
           ? _value.packageScoreItemCounter
-          : packageScoreItemCounter as TextStyle,
+          : packageScoreItemCounter // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       packageScoreItemTitle: packageScoreItemTitle == freezed
           ? _value.packageScoreItemTitle
-          : packageScoreItemTitle as TextStyle,
+          : packageScoreItemTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
       tagSectionTitle: tagSectionTitle == freezed
           ? _value.tagSectionTitle
-          : tagSectionTitle as TextStyle,
-      tagTitle: tagTitle == freezed ? _value.tagTitle : tagTitle as TextStyle,
+          : tagSectionTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
+      tagTitle: tagTitle == freezed
+          ? _value.tagTitle
+          : tagTitle // ignore: cast_nullable_to_non_nullable
+              as TextStyle,
     ));
   }
 }

@@ -174,8 +174,14 @@ class _$SdkDependencyDtoCopyWithImpl<$Res>
     Object? version = freezed,
   }) {
     return _then(SdkDependencyDto(
-      sdk: sdk == freezed ? _value.sdk : sdk as String,
-      version: version == freezed ? _value.version : version as String?,
+      sdk: sdk == freezed
+          ? _value.sdk
+          : sdk // ignore: cast_nullable_to_non_nullable
+              as String,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -304,10 +310,10 @@ class _$SdkDependencyDto extends SdkDependencyDto {
 }
 
 abstract class SdkDependencyDto extends DependencyDto {
-  const SdkDependencyDto._() : super._();
   const factory SdkDependencyDto(
       {@JsonKey(name: 'sdk') required String sdk,
       @JsonKey(name: 'version') String? version}) = _$SdkDependencyDto;
+  const SdkDependencyDto._() : super._();
 
   factory SdkDependencyDto.fromJson(Map<String, dynamic> json) =
       _$SdkDependencyDto.fromJson;
@@ -353,9 +359,18 @@ class _$GitDependencyDtoCopyWithImpl<$Res>
     Object? path = freezed,
   }) {
     return _then(GitDependencyDto(
-      url: url == freezed ? _value.url : url as String,
-      ref: ref == freezed ? _value.ref : ref as String?,
-      path: path == freezed ? _value.path : path as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      ref: ref == freezed
+          ? _value.ref
+          : ref // ignore: cast_nullable_to_non_nullable
+              as String?,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -494,11 +509,11 @@ class _$GitDependencyDto extends GitDependencyDto {
 }
 
 abstract class GitDependencyDto extends DependencyDto {
-  const GitDependencyDto._() : super._();
   const factory GitDependencyDto(
       {@JsonKey(name: 'url') required String url,
       @JsonKey(name: 'ref') String? ref,
       @JsonKey(name: 'path') String? path}) = _$GitDependencyDto;
+  const GitDependencyDto._() : super._();
 
   factory GitDependencyDto.fromJson(Map<String, dynamic> json) =
       _$GitDependencyDto.fromJson;
@@ -544,7 +559,10 @@ class _$PathDependencyDtoCopyWithImpl<$Res>
     Object? path = freezed,
   }) {
     return _then(PathDependencyDto(
-      path: path == freezed ? _value.path : path as String,
+      path: path == freezed
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -662,9 +680,9 @@ class _$PathDependencyDto extends PathDependencyDto {
 }
 
 abstract class PathDependencyDto extends DependencyDto {
-  const PathDependencyDto._() : super._();
   const factory PathDependencyDto(
       {@JsonKey(name: 'path') required String path}) = _$PathDependencyDto;
+  const PathDependencyDto._() : super._();
 
   factory PathDependencyDto.fromJson(Map<String, dynamic> json) =
       _$PathDependencyDto.fromJson;
@@ -706,8 +724,14 @@ class _$HostedDependencyDtoCopyWithImpl<$Res>
     Object? hosted = freezed,
   }) {
     return _then(HostedDependencyDto(
-      version: version == freezed ? _value.version : version as String,
-      hosted: hosted == freezed ? _value.hosted : hosted as HostedDetailsDto?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      hosted: hosted == freezed
+          ? _value.hosted
+          : hosted // ignore: cast_nullable_to_non_nullable
+              as HostedDetailsDto?,
     ));
   }
 
@@ -848,11 +872,11 @@ class _$HostedDependencyDto extends HostedDependencyDto {
 }
 
 abstract class HostedDependencyDto extends DependencyDto {
-  const HostedDependencyDto._() : super._();
   const factory HostedDependencyDto(
           {@JsonKey(name: 'version') required String version,
           @JsonKey(name: 'hosted') HostedDetailsDto? hosted}) =
       _$HostedDependencyDto;
+  const HostedDependencyDto._() : super._();
 
   factory HostedDependencyDto.fromJson(Map<String, dynamic> json) =
       _$HostedDependencyDto.fromJson;

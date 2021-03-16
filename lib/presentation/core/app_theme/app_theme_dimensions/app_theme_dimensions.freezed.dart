@@ -64,10 +64,12 @@ class _$AppThemeDimensionsCopyWithImpl<$Res>
     return _then(_value.copyWith(
       imageInListSize: imageInListSize == freezed
           ? _value.imageInListSize
-          : imageInListSize as double,
+          : imageInListSize // ignore: cast_nullable_to_non_nullable
+              as double,
       maxInteractiveViewerScale: maxInteractiveViewerScale == freezed
           ? _value.maxInteractiveViewerScale
-          : maxInteractiveViewerScale as double,
+          : maxInteractiveViewerScale // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -101,10 +103,12 @@ class __$AppThemeDimensionsCopyWithImpl<$Res>
     return _then(_AppThemeDimensions(
       imageInListSize: imageInListSize == freezed
           ? _value.imageInListSize
-          : imageInListSize as double,
+          : imageInListSize // ignore: cast_nullable_to_non_nullable
+              as double,
       maxInteractiveViewerScale: maxInteractiveViewerScale == freezed
           ? _value.maxInteractiveViewerScale
-          : maxInteractiveViewerScale as double,
+          : maxInteractiveViewerScale // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }

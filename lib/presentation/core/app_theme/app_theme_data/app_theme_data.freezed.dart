@@ -72,11 +72,18 @@ class _$AppThemeDataCopyWithImpl<$Res> implements $AppThemeDataCopyWith<$Res> {
     Object? dimensions = freezed,
   }) {
     return _then(_value.copyWith(
-      colors: colors == freezed ? _value.colors : colors as AppThemeColors,
-      text: text == freezed ? _value.text : text as AppThemeText,
+      colors: colors == freezed
+          ? _value.colors
+          : colors // ignore: cast_nullable_to_non_nullable
+              as AppThemeColors,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as AppThemeText,
       dimensions: dimensions == freezed
           ? _value.dimensions
-          : dimensions as AppThemeDimensions,
+          : dimensions // ignore: cast_nullable_to_non_nullable
+              as AppThemeDimensions,
     ));
   }
 
@@ -139,11 +146,18 @@ class __$AppThemeDataCopyWithImpl<$Res> extends _$AppThemeDataCopyWithImpl<$Res>
     Object? dimensions = freezed,
   }) {
     return _then(_AppThemeData(
-      colors: colors == freezed ? _value.colors : colors as AppThemeColors,
-      text: text == freezed ? _value.text : text as AppThemeText,
+      colors: colors == freezed
+          ? _value.colors
+          : colors // ignore: cast_nullable_to_non_nullable
+              as AppThemeColors,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as AppThemeText,
       dimensions: dimensions == freezed
           ? _value.dimensions
-          : dimensions as AppThemeDimensions,
+          : dimensions // ignore: cast_nullable_to_non_nullable
+              as AppThemeDimensions,
     ));
   }
 }

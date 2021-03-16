@@ -1,15 +1,28 @@
 {
   "@@locale": "en",
-
   "appTitle": "Pub.dev",
-
   "connectionLost": "No connection",
   "@connectionLost": {
     "description": "Displayed everywhere in the app"
   },
-
   "connectionRestored": "Back online",
   "@connectionRestored": {
     "description": "Displayed everywhere in the app"
-  }
+  },
+  "packageScoreLikes": "Likes",
+  "packageScorePubPoints": "Pub points",
+  "packageScorePopularity": "Popularity",
+  "packageTagSectionPlatform": "Flutter",
+  "packageTagSectionRuntime": "Dart",
+  "packageTagSdkDart": "Dart",
+  "packageTagSdkFlutter": "Flutter",
+  "packageTagPlatformAndroid": "Android",
+  "packageTagPlatformIos": "iOS",
+  "packageTagPlatformWindows": "Windows",
+  "packageTagPlatformLinux": "Linux",
+  "packageTagPlatformMacos": "macOS",
+  "packageTagPlatformWeb": "Web",
+  "packageTagRuntimeNativeAot": "Native",
+  "packageTagRuntimeNativeJit": "Native",
+  "packageTagRuntimeWeb": "JS"
 }

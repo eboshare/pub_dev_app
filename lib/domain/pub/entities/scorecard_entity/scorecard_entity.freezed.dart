@@ -61,7 +61,8 @@ class _$ScorecardEntityCopyWithImpl<$Res>
     return _then(_value.copyWith(
       derivedTags: derivedTags == freezed
           ? _value.derivedTags
-          : derivedTags as DerivedTags,
+          : derivedTags // ignore: cast_nullable_to_non_nullable
+              as DerivedTags,
     ));
   }
 
@@ -104,7 +105,8 @@ class __$ScorecardEntityCopyWithImpl<$Res>
     return _then(_ScorecardEntity(
       derivedTags: derivedTags == freezed
           ? _value.derivedTags
-          : derivedTags as DerivedTags,
+          : derivedTags // ignore: cast_nullable_to_non_nullable
+              as DerivedTags,
     ));
   }
 }

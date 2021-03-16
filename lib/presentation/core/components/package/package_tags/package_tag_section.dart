@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:collection/collection.dart';
 
+import 'package:pub_dev_app/utils/extensions/extensions.dart';
 import 'package:pub_dev_app/presentation/core/app_theme/app_theme.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_tags/base_tag_widget.dart';
 import 'package:pub_dev_app/presentation/core/components/package/package_tags/package_tag.dart';
@@ -53,7 +55,7 @@ class TagSection extends StatelessWidget {
           Flexible(
             child: Wrap(
               children: [
-                for (final tag in tags) Tag(tagTitle: tag),
+                for (final tag in tags.sorted()) Tag(tagTitle: tag),
               ],
             ),
           ),

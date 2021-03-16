@@ -23,6 +23,22 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "appTitle" : MessageLookupByLibrary.simpleMessage("Pub.dev"),
     "connectionLost" : MessageLookupByLibrary.simpleMessage("No connection"),
-    "connectionRestored" : MessageLookupByLibrary.simpleMessage("Back online")
+    "connectionRestored" : MessageLookupByLibrary.simpleMessage("Back online"),
+    "packageScoreLikes" : MessageLookupByLibrary.simpleMessage("Likes"),
+    "packageScorePopularity" : MessageLookupByLibrary.simpleMessage("Popularity"),
+    "packageScorePubPoints" : MessageLookupByLibrary.simpleMessage("Pub points"),
+    "packageTagPlatformAndroid" : MessageLookupByLibrary.simpleMessage("Android"),
+    "packageTagPlatformIos" : MessageLookupByLibrary.simpleMessage("iOS"),
+    "packageTagPlatformLinux" : MessageLookupByLibrary.simpleMessage("Linux"),
+    "packageTagPlatformMacos" : MessageLookupByLibrary.simpleMessage("macOS"),
+    "packageTagPlatformWeb" : MessageLookupByLibrary.simpleMessage("Web"),
+    "packageTagPlatformWindows" : MessageLookupByLibrary.simpleMessage("Windows"),
+    "packageTagRuntimeNativeAot" : MessageLookupByLibrary.simpleMessage("Native"),
+    "packageTagRuntimeNativeJit" : MessageLookupByLibrary.simpleMessage("Native"),
+    "packageTagRuntimeWeb" : MessageLookupByLibrary.simpleMessage("JS"),
+    "packageTagSdkDart" : MessageLookupByLibrary.simpleMessage("Dart"),
+    "packageTagSdkFlutter" : MessageLookupByLibrary.simpleMessage("Flutter"),
+    "packageTagSectionPlatform" : MessageLookupByLibrary.simpleMessage("Flutter"),
+    "packageTagSectionRuntime" : MessageLookupByLibrary.simpleMessage("Dart")
   };
 }

@@ -86,16 +86,30 @@ class _$PackageVersionEntityCopyWithImpl<$Res>
     Object? publishedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      version: version == freezed ? _value.version : version as Version,
-      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecEntity,
-      archiveUrl:
-          archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
-      packageUrl:
-          packageUrl == freezed ? _value.packageUrl : packageUrl as String?,
-      url: url == freezed ? _value.url : url as String?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as Version,
+      pubSpec: pubSpec == freezed
+          ? _value.pubSpec
+          : pubSpec // ignore: cast_nullable_to_non_nullable
+              as PubSpecEntity,
+      archiveUrl: archiveUrl == freezed
+          ? _value.archiveUrl
+          : archiveUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      packageUrl: packageUrl == freezed
+          ? _value.packageUrl
+          : packageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
       publishedAt: publishedAt == freezed
           ? _value.publishedAt
-          : publishedAt as DateTime?,
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
@@ -147,16 +161,30 @@ class __$PackageVersionEntityCopyWithImpl<$Res>
     Object? publishedAt = freezed,
   }) {
     return _then(_PackageVersionEntity(
-      version: version == freezed ? _value.version : version as Version,
-      pubSpec: pubSpec == freezed ? _value.pubSpec : pubSpec as PubSpecEntity,
-      archiveUrl:
-          archiveUrl == freezed ? _value.archiveUrl : archiveUrl as String,
-      packageUrl:
-          packageUrl == freezed ? _value.packageUrl : packageUrl as String?,
-      url: url == freezed ? _value.url : url as String?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as Version,
+      pubSpec: pubSpec == freezed
+          ? _value.pubSpec
+          : pubSpec // ignore: cast_nullable_to_non_nullable
+              as PubSpecEntity,
+      archiveUrl: archiveUrl == freezed
+          ? _value.archiveUrl
+          : archiveUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      packageUrl: packageUrl == freezed
+          ? _value.packageUrl
+          : packageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
       publishedAt: publishedAt == freezed
           ? _value.publishedAt
-          : publishedAt as DateTime?,
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
